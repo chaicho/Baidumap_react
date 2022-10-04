@@ -10,20 +10,26 @@ import { Button } from 'semantic-ui-react'
 //   </Button.Group>
 // )
 
-// class ButtonExampleToggle extends Component {
-//   state = {}
-//   handleClick = () =>
-//     this.setState((prevState) => ({ active: !prevState.active }))
+export class ButtonExampleToggle extends React.Component {
+  state = {}
 
-//   render() {
-//     const { active } = this.state
+  handleClick = () =>{
+    this.props.onClick()
+    this.setState((prevState) => ({ active: !prevState.active }))
+    // console.log('gg')
+  }
+  
+  render() {
+    const {active} = this.state
+    console.log(active)
+    return (
+      <Button toggle active={active} onClick={this.handleClick}>
+        {this.props.text}
+      </Button>
+    )
+  }
+}
 
-//     return (
-//       <Button toggle active={active} onClick={this.handleClick}>
-//         {/* Toggle */}
-//       </Button>
-//     )
-//   }
-// }
-
+export  {ButtonExampleToggle as Displaybutton};
 // export default ButtonExampleConditionals
+// export { }

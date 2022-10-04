@@ -1,1 +1,5 @@
-.div2 {  position: absolute;  width: 30px;  height: 30px;  background-color: blue;  border-radius: 50%;  animation: blinker 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;}
+.mymap {  position: relative;z-index:1;  }
+.selectview {     
+  left:20px;
+  top:20px;
+  z-index:2; position: fixed; z-index: 2;}

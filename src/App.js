@@ -8,20 +8,37 @@ import  Devicedata  from './Deviceinfo_bd_shi';
 // import {Devicedata} from './Devicedata';
 import Device from './Device';
 import Button from '@mui/material/Button';
+import  {Displaybutton} from './components/Displaybutton'
 import './App.css'
+// const DisplayRouteButton = 
+// const DisplayDeviceButton = <Displaybutton text = '显示龙门架'></Displaybutton>
+
 class App extends React.Component {
-   
+    constructor(props) {
+      super(props);
+      this.handleRouteChange = this.handleRouteChange.bind(this);
+      // this.handleDeviceChange = this.handleDeviceChange.bind(this);
+      this.state = {displayroute: false, displaydevice: false}; 
+   }
+    handleRouteChange(){
+      this.state.displayroute =!this.state.displayroute
+      console.log('click',this.state.displayroute)
+    }
     render() {
+        const displayroute = this.state.displayroute
         return(
           <div className = "div">
-
-          <div className = "div1">
+          <div className='mymap'>
            <Mymap 
                 //  Devicelist = {Devicelist}
-                  Roadlist = {Roadlist}/> 
-          </div>  
-          <div className = "div2">
-          <Button variant="contained">Hello World</Button>
+                  Roadlist = {Roadlist}
+                /> 
+          </div>
+          <div className='selectview'>
+          <Displaybutton  
+          text = '显示路径'
+          active = {displayroute}
+          onClick = {this.handleRouteChange}  ></Displaybutton>
           </div>
           </div>
         )
