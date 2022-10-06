@@ -1,4 +1,4 @@
-export const Devicedata = [
+export const devicedata = [
   {
           "门架HEX字符串": "3F5401",
           "门架名称": "乐陵北-京沪鲁冀门架",

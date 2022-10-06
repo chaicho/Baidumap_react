@@ -34,7 +34,7 @@ const red_shelf = new window.BMapGL.Icon('./red_shelf.png',
 
 
 
-export default class Device extends React.Component{ 
+export  class Device extends React.Component{ 
     constructor(props){
       super(props) 
       this.state = { 
@@ -62,10 +62,11 @@ export default class Device extends React.Component{
       // autoViewport
       // onClick = {this.debug_info}
       // />
-      console.log(this.props.id)
+      // console.log(this.props.id)
       return   <Label
       position={this.props.position}
       onClick = {this.debug_info}
+      autoViewport = {true}
       text={this.props.id}
     />
     }

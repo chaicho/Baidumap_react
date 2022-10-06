@@ -12,7 +12,7 @@ export default class Mymap extends React.Component {
 
 
   render() {
-      console.log(this.props.Displayroute)
+      // console.log(this.props.devicelist)
       return (
       <div className='top'>
       <div className='mymap'>
@@ -21,8 +21,8 @@ export default class Mymap extends React.Component {
       zoom="9"
       enableScrollWheelZoom
        >
-       {this.props.Devicelist}
-       {this.props.Roadlist}
+       {this.props.devicelist}
+       {this.props.roadlist}
       <MapTypeControl />
       </Map>
       </div>
