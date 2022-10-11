@@ -1,8 +1,8 @@
 import React  from 'react';
-import ReactDOM from 'react-dom';
-import {Map, Marker, NavigationControl, InfoWindow,MapTypeControl} from 'react-bmapgl';
-import Device from './Device';
-import { Displaybutton } from './components/Displaybutton';
+// import ReactDOM from 'react-dom';
+import {Map,MapTypeControl} from 'react-bmapgl';
+// import Device from './Device';
+// import { Displaybutton } from './components/Displaybutton';
 import './Mymap.css'
 export default class Mymap extends React.Component {
   constructor(props){
@@ -12,21 +12,19 @@ export default class Mymap extends React.Component {
 
 
   render() {
-      // console.log(this.props.devicelist)
       return (
-      <div className='top'>
-      <div className='mymap'>
+      <div className='map'>
       <Map center={{lng: 116.600797625, lat: 35.4021216643}} 
-      style={{width:'100%',height:'565px'}}
+      style={{position : 'absolute',width:'100%',height:'100%'}}
       zoom="9"
       enableScrollWheelZoom
        >
        {this.props.devicelist}
        {this.props.roadlist}
-      <MapTypeControl />
+       
+      <MapTypeControl  anchor={2}/>
       </Map>
       </div>
-    </div>
       )
   }
 }

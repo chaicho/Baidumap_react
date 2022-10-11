@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Map,Label, Marker, NavigationControl, InfoWindow,CustomOverlay,Circle} from 'react-bmapgl';
+import {Label, InfoWindow} from 'react-bmapgl';
 
 function translateCallback  (data){
   this.state.position = data.points[0]
@@ -39,23 +39,22 @@ export  class Device extends React.Component{
       super(props) 
       this.state = { 
         alive : true ,
-        icon : red_shelf,        
+        icon : red_shelf,  
+        showInfo : false,      
       }
       this.debug_info = this.debug_info.bind(this)
-      // var convertor = new window.BMapGL.Convertor();
-      // var pointArr = [];
-      // pointArr.push(props.position);
-      // convertor.translate(pointArr, 1, 5, translateCallback)
-    }
+  }
 
     debug_info(){
       // console.assert(0)
-      console.log('Device info')
-      console.log(this.props)
+      this.setState({showInfo:true})
+      console.log(this.props.id)
+      this.forceUpdate()
+      // console.log(this.state.showInfo)
     }
     render(){
       // return <div/>
-      // console.log(this.props.id)
+      console.log(this.state.showInfo)
       // return <Marker 
       // position={this.props.position} 
       // icon={this.state.icon}
@@ -63,11 +62,34 @@ export  class Device extends React.Component{
       // onClick = {this.debug_info}
       // />
       // console.log(this.props.id)
-      return   <Label
-      position={this.props.position}
-      onClick = {this.debug_info}
-      autoViewport = {true}
-      text={this.props.id}
-    />
+      if (!this.state.showInfo) {
+        return  ( 
+          <Label
+          position={this.props.position}
+          onClick = {this.debug_info}
+          autoViewport = {true}
+          text={this.props.id}
+          />
+        )
+      }
+      else{
+        console.log('showinfo')
+        return (
+          <div>
+          <InfoWindow
+          position={this.props.position}
+          title="龙门架信息"
+          text={this.props.id}
+          onClickclose={() => {this.setState({showInfo : false})}}
+          /> 
+          <Label
+          position={this.props.position}
+          onClick = {this.debug_info}
+          autoViewport = {true}
+          text={this.props.id}
+          />                     
+          </div>
+        )
+      }
     }
 }

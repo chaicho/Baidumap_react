@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import Mymap from './Mymap'
 import { Road } from './Road';
 // import {devicedata} from './Deviceinfo_bd';
-import  devicedata  from './Deviceinfo_bd_shi';
 // import {devicedata} from './devicedata';
+import  devicedata  from './Deviceinfo_bd_shi';
 import {Device} from './Device';
 import  {Displaybutton} from './components/Displaybutton'
+import DeviceStateList from './DeviceStateList'
+import SearchBox from './components/SearchBox'
 import './App.css'
 // const DisplayRouteButton = 
 // const DisplayDeviceButton = <Displaybutton text = '显示龙门架'></Displaybutton>
@@ -16,10 +18,12 @@ class App extends React.Component {
       super(props);
       this.handleRouteDisplayChange = this.handleRouteDisplayChange.bind(this);
       this.handleDeviceDisplayChange = this.handleDeviceDisplayChange.bind(this)
-      // this.handleDeviceChange = this.handleDeviceChange.bind(this);
-      this.state = {displayroute: false, displaydevice: false}; 
+      this.state = {displayroute: false, displaydevice: false,searchedDevice:<div/>}; 
  
    }
+    handleSearchDevice(e){
+      this.setState({searchedDevice : e})
+    }
     handleRouteDisplayChange(){
       this.setState({displayroute : !this.state.displayroute})
       // console.log(this.state.displayroute,this.state.devicelist)
@@ -32,24 +36,33 @@ class App extends React.Component {
         // console.log(devicelist)
         const displayroute = this.state.displayroute
         const displaydevice = this.state.displaydevice
+        // return           <DeviceStateList/>;
         return(
-          <div className = "div">
+          <div className = "app">
           <div className='mymap'>
            <Mymap 
                   devicelist = {<Devicelist display = {displaydevice}/>}
                   roadlist = {<Roadlist display = {displayroute}/>}
-                /> 
+                  searchedDevice =  {this.state.searchedDevice}
+            /> 
+
           </div>
-          <div className='selectview'>
-          <Displaybutton  
-          text = '显示路径'
-          active = {displayroute}
-          onClick = {this.handleRouteDisplayChange}  ></Displaybutton>
-          <Displaybutton  
-          text = '显示龙门架'
-          active = {displaydevice}
-          onClick = {this.handleDeviceDisplayChange}  ></Displaybutton>
-          </div>
+            <div className="SelectView">
+            <Displaybutton  
+              text = '显示路径'
+              active = {displayroute}
+              onClick = {this.handleRouteDisplayChange}  ></Displaybutton>
+              <Displaybutton  
+              text = '显示龙门架'
+              active = {displaydevice}
+              onClick = {this.handleDeviceDisplayChange}  ></Displaybutton>
+            </div >
+            <div className="DeviceState">  
+              <DeviceStateList/>
+            </div>
+            <div  className="SearchBox">
+              <SearchBox/>
+            </div> 
           </div>
         )
   }
