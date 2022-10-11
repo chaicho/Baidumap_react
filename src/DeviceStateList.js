@@ -70,8 +70,8 @@ export default () => (
         subTitle: {
             render: () => {
                 return (<Space size={0}>
-              <Tag color="blue">Ant Design</Tag>
-              <Tag color="#5BD8A6">TechUI</Tag>
+              <Tag color="blue">问题描述</Tag>
+              <Tag color="#5BD8A6">门架状况</Tag>
             </Space>);
             },
         },

@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Mymap from './Mymap'
 import { Road } from './Road';
-// import {devicedata} from './Deviceinfo_bd';
+import {InfoWindow} from 'react-bmapgl';
+import {devicedata} from './Deviceinfo_bd';
 // import {devicedata} from './devicedata';
-import  devicedata  from './Deviceinfo_bd_shi';
+// import  devicedata  from './Deviceinfo_bd_shi';
 import {Device} from './Device';
 import  {Displaybutton} from './components/Displaybutton'
 import DeviceStateList from './DeviceStateList'
@@ -17,12 +18,19 @@ class App extends React.Component {
     constructor(props) {
       super(props);
       this.handleRouteDisplayChange = this.handleRouteDisplayChange.bind(this);
-      this.handleDeviceDisplayChange = this.handleDeviceDisplayChange.bind(this)
-      this.state = {displayroute: false, displaydevice: false,searchedDevice:<div/>}; 
+      this.handleDeviceDisplayChange = this.handleDeviceDisplayChange.bind(this);
+      this.handleSearchDevice  = this.handleSearchDevice.bind(this);
+      this.state = {displayroute: false, 
+                  displaydevice: false,
+                  searchedDeviceHex:null}; 
  
    }
-    handleSearchDevice(e){
-      this.setState({searchedDevice : e})
+    handleSearchDevice(hex){
+      if(!( hex in Deviceinfodict)) {
+         return;
+      }
+      this.setState({searchedDeviceHex:hex})
+      // console.log(this.state.searchedDeviceHex)
     }
     handleRouteDisplayChange(){
       this.setState({displayroute : !this.state.displayroute})
@@ -43,7 +51,7 @@ class App extends React.Component {
            <Mymap 
                   devicelist = {<Devicelist display = {displaydevice}/>}
                   roadlist = {<Roadlist display = {displayroute}/>}
-                  searchedDevice =  {this.state.searchedDevice}
+                  searchedDevice =  {<SearchedInfo hex = {this.state.searchedDeviceHex} />}
             /> 
 
           </div>
@@ -61,7 +69,7 @@ class App extends React.Component {
               <DeviceStateList/>
             </div>
             <div  className="SearchBox">
-              <SearchBox/>
+              <SearchBox onPressEnter={this.handleSearchDevice}/>
             </div> 
           </div>
         )
@@ -90,7 +98,6 @@ const devicelist =  devicedata.map((device) =>
 )
 
 function Devicelist(props){
-  console.log('gg')
   // const display = props.display
   if(props.display){
     return <ul>{devicelist}</ul>
@@ -100,6 +107,23 @@ function Devicelist(props){
   }
 }
 
+function SearchedInfo(props){
+  // console.log()
+  if(props.hex == null || !(props.hex in Deviceinfodict)){
+    return <div></div>
+  }
+  else{
+    // return <div></div>
+    const targetDevice = Deviceinfodict[props.hex]
+    console.log(targetDevice)
+    return <InfoWindow  position =  {new window.BMapGL.Point(targetDevice.经度, targetDevice.纬度)} 
+    title="门架信息"
+    text={`门架编号: ${targetDevice.收费门架编号}` + '\n' + `使用状态 : ${targetDevice.使用状态}`}
+    onClickclose={e => {console.log(e)}}
+    />
+                        // text = 'gg'> </InfoWindow>
+  }
+}
 
 
 

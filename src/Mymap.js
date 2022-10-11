@@ -1,6 +1,6 @@
 import React  from 'react';
 // import ReactDOM from 'react-dom';
-import {Map,MapTypeControl} from 'react-bmapgl';
+import {Map,MapTypeControl,InfoWindow} from 'react-bmapgl';
 // import Device from './Device';
 // import { Displaybutton } from './components/Displaybutton';
 import './Mymap.css'
@@ -21,7 +21,7 @@ export default class Mymap extends React.Component {
        >
        {this.props.devicelist}
        {this.props.roadlist}
-       
+       {this.props.searchedDevice}
       <MapTypeControl  anchor={2}/>
       </Map>
       </div>
