@@ -37,3 +37,16 @@
   position: absolute;
   z-index: 999;
 }
+.PathTimer {
+  text-align: center;
+  min-height: 100vh;
+  position: absolute;
+  bottom: 0px;
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}

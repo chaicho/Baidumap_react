@@ -4,6 +4,7 @@ import Mymap from './Mymap'
 import { Road } from './Road';
 import {InfoWindow} from 'react-bmapgl';
 import {devicedata} from './Deviceinfo_bd';
+import PathViewer from './components/PathViewer'
 // import {devicedata} from './devicedata';
 // import  devicedata  from './Deviceinfo_bd_shi';
 import {Device} from './Device';
@@ -71,6 +72,9 @@ class App extends React.Component {
             <div  className="SearchBox">
               <SearchBox onPressEnter={this.handleSearchDevice}/>
             </div> 
+            {/* <div className='PathTimer'> */}
+            {/* <PathViewer/> */}
+            {/* </div> */}
           </div>
         )
   }
@@ -131,7 +135,6 @@ const roadlist = []
 
 for  (var j  in devicedata)
 { 
-  // if (j >= 500) break
   const device = devicedata[j]
   const start = new window.BMapGL.Point(device.经度, device.纬度)
   for(var  i in device.下游门架) {
