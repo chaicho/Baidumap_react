@@ -1,1 +1,1 @@
-export const devicedata = require('./Deviceinfo.json')
+export const devicedata = require('./Deviceinfo_filtered.json')

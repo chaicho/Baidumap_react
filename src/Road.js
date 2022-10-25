@@ -22,7 +22,7 @@ export class Road extends React.Component{
                 ]}
                 strokeColor="#000"
                 cord = 	"bd09ll" 
-                strokeWeight={3}
+                strokeWeight={1}
                 onClick= {this.debug_info}
              />
         }
@@ -43,7 +43,7 @@ export class Road extends React.Component{
                 ]}
                 strokeColor="#000"
                 cord = 	"bd09ll" 
-                strokeWeight={8}
+                strokeWeight={1}
                 onClick= {this.debug_info}
              />
           </div>
