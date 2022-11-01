@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Mymap from './Mymap'
 import { Road } from './Road';
 import {InfoWindow} from 'react-bmapgl';
 import {devicedata} from './Deviceinfo_bd';
 import PathViewer from './components/PathViewer'
+import StatisticViewer from './components/StatisticViewer';
 // import {devicedata} from './devicedata';
 // import  devicedata  from './Deviceinfo_bd_shi';
 import {Device} from './Device';
 import  {Displaybutton} from './components/Displaybutton'
 import DeviceStateList from './DeviceStateList'
 import SearchBox from './components/SearchBox'
+import BasicExample from './components/RightInfoBar';
+
 import './App.css'
 // const DisplayRouteButton = 
 // const DisplayDeviceButton = <Displaybutton text = '显示龙门架'></Displaybutton>
@@ -48,33 +52,36 @@ class App extends React.Component {
         // return           <DeviceStateList/>;
         return(
           <div className = "app">
-          <div className='mymap'>
+          <div className='mymap'> 
            <Mymap 
                   devicelist = {<Devicelist display = {displaydevice}/>}
                   roadlist = {<Roadlist display = {displayroute}/>}
                   searchedDevice =  {<SearchedInfo hex = {this.state.searchedDeviceHex} />}
             /> 
 
-          </div>
+          </div> 
+          <div className="DeviceState">  
+              <BasicExample/>
+            </div>
+            <div  className="SearchBox">
+              {/* <SearchBox onPressEnter={this.handleSearchDevice}/> */}
+            </div>  
+            {/* <div className='PathTimer'> */}
+            {/* <PathViewer/> */}
+            {/* </div> */}
             <div className="SelectView">
-            <Displaybutton  
+            <Displaybutton 
               text = '显示路径'
               active = {displayroute}
               onClick = {this.handleRouteDisplayChange}  ></Displaybutton>
               <Displaybutton  
               text = '显示龙门架'
               active = {displaydevice}
-              onClick = {this.handleDeviceDisplayChange}  ></Displaybutton>
+              onClick = {this.handleDeviceDisplayChange}  ></Displaybutton> */}
             </div >
-            <div className="DeviceState">  
-              <DeviceStateList/>
+            <div className='StatisticViewer'>
+              {/* <StatisticViewer/> */}
             </div>
-            <div  className="SearchBox">
-              <SearchBox onPressEnter={this.handleSearchDevice}/>
-            </div> 
-            {/* <div className='PathTimer'> */}
-            {/* <PathViewer/> */}
-            {/* </div> */}
           </div>
         )
   }
