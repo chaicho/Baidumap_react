@@ -40,7 +40,7 @@ class App extends React.Component {
     }
     handleRouteDisplayChange(){
       this.setState({displayroute : !this.state.displayroute})
-      // console.log(this.state.displayroute,this.state.devicelist)
+      console.log(this.state.displayroute)
     }
     handleDeviceDisplayChange(){
       this.setState({displaydevice: !this.state.displaydevice})
@@ -56,7 +56,7 @@ class App extends React.Component {
           <div className='mymap'> 
            <Mymap 
                   devicelist = {<Devicelist display = {displaydevice}/>}
-                  Roadlist = {<Roadlist display = {displayroute}/>}
+                  roadlist = {<Roadlist display = {displayroute}/>}
                   searchedDevice =  {<SearchedInfo hex = {this.state.searchedDeviceHex} />}
             /> 
 

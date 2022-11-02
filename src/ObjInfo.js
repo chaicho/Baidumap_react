@@ -28,6 +28,7 @@ for (var i in devicedata ){
 export function Devicelist(props){
   // const display = props.display
   if(props.display){
+    console.log('gg')
     return <ul>{devicelist}</ul>
   }
   else{
@@ -62,7 +63,7 @@ for  (var j  in devicedata)
       }
     }
 }
-// console.log(roadlist)
+console.log(roadlist)
 
 export function Roadlist(props){
   // console.log('gg')
