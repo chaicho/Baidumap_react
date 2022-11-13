@@ -15,6 +15,7 @@ import  {Displaybutton} from './components/Displaybutton'
 import DeviceStateList from './DeviceStateList'
 import {SearchBox,SearchedInfo} from './components/SearchBox'
 import BasicExample from './components/RightInfoBar';
+// import {VehicleList} from './components/Vehicle/VehicleList';
 
 import './App.css'
 // const DisplayRouteButton = 
@@ -53,23 +54,24 @@ class App extends React.Component {
         // return           <DeviceStateList/>;
         return(
           <div className = "app">
-          <div className='mymap'> 
-           <Mymap 
+          
+            <div className='mymap'> 
+              <Mymap 
                   devicelist = {<Devicelist display = {displaydevice}/>}
                   roadlist = {<Roadlist display = {displayroute}/>}
                   searchedDevice =  {<SearchedInfo hex = {this.state.searchedDeviceHex} />}
-            /> 
+              /> 
 
-          </div> 
-          <div className="DeviceState">  
+            </div> 
+            {/* <div className="DeviceState">  
               <BasicExample/>
             </div>
             <div  className="SearchBox">
               <SearchBox onPressEnter={this.handleSearchDevice}/>
             </div>  
-            {/* <div className='PathTimer'> */}
-            {/* <PathViewer/> */}
-            {/* </div> */}
+            <div className='PathTimer'> 
+             <PathViewer/> 
+             </div>  */}
             <div className="SelectView">
             <Displaybutton 
               text = '显示路径'
@@ -82,6 +84,7 @@ class App extends React.Component {
             <div className='StatisticViewer'>
               {/* <StatisticViewer/> */}
             </div>
+            {/* <VehicleList></VehicleList> */}
           </div>
         )
   }
