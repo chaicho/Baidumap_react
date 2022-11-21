@@ -17,7 +17,7 @@ export const devicelist =  []
 
 for (var i in devicedata ){
   const device = devicedata[i]
-  console.log(device.isValid)
+  // console.log(device.isValid)
   if(device.isValid === true){
     devicelist.push(<li key = {device.门架HEX字符串}> 
       <Device position = {{lng: device.经度,lat:device.纬度}} id = {device.门架HEX字符串}/>
@@ -28,8 +28,8 @@ for (var i in devicedata ){
 export function Devicelist(props){
   // const display = props.display
   if(props.display){
-    console.log('gg')
-    return <ul>{devicelist}</ul>
+    // console.log('gg')
+    return <ul> {devicelist}</ul>
   }
   else{
     return <div/>
@@ -63,7 +63,7 @@ for  (var j  in devicedata)
       }
     }
 }
-console.log(roadlist)
+// console.log(roadlist)
 
 export function Roadlist(props){
   // console.log('gg')

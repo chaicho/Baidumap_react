@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Mymap from './Mymap';
 import { Deviceinfodict,Roadlist,Devicelist } from './ObjInfo';
-import { Road } from './Road';
 import {InfoWindow} from 'react-bmapgl';
+// import {Bas}
 import {devicedata} from './Deviceinfo_bd';
 import PathViewer from './components/PathViewer/PathViewer'
 import StatisticViewer from './components/StatisticViewer';
@@ -14,8 +14,8 @@ import {Device} from './Device';
 import  {Displaybutton} from './components/Displaybutton'
 import DeviceStateList from './DeviceStateList'
 import {SearchBox,SearchedInfo} from './components/SearchBox'
-import BasicExample from './components/RightInfoBar';
-// import {VehicleList} from './components/Vehicle/VehicleList';
+// import BasicExample from './components/RightInfoBar';
+import {VehicleList} from './components/Vehicle/VehicleList';
 
 import './App.css'
 // const DisplayRouteButton = 
@@ -63,15 +63,15 @@ class App extends React.Component {
               /> 
 
             </div> 
-            {/* <div className="DeviceState">  
-              <BasicExample/>
-            </div>
+            <div className="DeviceState">  
+              {/* <BasicExample/> */}
+            </div> 
             <div  className="SearchBox">
               <SearchBox onPressEnter={this.handleSearchDevice}/>
             </div>  
-            <div className='PathTimer'> 
+            {/* <div className='PathTimer'> 
              <PathViewer/> 
-             </div>  */}
+             </div>   */}
             <div className="SelectView">
             <Displaybutton 
               text = '显示路径'
@@ -82,9 +82,9 @@ class App extends React.Component {
               active = {displaydevice}
               onClick = {this.handleDeviceDisplayChange}  ></Displaybutton>             </div >
             <div className='StatisticViewer'>
-              {/* <StatisticViewer/> */}
-            </div>
-            {/* <VehicleList></VehicleList> */}
+              <StatisticViewer/> 
+            </div> 
+ 
           </div>
         )
   }

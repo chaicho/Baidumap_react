@@ -3,6 +3,9 @@ import React  from 'react';
 import {Map,MapTypeControl,InfoWindow} from 'react-bmapgl';
 // import Device from './Device';
 // import { Displaybutton } from './components/Displaybutton';
+import { Vehicle } from './components/Vehicle/Vehicle';
+import {Device} from './Device'
+import { VehicleList } from './components/Vehicle/VehicleList';
 import './Mymap.css'
 export default class Mymap extends React.Component {
   constructor(props){
@@ -22,6 +25,10 @@ export default class Mymap extends React.Component {
        {this.props.devicelist}
        {this.props.roadlist}
        {this.props.searchedDevice}
+       <VehicleList/>
+        {/* <div className='test'> 
+          <Vehicle position = {{lng: 116.600797625, lat: 35.4021216643}} id = 'gg' />    
+        </div> */}
       <MapTypeControl  anchor={2}/>
       </Map>
       </div>
