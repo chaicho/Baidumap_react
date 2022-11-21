@@ -6,6 +6,7 @@ import {Map,MapTypeControl,InfoWindow} from 'react-bmapgl';
 import { Vehicle } from './components/Vehicle/Vehicle';
 import {Device} from './Device'
 import { VehicleList } from './components/Vehicle/VehicleList';
+import {Marker} from 'react-bmapgl';
 import './Mymap.css'
 export default class Mymap extends React.Component {
   constructor(props){
@@ -26,8 +27,8 @@ export default class Mymap extends React.Component {
        {this.props.roadlist}
        {this.props.searchedDevice}
        <VehicleList/>
-        {/* <div className='test'> 
-          <Vehicle position = {{lng: 116.600797625, lat: 35.4021216643}} id = 'gg' />    
+       {/* <div className='test'> 
+          <Marker position = {{lng: 116.600797625, lat: 35.4021216643}} id = 'gg' />    
         </div> */}
       <MapTypeControl  anchor={2}/>
       </Map>

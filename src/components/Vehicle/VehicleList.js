@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import {useInterval} from 'ahooks'
 import axios from 'axios'
 import { Vehicle } from './Vehicle';
+import { Marker } from 'react-bmapgl'
 
 export function VehicleList() {
-    const [vechiles,setVehicles ] = useState(<div/>)
-    const [vechilesdata,setVehiclesdata] = useState({'a' : {}})
+    const [vechiles,setVehicles ] = useState(<></>)
+    const [vechilesdata,setVehiclesdata] = useState({})
     const [tick, setTick] = useState(0)
     const [count , setCount] = useState(1)
     useInterval(() => {
@@ -23,28 +24,32 @@ export function VehicleList() {
               ...newdata
               }
           )
-          console.log(Object.keys(vechiles).length)
-          console.log(vechiles)
+
         }
         )
-        console.log(count)
-      } 
-      setVehicles(
-        Object.keys(vechilesdata).map((vlp) => 
-        <Vehicle 
-            pos = {{lat: vechilesdata[vlp]['lat'] ,lng : vechilesdata[vlp]['lng']}}
-            nxtpos = {{lat: vechilesdata[vlp]['nxtlat'] ,lng : vechilesdata[vlp]['nxtlng']}}
-            nxttime = {vechilesdata[vlp]['nxttime']}
-            id = {vlp}>    
-        </Vehicle>
+        setVehicles(
+          Object.keys(vechilesdata).map((vlp) => 
+          <Vehicle 
+              pos = {{lat: vechilesdata[vlp]['lat'] ,lng : vechilesdata[vlp]['lng']}}
+              nxtpos = {{lat: vechilesdata[vlp]['nxtlat'] ,lng : vechilesdata[vlp]['nxtlng']}}
+              nxttime = {vechilesdata[vlp]['nxttime']}
+              id = {vlp}>    
+          </Vehicle>
+          )
         )
-      )
+        console.log(vechilesdata)
+        // console.log(count)
+      } 
+
       // console.log(vechiles)
       setCount( v => v + 1)
-    }  ,1000)    
+    }  ,2000)    
     return (
+      <React.Fragment>
       <ul>
       {vechiles}
       </ul>
+
+      </React.Fragment>
     )
 }

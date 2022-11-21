@@ -84,7 +84,6 @@ class App extends React.Component {
             <div className='StatisticViewer'>
               <StatisticViewer/> 
             </div> 
- 
           </div>
         )
   }
