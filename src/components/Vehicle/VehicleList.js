@@ -17,17 +17,12 @@ export function VehicleList() {
         })
         .then(function(res){
           const newdata= res['data']
-          if(vechilesdata !== {}){
-            setVehiclesdata(
+          setVehiclesdata(
+              {
               ...vechilesdata,
               ...newdata
-            )
-          }
-          else{
-            setVehiclesdata(
-              ...newdata
-            )
-          }
+              }
+          )
           console.log(Object.keys(vechiles).length)
           console.log(vechiles)
         }
