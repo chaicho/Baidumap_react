@@ -2,31 +2,39 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import {Label,Marker} from 'react-bmapgl';
 import { useInterval } from 'ahooks';
+import { ProForm } from '@ant-design/pro-components';
 
 export function Vehicle(props){
-  const FPS = 2
   const [pos,setPos] = useState(props.pos)
-  const [speed,setSpeed] = useState({})
-  const [tick, setTick] = useState(0)  
-  useEffect( () =>{
-    setSpeed({
-    'lng' : (props.nxtpos['lng'] - props.pos['lng']) /  (FPS * (props.nxttime + 1)  ),
-    'lat' : (props.nxtpos['lat'] - props.pos['lat']) /  (FPS * (props.nxttime  + 1)  )
+  const [speed,setSpeed] = useState({
+    'lng' : (props.nxtpos['lng'] - props.pos['lng']) /  (props.FPS * (props.nxttime + 1)  ),
+    'lat' : (props.nxtpos['lat'] - props.pos['lat']) /  (props.FPS * (props.nxttime + 1)  )
     })
+  useEffect( () =>{
+    // console.log('changespeed')
+    setSpeed({
+    'lng' : (props.nxtpos['lng'] - props.pos['lng']) /  (props.FPS * (props.nxttime + 1)  ),
+    'lat' : (props.nxtpos['lat'] - props.pos['lat']) /  (props.FPS * (props.nxttime + 1)  )
+    })
+
   }
   ,[props.nxttime])
-  useInterval( () => {
-    setPos({
-      'lng': pos['lng'] + speed['lng'],
-      'lat': pos['lat'] + speed['lat']
-    })
-    // console.log(props.id)
-    setTick( tick + 1 )
-    if(props.nxttime === -1){
-      return;
-    }
+  useEffect( () => {
+
+    if(Object.keys(speed) !== 0){
+      // console.log(pos)
+      // console.log(speed)
+      // console.log(props.tick)
+      setPos(
+      {
+        'lng': pos['lng'] + speed['lng'],
+        'lat': pos['lat'] + speed['lat']
+      }
+      )
   }
-  , 1000 / FPS) 
+  },[props.tick])
+
+
   if(props.nxttime === -1){
     return <></>
   }

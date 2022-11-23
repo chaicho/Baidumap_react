@@ -67,7 +67,7 @@ class App extends React.Component {
               {/* <BasicExample/> */}
             </div> 
             <div  className="SearchBox">
-              <SearchBox onPressEnter={this.handleSearchDevice}/>
+              {/* <SearchBox onPressEnter={this.handleSearchDevice}/> */}
             </div>  
             {/* <div className='PathTimer'> 
              <PathViewer/> 

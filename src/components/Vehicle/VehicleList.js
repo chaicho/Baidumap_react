@@ -10,8 +10,9 @@ export function VehicleList() {
     const [vechilesdata,setVehiclesdata] = useState({})
     const [tick, setTick] = useState(0)
     const [count , setCount] = useState(1)
-    useInterval(() => {
-      if ( count < 200){
+    const FPS = 5
+    useInterval(() => { 
+      if(tick % FPS === 0){
         axios.get(`Data/carInfo/5per/${count}.json`)
         .catch(function(response){
           console.log(response)
@@ -24,26 +25,41 @@ export function VehicleList() {
               ...newdata
               }
           )
-
+          setCount(v => v + 1 )
         }
         )
-        setVehicles(
-          Object.keys(vechilesdata).map((vlp) => 
-          <Vehicle 
-              pos = {{lat: vechilesdata[vlp]['lat'] ,lng : vechilesdata[vlp]['lng']}}
-              nxtpos = {{lat: vechilesdata[vlp]['nxtlat'] ,lng : vechilesdata[vlp]['nxtlng']}}
-              nxttime = {vechilesdata[vlp]['nxttime']}
-              id = {vlp}>    
+      }
+      var carcnt = 0
+      var fincnt = 0
+      setVehicles(
+        Object.keys(vechilesdata).map((vlp) => { 
+        if(vechilesdata[vlp]['nxttime'] === -1){ 
+          fincnt = fincnt + 1
+          return <></>
+        }
+        else{
+          carcnt += 1
+          return <Vehicle 
+            pos = {{lat : vechilesdata[vlp]['lat'] ,lng : vechilesdata[vlp]['lng']}}
+            nxtpos = {{lat : vechilesdata[vlp]['nxtlat'] ,lng : vechilesdata[vlp]['nxtlng']}}
+            nxttime = {vechilesdata[vlp]['nxttime']}
+            tick = {tick}
+            id = {vlp}
+            FPS = {FPS}
+          >    
           </Vehicle>
-          )
-        )
-        console.log(vechilesdata)
-        // console.log(count)
-      } 
-
-      // console.log(vechiles)
-      setCount( v => v + 1)
-    }  ,2000)    
+          }
+        }
+      )
+      )   
+      if( tick % FPS === 0){
+        console.log(`Car ${carcnt} `)
+        console.log(`fin ${fincnt} `)
+      }
+      setTick( v => v + 1 )
+      },
+      1000 / FPS
+    )
     return (
       <React.Fragment>
       <ul>
