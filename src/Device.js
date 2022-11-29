@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Label, InfoWindow} from 'react-bmapgl';
+import {Label, InfoWindow,Marker} from 'react-bmapgl';
 
 function translateCallback  (data){
   this.state.position = data.points[0]
@@ -49,7 +49,7 @@ export  class Device extends React.Component{
       // console.assert(0)
       this.setState({showInfo:true})
       console.log(this.props.id)
-      this.forceUpdate()
+      // this.forceUpdate()
       // console.log(this.state.showInfo)
     }
     render(){
@@ -64,11 +64,11 @@ export  class Device extends React.Component{
       // console.log(this.props.id)
       if (!this.state.showInfo) {
         return  ( 
-          <Label
-          position={this.props.position}
-          onClick = {this.debug_info}
-          autoViewport = {true}
-          text={this.props.id}
+          <Marker 
+            position={this.props.position} 
+            icon={red_shelf}
+            // autoViewport
+            onClick = {this.debug_info}
           />
         )
       }

@@ -7,6 +7,7 @@ import { Vehicle } from './components/Vehicle/Vehicle';
 import {Device} from './Device'
 import { VehicleList } from './components/Vehicle/VehicleList';
 import {Marker} from 'react-bmapgl';
+import { Devicelist } from './ObjInfo';
 import './Mymap.css'
 export default class Mymap extends React.Component {
   constructor(props){
@@ -23,7 +24,7 @@ export default class Mymap extends React.Component {
       zoom="9"
       enableScrollWheelZoom
        >
-       {this.props.devicelist}
+       <Devicelist display = {this.props.displaydevice}></Devicelist>
        {this.props.roadlist}
        {this.props.searchedDevice}
        <VehicleList/>

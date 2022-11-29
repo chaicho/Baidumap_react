@@ -1,7 +1,9 @@
 import { devicedata } from "./Deviceinfo_bd";
 import { Device } from "./Device";
 import { Road } from "./Road";
+import React, { useEffect, useState } from "react";
 function createDevicedict(dict){
+  console.log('createdict')
   devicedata.map((device) => {
     const id = device.门架HEX字符串;
     dict[id] = device
@@ -26,14 +28,33 @@ for (var i in devicedata ){
 } 
 
 export function Devicelist(props){
-  // const display = props.display
-  if(props.display){
-    // console.log('gg')
-    return <ul> {devicelist}</ul>
+  const [devices, setDevices] =  useState(<></>)
+  useEffect(() => {
+    console.log(props.display)
+    if(props.display){
+    setDevices(
+      devicedata.map((device) =>{
+        if(device.isValid === true) {
+          return  <Device position = {{lng: device.经度,lat:device.纬度}} id = {device.门架HEX字符串}/>
+        }
+        else{
+          return <></>
+        }
+        }
+      )
+    )
   }
   else{
-    return <div/>
+    setDevices(<></>)
   }
+  }
+  ,[props.display])
+  console.log(props.display)
+  return(
+    <React.Fragment>
+      {devices  }
+    </React.Fragment>
+  )
 }
 
 
