@@ -8,8 +8,8 @@ import { Marker } from 'react-bmapgl'
 export function VehicleList() {
     // const [vechiles,setVehicles ] = useState(<></>)
     const [vechilesdata,setVehiclesdata] = useState({})
-    const [tick, setTick] = useState(0)
-    const [count , setCount] = useState(1)
+    const [tick, setTick] = useState(1400)
+    const [count , setCount] = useState(0)
     const FPS = 2
     useInterval(() => { 
         axios.get(`Data/carInfo/5per20sec/${count}.json`)
@@ -24,7 +24,7 @@ export function VehicleList() {
           setCount(v => v + 1 )
         }
         )
-      console.log(Date())
+      console.log(Date(),tick)
       setTick( v => v + 1 )
       },
       1000 / FPS
