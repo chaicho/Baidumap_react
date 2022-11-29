@@ -12,24 +12,19 @@ export function VehicleList() {
     const [count , setCount] = useState(1)
     const FPS = 2
     useInterval(() => { 
-      if(tick % FPS === 0){
-        axios.get(`Data/carInfo/5per/${count}.json`)
+        axios.get(`Data/carInfo/5per20sec/${count}.json`)
         .catch(function(response){
           console.log(response)
         })
         .then(function(res){
           const newdata= res['data']
           setVehiclesdata(
-              {
-              ...vechilesdata,
-              ...newdata
-              }
+              newdata
           )
           setCount(v => v + 1 )
         }
         )
-      }
-
+      console.log(Date())
       setTick( v => v + 1 )
       },
       1000 / FPS
@@ -45,11 +40,7 @@ export function VehicleList() {
         else{
           return <Vehicle 
             pos = {{lat : vechilesdata[vlp]['lat'] ,lng : vechilesdata[vlp]['lng']}}
-            nxtpos = {{lat : vechilesdata[vlp]['nxtlat'] ,lng : vechilesdata[vlp]['nxtlng']}}
-            nxttime = {vechilesdata[vlp]['nxttime']}
             tick = {tick}
-            id = {vlp}
-            FPS = {FPS}
           >    
           </Vehicle>
           }

@@ -1,6 +1,6 @@
 import React  from 'react';
 // import ReactDOM from 'react-dom';
-import {Map,MapTypeControl,InfoWindow} from 'react-bmapgl';
+import {Map,MapTypeControl,InfoWindow,ScaleControl,ZoomControl} from 'react-bmapgl';
 // import Device from './Device';
 // import { Displaybutton } from './components/Displaybutton';
 import { Vehicle } from './components/Vehicle/Vehicle';
@@ -22,16 +22,18 @@ export default class Mymap extends React.Component {
       <Map center={{lng: 116.600797625, lat: 35.4021216643}} 
       style={{position : 'absolute',width:'100%',height:'100%'}}
       zoom="9"
-      enableScrollWheelZoom
        >
+       <ScaleControl  anchor ={1}/>
        <Devicelist display = {this.props.displaydevice}></Devicelist>
-       {this.props.roadlist}
-       {this.props.searchedDevice}
+       {/* {this.props.roadlist} */}
+       {/* {this.props.searchedDevice} */}
        <VehicleList/>
        {/* <div className='test'> 
           <Marker position = {{lng: 116.600797625, lat: 35.4021216643}} id = 'gg' />    
         </div> */}
       <MapTypeControl  anchor={2}/>
+      <ZoomControl/>
+
       </Map>
       </div>
       )
