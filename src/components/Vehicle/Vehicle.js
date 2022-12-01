@@ -15,7 +15,7 @@ export function Vehicle(props){
           icon =  'loc_blue'
           />             */}
           <Marker
-          icon = {blue_car}
+          icon = 'loc_blue'
           position={props.pos}
           />              
           {/* <Marker

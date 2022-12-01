@@ -21,18 +21,18 @@ export default class Mymap extends React.Component {
       <div className='map'>
       <Map center={{lng: 116.600797625, lat: 35.4021216643}} 
       style={{position : 'absolute',width:'100%',height:'100%'}}
+      enableScrollWheelZoom
+      // maxZoom = "13"
+      // minZoom = "6"
       zoom="9"
        >
-       <ScaleControl  anchor ={1}/>
+       {/* <ScaleControl  anchor ={1}/> */}
        <Devicelist display = {this.props.displaydevice}></Devicelist>
        {/* {this.props.roadlist} */}
-       {/* {this.props.searchedDevice} */}
-       <VehicleList/>
-       {/* <div className='test'> 
-          <Marker position = {{lng: 116.600797625, lat: 35.4021216643}} id = 'gg' />    
-        </div> */}
+       {this.props.searchedDevice}
+       {/* <VehicleList/> */}
       <MapTypeControl  anchor={2}/>
-      <ZoomControl/>
+      {/* <ZoomControl/> */}
 
       </Map>
       </div>

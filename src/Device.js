@@ -64,12 +64,12 @@ export  class Device extends React.Component{
       // console.log(this.props.id)
       if (!this.state.showInfo) {
         return  ( 
-          <Marker 
-            position={this.props.position} 
-            icon={red_shelf}
-            // autoViewport
-            onClick = {this.debug_info}
-          />
+          <Label
+          position={this.props.position}
+          onClick = {this.debug_info}
+          autoViewport = {true}
+          text={this.props.id}
+          />      
         )
       }
       else{

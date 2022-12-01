@@ -33,9 +33,7 @@ class App extends React.Component {
  
    }
     handleSearchDevice(hex){
-      if(!( hex in Deviceinfodict)) {
-         return;
-      }
+
       this.setState({searchedDeviceHex:hex})
       // console.log(this.state.searchedDeviceHex)
     }
@@ -67,7 +65,7 @@ class App extends React.Component {
               {/* <BasicExample/> */}
             </div> 
             <div  className="SearchBox">
-              {/* <SearchBox onPressEnter={this.handleSearchDevice}/> */}
+              <SearchBox onPressEnter={this.handleSearchDevice}/>
             </div>  
             {/* <div className='PathTimer'> 
              <PathViewer/> 
@@ -80,9 +78,11 @@ class App extends React.Component {
               <Displaybutton  
               text = '显示龙门架'
               active = {displaydevice}
-              onClick = {this.handleDeviceDisplayChange}  ></Displaybutton>             </div >
+              onClick = {this.handleDeviceDisplayChange}  ></Displaybutton>            
+           
+            </div > 
             <div className='StatisticViewer'>
-              <StatisticViewer/> 
+              {/* <StatisticViewer/>  */}
             </div> 
           </div>
         )
