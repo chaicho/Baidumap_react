@@ -6,6 +6,7 @@ import {Map,MapTypeControl,InfoWindow,ScaleControl,ZoomControl} from 'react-bmap
 import { Vehicle } from './components/Vehicle/Vehicle';
 import {Devicelist} from './components/Device/DeviceList'
 import { VehicleList } from './components/Vehicle/VehicleList';
+import { Roadlist } from './components/Road/Roadlist';
 import {Marker} from 'react-bmapgl';
 import './Mymap.css'
 export default class Mymap extends React.Component {
@@ -24,6 +25,7 @@ export default class Mymap extends React.Component {
        >
        <ScaleControl  anchor ={1}/>
        <Devicelist display = {this.props.displaydevice}></Devicelist>
+       <Roadlist display = {this.props.displayroute}></Roadlist>
        {/* {this.props.roadlist} */}
        {/* {this.props.searchedDevice} */}
        <VehicleList/>

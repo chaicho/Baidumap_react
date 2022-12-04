@@ -58,7 +58,7 @@ class App extends React.Component {
             <div className='mymap'> 
               <Mymap 
                   displaydevice = {displaydevice}
-                  roadlist = {<Roadlist display = {displayroute}/>}
+                  displayroute = {displayroute}
                   searchedDevice =  {<SearchedInfo hex = {this.state.searchedDeviceHex} />}
               /> 
 

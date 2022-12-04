@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import { devicedata } from "../../Deviceinfo_bd";
 import {useInterval} from 'ahooks'
 
-const devices =  devicedata.map((device) =>{
+const devices_static =  devicedata.map((device) =>{
+  console.log('gg')
   if(device.isValid === true) {
     return  <Device position = {{lng: device.经度,lat:device.纬度}} id = {device.门架HEX字符串}/>
   }
@@ -13,22 +14,14 @@ const devices =  devicedata.map((device) =>{
   }
 )
 export function Devicelist(props){
-  const [devices, setDevices] =  useState(<></>)
-  useEffect(() => {
-    console.log(props.display)
-    if(props.display){
-    setDevices(
-        devices
+  if(props.display){
+    return(
+      <React.Fragment>
+        {devices_static  }
+      </React.Fragment>
     )
   }
   else{
-    setDevices(<></>)
+    return <></>
   }
-  }
-  ,[props.display])
-  return(
-    <React.Fragment>
-      {devices  }
-    </React.Fragment>
-  )
 }

@@ -28,7 +28,7 @@ export class Road extends React.Component{
   render(){
       return( 
         <React.Fragment>
-        {this.state.infoWindow}
+        {/* {this.state.infoWindow} */}
         <Polyline
                 path={[
                 this.props.start,
