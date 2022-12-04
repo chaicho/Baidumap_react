@@ -8,7 +8,7 @@ import { Marker } from 'react-bmapgl'
 export function VehicleList() {
     // const [vechiles,setVehicles ] = useState(<></>)
     const [vechilesdata,setVehiclesdata] = useState({})
-    const [tick, setTick] = useState(1400)
+    const [tick, setTick] = useState(0)
     const [count , setCount] = useState(0)
     const FPS = 2
     useInterval(() => { 

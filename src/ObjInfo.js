@@ -13,20 +13,6 @@ function createDevicedict(dict){
 export const Deviceinfodict = {} 
 createDevicedict(Deviceinfodict)
 
-
-// console.log(Deviceinfodict)
-export const devicelist =  []
-
-for (var i in devicedata ){
-  const device = devicedata[i]
-  // console.log(device.isValid)
-  if(device.isValid === true){
-    devicelist.push(<li key = {device.门架HEX字符串}> 
-      <Device position = {{lng: device.经度,lat:device.纬度}} id = {device.门架HEX字符串}/>
-    </li>)
-  }
-} 
-
 export function Devicelist(props){
   const [devices, setDevices] =  useState(<></>)
   useEffect(() => {

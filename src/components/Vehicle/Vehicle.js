@@ -4,7 +4,13 @@ import {Label,Marker} from 'react-bmapgl';
 import { useInterval } from 'ahooks';
 import { ProForm } from '@ant-design/pro-components';
 const blue_car = new window.BMapGL.Icon('./blue_car.png', 
-new window.BMapGL.Size(10, 20) );
+new window.BMapGL.Size(10, 20) ,
+{
+  imageOffset: new window.BMapGL.Size(0,0),
+  imageSize: new window.BMapGL.Size(10, 20)
+}
+)
+;
 export function Vehicle(props){
   // const [pos,setPos] = useState(props.pos)
 
@@ -17,6 +23,7 @@ export function Vehicle(props){
           <Marker
           icon = {blue_car}
           position={props.pos}
+          isTop = {true}
           />              
           {/* <Marker
           position={{ lng : props.nxtpos['lng'], lat : props.nxtpos['lat']}}
