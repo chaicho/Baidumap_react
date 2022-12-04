@@ -10,7 +10,7 @@ import PathViewer from './components/PathViewer/PathViewer'
 import StatisticViewer from './components/StatisticViewer';
 // import {devicedata} from './devicedata';
 // import  devicedata  from './Deviceinfo_bd_shi';
-import {Device} from './Device';
+import {Device} from './components/Device/Device';
 import  {Displaybutton} from './components/Displaybutton'
 import DeviceStateList from './DeviceStateList'
 import {SearchBox,SearchedInfo} from './components/SearchBox'
@@ -28,7 +28,7 @@ class App extends React.Component {
       this.handleDeviceDisplayChange = this.handleDeviceDisplayChange.bind(this);
       this.handleSearchDevice  = this.handleSearchDevice.bind(this);
       this.state = {displayroute: false, 
-                  displaydevice: false,
+                  displaydevice: true,
                   searchedDeviceHex:null}; 
  
    }

@@ -1,5 +1,4 @@
 import { devicedata } from "./Deviceinfo_bd";
-import { Device } from "./Device";
 import { Road } from "./Road";
 import React, { useEffect, useState } from "react";
 function createDevicedict(dict){
@@ -13,35 +12,6 @@ function createDevicedict(dict){
 export const Deviceinfodict = {} 
 createDevicedict(Deviceinfodict)
 
-export function Devicelist(props){
-  const [devices, setDevices] =  useState(<></>)
-  useEffect(() => {
-    console.log(props.display)
-    if(props.display){
-    setDevices(
-      devicedata.map((device) =>{
-        if(device.isValid === true) {
-          return  <Device position = {{lng: device.经度,lat:device.纬度}} id = {device.门架HEX字符串}/>
-        }
-        else{
-          return <></>
-        }
-        }
-      )
-    )
-  }
-  else{
-    setDevices(<></>)
-  }
-  }
-  ,[props.display])
-  console.log(props.display)
-  return(
-    <React.Fragment>
-      {devices  }
-    </React.Fragment>
-  )
-}
 
 
 const roadlist = []

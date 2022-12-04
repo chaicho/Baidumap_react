@@ -4,16 +4,16 @@ import {Label,Marker} from 'react-bmapgl';
 import { useInterval } from 'ahooks';
 import { ProForm } from '@ant-design/pro-components';
 const blue_car = new window.BMapGL.Icon('./blue_car.png', 
-new window.BMapGL.Size(10, 20) ,
+new window.BMapGL.Size(15, 25) ,
 {
   imageOffset: new window.BMapGL.Size(0,0),
-  imageSize: new window.BMapGL.Size(10, 20)
+  imageSize: new window.BMapGL.Size(15, 25)
 }
 )
 ;
 export function Vehicle(props){
-  // const [pos,setPos] = useState(props.pos)
-
+  const [icon,setIcon] = useState(blue_car)
+  
   return (
           <React.Fragment>
           {/* <Marker
@@ -21,7 +21,7 @@ export function Vehicle(props){
           icon =  'loc_blue'
           />             */}
           <Marker
-          icon = {blue_car}
+          icon = {icon}
           position={props.pos}
           isTop = {true}
           />              

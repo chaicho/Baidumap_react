@@ -4,10 +4,9 @@ import {Map,MapTypeControl,InfoWindow,ScaleControl,ZoomControl} from 'react-bmap
 // import Device from './Device';
 // import { Displaybutton } from './components/Displaybutton';
 import { Vehicle } from './components/Vehicle/Vehicle';
-import {Device} from './Device'
+import {Devicelist} from './components/Device/DeviceList'
 import { VehicleList } from './components/Vehicle/VehicleList';
 import {Marker} from 'react-bmapgl';
-import { Devicelist } from './ObjInfo';
 import './Mymap.css'
 export default class Mymap extends React.Component {
   constructor(props){

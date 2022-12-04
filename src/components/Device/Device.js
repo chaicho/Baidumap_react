@@ -39,7 +39,6 @@ export  class Device extends React.Component{
       super(props) 
       this.state = { 
         alive : true ,
-        icon : 'red_shelf',  
         showInfo : false,      
       }
       this.debug_info = this.debug_info.bind(this)
