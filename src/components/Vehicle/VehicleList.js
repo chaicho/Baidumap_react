@@ -31,7 +31,6 @@ export function VehicleList() {
     )
     return (
       <React.Fragment>
-      <ul>
       {(
         Object.keys(vechilesdata).map((vlp) => { 
         if(vechilesdata[vlp]['nxttime'] === -1){ 
@@ -48,8 +47,9 @@ export function VehicleList() {
         )
       )
       }
-      </ul>
-
+      <div className="time">
+        {tick}
+      </div>
       </React.Fragment>
     )
 }
