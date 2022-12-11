@@ -13,3 +13,5 @@ export const Deviceinfodict = {}
 createDevicedict(Deviceinfodict)
 
 
+// console.log(Cartracedict)
+

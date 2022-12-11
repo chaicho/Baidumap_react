@@ -8,7 +8,7 @@ import {Devicelist} from './components/Device/DeviceList'
 import { VehicleList } from './components/Vehicle/VehicleList';
 import { Roadlist } from './components/Road/Roadlist';
 import {Marker} from 'react-bmapgl';
-import { AllLog } from './components/AllLog/AllLog';
+// import { AllLog } from './components/AllLog/AllLog';
 import './Mymap.css'
 export default class Mymap extends React.Component {
   constructor(props){

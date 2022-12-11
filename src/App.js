@@ -12,7 +12,7 @@ import StatisticViewer from './components/StatisticViewer';
 // import  devicedata  from './Deviceinfo_bd_shi';
 import {Device} from './components/Device/Device';
 import  {Displaybutton} from './components/Displaybutton'
-import { AllLog } from './components/AllLog/AllLog';
+import  {SideBar}  from './components/SideBar/SideBar';
 import DeviceStateList from './DeviceStateList'
 import {SearchBox,SearchedInfo} from './components/SearchBox'
 // import BasicExample from './components/RightInfoBar';
@@ -65,7 +65,7 @@ class App extends React.Component {
 
             </div> 
             <div className="DeviceState">  
-                <AllLog></AllLog>
+                <SideBar></SideBar>
             </div> 
             <div  className="SearchBox">
               {/* <SearchBox onPressEnter={this.handleSearchDevice}/> */}

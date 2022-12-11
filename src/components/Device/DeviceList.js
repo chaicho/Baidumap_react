@@ -4,7 +4,6 @@ import { devicedata } from "../../Deviceinfo_bd";
 import {useInterval} from 'ahooks'
 
 const devices_static =  devicedata.map((device) =>{
-  console.log('gg')
   if(device.isValid === true) {
     return  <Device position = {{lng: device.经度,lat:device.纬度}} id = {device.门架HEX字符串}/>
   }
