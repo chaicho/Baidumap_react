@@ -11,7 +11,11 @@ export function VehicleList() {
     const [tick, setTick] = useState(0)
     const [count , setCount] = useState(0)
     const FPS = 2
-    useInterval(() => { 
+    useInterval(() => {
+        setTick( v => v + 1 )
+        if(tick < 10) {
+          return
+        }
         axios.get(`Data/carInfo/5per20sec/${count}.json`)
         .catch(function(response){
           console.log(response)
@@ -24,8 +28,7 @@ export function VehicleList() {
           setCount(v => v + 1 )
         }
         )
-      console.log(Date(),tick)
-      setTick( v => v + 1 )
+      // console.log(Date(),tick)
       },
       1000 / FPS
     )
@@ -48,7 +51,7 @@ export function VehicleList() {
       )
       }
       <div className="time">
-        {tick}
+       {new Date(1635696000000 + count * 12000).toLocaleString()}
       </div>
       </React.Fragment>
     )

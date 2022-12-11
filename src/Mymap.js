@@ -8,6 +8,7 @@ import {Devicelist} from './components/Device/DeviceList'
 import { VehicleList } from './components/Vehicle/VehicleList';
 import { Roadlist } from './components/Road/Roadlist';
 import {Marker} from 'react-bmapgl';
+import { AllLog } from './components/AllLog/AllLog';
 import './Mymap.css'
 export default class Mymap extends React.Component {
   constructor(props){
@@ -21,6 +22,7 @@ export default class Mymap extends React.Component {
       <div className='map'>
       <Map center={{lng: 116.600797625, lat: 35.4021216643}} 
       style={{position : 'absolute',width:'100%',height:'100%'}}
+      enableScrollWheelZoom
       zoom="9"
        >
        <ScaleControl  anchor ={1}/>
@@ -28,13 +30,13 @@ export default class Mymap extends React.Component {
        <Roadlist display = {this.props.displayroute}></Roadlist>
        {/* {this.props.roadlist} */}
        {/* {this.props.searchedDevice} */}
-       <VehicleList/>
+       {/* <VehicleList/> */}
        {/* <div className='test'> 
           <Marker position = {{lng: 116.600797625, lat: 35.4021216643}} id = 'gg' />    
         </div> */}
       <MapTypeControl  anchor={2}/>
       <ZoomControl/>
-
+      {/* <AllLog/> */}
       </Map>
       </div>
       )
