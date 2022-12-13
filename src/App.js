@@ -65,7 +65,7 @@ class App extends React.Component {
 
             </div> 
             <div className="DeviceState">  
-                <SideBar></SideBar>
+                {/* <SideBar></SideBar> */}
             </div> 
             <div  className="SearchBox">
               {/* <SearchBox onPressEnter={this.handleSearchDevice}/> */}

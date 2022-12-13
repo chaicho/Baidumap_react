@@ -22,7 +22,7 @@ export function SideBar() {
       setCarTraces(response['data'])
       // console.log(response)
     })
-    // console.log(cartraces)
+    console.log(cartraces)
   }
     
   , []);
@@ -47,8 +47,8 @@ export function SideBar() {
   return (
     <React.Fragment>
     <CarTraceContext.Provider value={cartraces}>
-      <LogList/>
       <VehicleSearch/>
+      <LogList/>
       <Button onClick={() => setSelected('Button 1')}>Button 1</Button>
       <Button onClick={() => setSelected('Button 2')}>Button 2</Button>
       <Button onClick={() => setSelected('Button 3')}>Button 3</Button>

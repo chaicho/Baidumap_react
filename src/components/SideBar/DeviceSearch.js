@@ -1,27 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { Input,Button} from 'antd';
-import cartraces from './VehicleTrace'
+import Deviceinfodict from '../../ObjInfo'
 const { Search } = Input;
 
 export function DeviceSearch() {
   const [query, setQuery] = useState('');
-
+  const [curTrace,setCurTrace] =  useState([])
+  const [curLine, setCurLine] = useState(<></>)
+  const cartraces = useContext(CarTraceContext)
+  
   useEffect(() => {
-    // 触发搜索操作
+
+
+
   }, [query]);
-  // console.log(cartraces)
+  console.log(curLine)
   return (
-    
     <div>
       <Search
-        placeholder="请输入搜索门架"
+        placeholder="请输入搜索车辆"
         onSearch={(value) => setQuery(value)}
       />
-      {
-      }
+      {curLine}
       {query && (
-        <Button onClick={() => setQuery('')}>取消搜索</Button>
-      )}
+        <Button onClick={() => {
+            setQuery('');
+            setCurLine(<></>);}}>取消搜索</Button>
+      )
+      }
     </div>
-  );
+  )
 }
