@@ -5,27 +5,27 @@ const { Search } = Input;
 
 export function DeviceSearch() {
   const [query, setQuery] = useState('');
-  const [curTrace,setCurTrace] =  useState([])
-  const [curLine, setCurLine] = useState(<></>)
-  const cartraces = useContext(CarTraceContext)
+  const [curDevice,setCurDevice] =  useState(<></>)
   
   useEffect(() => {
-
-
-
+    console.log('query')
+    if(Deviceinfodict === null || query === '' || !(query in ( Deviceinfodict))  ) {
+      return ;
+    }
+    const pos = Deviceinfodict[query]
+    setCurDevice()
   }, [query]);
-  console.log(curLine)
   return (
     <div>
       <Search
-        placeholder="请输入搜索车辆"
+        placeholder="请输入搜索门架"
         onSearch={(value) => setQuery(value)}
       />
-      {curLine}
+      {curDevice}
       {query && (
         <Button onClick={() => {
             setQuery('');
-            setCurLine(<></>);}}>取消搜索</Button>
+            curDevice(<></>);}}>取消搜索</Button>
       )
       }
     </div>

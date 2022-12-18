@@ -4,6 +4,7 @@ import { LogList } from './LogList';
 import { VehicleSearch } from './VehicleSearch';
 import { createContext } from 'react';
 import axios from 'axios';
+import './SideBar.css'
 export const CarTraceContext = createContext();
 
 export function SideBar() {
@@ -46,15 +47,16 @@ export function SideBar() {
 
   return (
     <React.Fragment>
+    <div className='SideBar'>
     <CarTraceContext.Provider value={cartraces}>
-      <VehicleSearch/>
+      <VehicleSearch/>  
       <LogList/>
       <Button onClick={() => setSelected('Button 1')}>Button 1</Button>
       <Button onClick={() => setSelected('Button 2')}>Button 2</Button>
       <Button onClick={() => setSelected('Button 3')}>Button 3</Button>
 
       {selected && (
-        <List
+        <List 
           bordered
           dataSource={
             selected === 'Button 1'
@@ -82,6 +84,7 @@ export function SideBar() {
         />
       )}
     </CarTraceContext.Provider>
+    </div>
     </React.Fragment>
     );
 }

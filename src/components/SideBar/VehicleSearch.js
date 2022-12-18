@@ -28,10 +28,10 @@ export function VehicleSearch() {
             cord = 	"bd09ll" 
             strokeWeight={10}/>
     )
-    console.log(...curTrace)
+    // console.log(...curTrace)
 
   }, [query]);
-  console.log(curLine)
+  // console.log(curLine)
   return (
     <div>
       <Search
