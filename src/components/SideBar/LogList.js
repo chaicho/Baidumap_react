@@ -1,40 +1,26 @@
-import React from 'react';
-import { Table } from 'antd';
-const columns = [
-  {
-    title: 'Name',
-    dataIndex: 'name',
-    // width: 50,
-  },
-  {
-    title: 'Age',
-    dataIndex: 'age',
-  },
-  {
-    title: 'Address',
-    dataIndex: 'address',
-  },
-];
-const data = [];
-for (let i = 0; i < 100; i++) {
-  data.push({
-    key: i,
-    name: `Edward King ${i}`,
-    age: 32,
-    address: `London, Park Lane no. ${i}`,
-  });
-}
-export function LogList () {
-  return(  
-  <Table
-    columns={columns}
-    dataSource={data}
-    pagination={{
-      pageSize: 50,
-    }}
-    scroll={{
-      y: 240,
-    }}
-  />
-  )
+import { useState, useEffect } from 'react';
+import {useInterval} from 'ahooks'
+import { Card } from 'antd';
+export function LogList() {
+  const [logs, setLogs] = useState([]);
+  const [logID,setLogID] = useState(0)
+  function fetchNewLogs(){
+    setLogID( i => i + 1)
+    return [{'id': logID, 'message': Math.random()}]
+  }
+  useInterval(() => {
+      const newLogs =  fetchNewLogs();
+      setLogs([...logs, ...newLogs]);
+      console.log(newLogs)
+  }, 1000);
+
+  return (
+    <Card style={{ width: '100%' }}>
+    <div style={{ overflow: 'scroll',height : '200px' }}>
+      {logs.map((log) => (
+        <p key={log.id}>{log.message}</p>
+      ))}
+    </div>
+    </Card>
+  );
 }

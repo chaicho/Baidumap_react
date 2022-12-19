@@ -21,16 +21,7 @@
   z-index:999; 
   position: absolute; 
 }
-.DeviceState {
-  right :0px;
-  top :0px;
-  height: 100%;
-  width: 25%;
-  z-index: 999;
-  /* background-color: white; */
-  position: absolute; 
-  /* float:inline-end; */
-}
+
 .SearchBox{
   top : 20px;
   right: 350px;
