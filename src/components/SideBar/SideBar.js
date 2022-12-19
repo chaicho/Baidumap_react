@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import { Button, List } from 'antd';
 import { LogList } from './LogList';
 import { VehicleSearch } from './VehicleSearch';
+import { DeviceSearch } from './DeviceSearch';
 import { createContext } from 'react';
 import axios from 'axios';
 import './SideBar.css'
@@ -49,8 +50,13 @@ export function SideBar() {
     <React.Fragment>
     <div className='SideBar'>
     <CarTraceContext.Provider value={cartraces}>
+      {/* 车辆搜索 */}
       <VehicleSearch/>  
+      {/* 门架搜索 */}
+      <DeviceSearch/>
+      {/* 日志信息 */}
       <LogList/>
+
       <Button onClick={() => setSelected('Button 1')}>Button 1</Button>
       <Button onClick={() => setSelected('Button 2')}>Button 2</Button>
       <Button onClick={() => setSelected('Button 3')}>Button 3</Button>

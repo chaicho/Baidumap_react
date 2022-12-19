@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Input,Button} from 'antd';
-import Deviceinfodict from '../../ObjInfo'
+import { Input,Button } from 'antd';
+import { Marker }  from 'react-bmapgl'
+import { Deviceinfodict } from '../../ObjInfo'
 const { Search } = Input;
 
 export function DeviceSearch() {
@@ -12,10 +13,14 @@ export function DeviceSearch() {
     if(Deviceinfodict === null || query === '' || !(query in ( Deviceinfodict))  ) {
       return ;
     }
-    const pos = Deviceinfodict[query]
-    setCurDevice()
-  }, [query]);
-  return (
+    const targetDevice = Deviceinfodict[query]
+    setCurDevice( 
+    <Marker position  =  {new window.BMapGL.Point(targetDevice.经度, targetDevice.纬度)}/>, [query]);
+    }
+  ,[query])
+  
+  
+    return (
     <div>
       <Search
         placeholder="请输入搜索门架"
@@ -25,7 +30,7 @@ export function DeviceSearch() {
       {query && (
         <Button onClick={() => {
             setQuery('');
-            curDevice(<></>);}}>取消搜索</Button>
+            setCurDevice(<></>);}}>取消搜索</Button>
       )
       }
     </div>
