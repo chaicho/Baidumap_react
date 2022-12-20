@@ -6,13 +6,16 @@ function createDevicedict(dict){
   console.log('createdict')
   devicedata.map((device) => {
     const id = device.门架HEX字符串;
+    if(id === "3D8114"){
+      console.log(id)
+    }
     dict[id] = device
   }
   )
 }
 export const Deviceinfodict = {} 
 createDevicedict(Deviceinfodict)
-
+console.log( "3D8114" in  Deviceinfodict)
 
 // console.log(Deviceinfodict)
 export const devicelist =  []

@@ -29,14 +29,14 @@ export function SearchedInfo(props){
   }
   else{
     var devices = props.hex.split('|')
+    console.log(devices)
     return (devices.map(( device) =>{
         if(!(device  in Deviceinfodict)){
           return <></>
         }  
         else{
-           
           const targetDevice = Deviceinfodict[device]
-          return <Marker position  =  {new window.BMapGL.Point(targetDevice.经度, targetDevice.纬度)}
+          return <Marker position  =  {new window.BMapGL.Point(Math.max(targetDevice.经度, targetDevice.纬度),Math.min(targetDevice.经度, targetDevice.纬度))}
           />
         }
     }))
