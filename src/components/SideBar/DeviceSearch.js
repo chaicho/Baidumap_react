@@ -15,7 +15,7 @@ export function DeviceSearch() {
     }
     const targetDevice = Deviceinfodict[query]
     setCurDevice( 
-    <Marker position  =  {new window.BMapGL.Point(targetDevice.经度, targetDevice.纬度)}/>, [query]);
+    <Marker position  =  {new window.BMapGL.Point(Math.max(targetDevice.经度, targetDevice.纬度),Math.min(targetDevice.经度, targetDevice.纬度))}/>, [query]);
     }
   ,[query])
   
