@@ -16,7 +16,7 @@ export function VehicleList() {
         if(tick < 10) {
           return
         }
-        axios.get(`Data/carInfo/5per20sec/${count}.json`)
+        axios.get(`Data/carInfo/DoubleKey5per/${count}.json`)
         .catch(function(response){
           console.log(response)
         })

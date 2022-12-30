@@ -31,7 +31,7 @@ export default class Mymap extends React.Component {
        <Roadlist display = {this.props.displayroute}></Roadlist>
        {/* {this.props.roadlist} */}
        {/* {this.props.searchedDevice} */}
-       {/* <VehicleList/> */}
+       <VehicleList/>
        {/* <div className='test'> 
           <Marker position = {{lng: 116.600797625, lat: 35.4021216643}} id = 'gg' />    
         </div> */}

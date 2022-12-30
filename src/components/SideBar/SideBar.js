@@ -16,7 +16,7 @@ export function SideBar() {
 
   //获取本地的车辆轨迹数据
   useEffect(() => {
-    axios.get('Data/carInfo/car_trace.json')
+    axios.get('Data/carInfo/car_trace_db.json')
     .catch(function(response){
       console.log(response)
     })
@@ -24,7 +24,7 @@ export function SideBar() {
       setCarTraces(response['data'])
       // console.log(response)
     })
-    console.log(cartraces)
+    // console.log(cartraces)
   }
     
   , []);
