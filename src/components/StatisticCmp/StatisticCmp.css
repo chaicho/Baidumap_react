@@ -1,0 +1,14 @@
+.Histogram{
+  width: 33.33%;
+    padding: 0; /* 取消内边距 */
+  margin: 0; /* 取消外边距 */
+  border: 0; /* 取消边框 */
+  height: 30%;
+  position:inherit;
+  top: 0px;
+  right: 0px;
+}
+.StaCmp{
+  display: flex;
+  align-items: center;
+}

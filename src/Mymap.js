@@ -9,6 +9,7 @@ import { VehicleList } from './components/Vehicle/VehicleList';
 import { Roadlist } from './components/Road/Roadlist';
 import {Marker} from 'react-bmapgl';
 import { SideBar } from './components/SideBar/SideBar';
+import { StaCmp } from './components/StatisticCmp/StatisticCmp';
 // import { AllLog } from './components/AllLog/AllLog';
 import './Mymap.css'
 export default class Mymap extends React.Component {
@@ -29,18 +30,16 @@ export default class Mymap extends React.Component {
        <ScaleControl  anchor ={1}/>
        <Devicelist display = {this.props.displaydevice}></Devicelist>
        <Roadlist display = {this.props.displayroute}></Roadlist>
-       {/* {this.props.roadlist} */}
-       {/* {this.props.searchedDevice} */}
-       <VehicleList/>
-       {/* <div className='test'> 
-          <Marker position = {{lng: 116.600797625, lat: 35.4021216643}} id = 'gg' />    
-        </div> */}
-      <MapTypeControl  anchor={2}/>
-      <ZoomControl/>
-      <SideBar></SideBar>
+       {/* <VehicleList/> */}
 
+        <MapTypeControl  anchor={2}/>
+        <ZoomControl/>
+        <SideBar></SideBar>
       {/* <AllLog/> */}
+      <StaCmp></StaCmp>      
       </Map>
+      
+
       </div>
       )
   }
