@@ -6,6 +6,9 @@ export function StaLine(props) {
   const [data, setData] = useState([]);
 
   useEffect(()=>{
+    if(props.tick > 99) {
+      return;  
+    }
     const newData = alldata[props.tick].map((item) => ({
     ...item,
     time : props.tick  

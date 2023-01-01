@@ -1,6 +1,6 @@
 // import { Vehicle } from "./Vehicle";
-import React, { useState } from 'react';
-import {useInterval} from 'ahooks'
+import React, { useEffect, useState,useContext } from 'react';
+import { timeContext } from '../../Mymap';
 import axios from 'axios'
 import { Vehicle } from './Vehicle';
 import { Marker } from 'react-bmapgl'
@@ -8,15 +8,11 @@ import { Marker } from 'react-bmapgl'
 export function VehicleList() {
     // const [vechiles,setVehicles ] = useState(<></>)
     const [vechilesdata,setVehiclesdata] = useState({})
-    const [tick, setTick] = useState(0)
+    const tick = useContext(timeContext)
     const [count , setCount] = useState(0)
     const FPS = 2
-    useInterval(() => {
-        setTick( v => v + 1 )
-        if(tick < 10) {
-          return
-        }
-        axios.get(`Data/carInfo/DoubleKey5per/${count}.json`)
+    useEffect(() => {
+        axios.get(`Data/carInfo/DoubleKey5per/${tick}.json`)
         .catch(function(response){
           console.log(response)
         })
@@ -25,13 +21,9 @@ export function VehicleList() {
           setVehiclesdata(
               newdata
           )
-          setCount(v => v + 1 )
         }
         )
-      // console.log(Date(),tick)
-      },
-      1000 / FPS
-    )
+      }, [tick]);
     return (
       <React.Fragment>
       {(
@@ -51,7 +43,7 @@ export function VehicleList() {
       )
       }
       <div className="time">
-       {new Date(1635696000000 + count * 12000).toLocaleString()}
+       {new Date(1635696000000 + tick * FPS * 12000).toLocaleString()}
       </div>
       </React.Fragment>
     )

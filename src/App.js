@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Mymap from './Mymap';
+import {Mymap} from './Mymap';
 import { Deviceinfodict,Roadlist,Devicelist } from './ObjInfo';
 import {InfoWindow} from 'react-bmapgl';
 // import {Bas}

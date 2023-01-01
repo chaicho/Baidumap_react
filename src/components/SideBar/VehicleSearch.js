@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Input,Button} from 'antd';
 import { CarTraceContext } from './SideBar';
 import {Polyline} from "react-bmapgl" 
+import { timeContext } from '../../Mymap';
 const { Search } = Input;
 
 export function VehicleSearch() { 
@@ -9,6 +10,12 @@ export function VehicleSearch() {
   const [curTrace,setCurTrace] =  useState([])
   const [curLine, setCurLine] = useState(<></>)
   const cartraces = useContext(CarTraceContext)
+  const tick = useContext(timeContext)
+  function getLine(query,tick){
+    {
+      cartraces[query].map((loc) => {return { 'lng': loc[0], 'lat': loc[1]}})
+    }
+  }
   useEffect(() => {
     console.log('query')
     if(cartraces !== null){

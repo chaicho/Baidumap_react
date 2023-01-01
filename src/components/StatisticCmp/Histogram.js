@@ -7,7 +7,9 @@ export function Histogram(props) {
   const [data, setData] = useState([]);
 
   useEffect(()=>{
-
+    if(props.tick > 99) {
+      return;  
+    }
     setData(alldata[props.tick])
   }
   ,[props.tick])

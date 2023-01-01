@@ -1,6 +1,7 @@
-import React, { useEffect,useState } from "react";
-import './StatisticCmp.css'
-import { Histogram } from "./Histogram"
+import React, { useContext, useEffect,useState } from "react";
+import './StatisticCmp.css';
+import { timeContext } from "../../Mymap";
+import { Histogram } from "./Histogram";
 import { useInterval } from 'ahooks';
 import { StaLine } from "./StaLine";
 const screenHeight = window.innerHeight;
@@ -15,11 +16,7 @@ const elementStyle = {
 };
 
 export function StaCmp(){
-  const [tick, setTick] = useState(0);
-  useInterval(()=>
-  {
-    setTick(tick + 1)
-  },1000)
+  const tick = useContext(timeContext);
   return (
     <React.Fragment>
     <div className="StaCmp">
