@@ -41,7 +41,7 @@ export function Mymap(props) {
         <ZoomControl/>
         <SideBar></SideBar>
       {/* <AllLog/> */}
-      <StaCmp></StaCmp>      
+      {/* <StaCmp></StaCmp>       */}
       </Map>
       
 

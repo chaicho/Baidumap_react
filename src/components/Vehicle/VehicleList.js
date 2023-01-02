@@ -43,7 +43,7 @@ export function VehicleList() {
       )
       }
       <div className="time">
-       {new Date(1635696000000 + tick * FPS * 12000).toLocaleString()}
+       {new Date(1635696000000 + tick * FPS * 20000).toLocaleString()}
       </div>
       </React.Fragment>
     )

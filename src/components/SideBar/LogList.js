@@ -11,7 +11,7 @@ export function LogList() {
   useInterval(() => {
       const newLogs =  fetchNewLogs();
       setLogs([...logs, ...newLogs]);
-      console.log(newLogs)
+      // console.log(newLogs)
   }, 1000);
 
   return (
