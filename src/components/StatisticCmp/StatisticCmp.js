@@ -2,8 +2,10 @@ import React, { useContext, useEffect,useState } from "react";
 import './StatisticCmp.css';
 import { timeContext } from "../../Mymap";
 import { Histogram } from "./Histogram";
+import { SideBar } from "../SideBar/SideBar";
 import { useInterval } from 'ahooks';
 import { StaLine } from "./StaLine";
+import { StaBar } from "./StaBar";
 const screenHeight = window.innerHeight;
 const screenWidth = window.innerWidth;
 const elementHeight = screenHeight * 0.35;
@@ -28,7 +30,7 @@ export function StaCmp(){
     <div  
     style=  {elementStyle}
       >
-    <Histogram tick = {tick}></Histogram>
+    <StaBar tick = {tick}></StaBar>
     </div>
 
     </div>

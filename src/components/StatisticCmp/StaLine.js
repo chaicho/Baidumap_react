@@ -17,8 +17,8 @@ export function StaLine(props) {
       ...data,
       ...newData
     ])
-    console.log(props.tick)
-    console.log(data)
+    // console.log(props.tick)
+    // console.log(data)
   }
   ,[props.tick])
 
