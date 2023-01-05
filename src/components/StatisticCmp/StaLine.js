@@ -1,4 +1,4 @@
-import { Line } from "@ant-design/plots";
+import { Line } from "@ant-design/charts";
 import { useState,useEffect } from "react";
 const alldata = require('../../assets/statistics/data.json')
 
@@ -33,6 +33,6 @@ export function StaLine(props) {
   };
 
   // return <></>
-  return <Line {...config} />;
+  return <Line {...config}   />;
 }
 
