@@ -1,11 +1,13 @@
-import React, { useContext, useEffect,useState } from "react";
+import React, { useContext, useEffect,useState,useRef} from "react";
 import './StatisticCmp.css';
 import { timeContext } from "../../Mymap";
 import { Histogram } from "./Histogram";
 import { SideBar } from "../SideBar/SideBar";
-import { useInterval } from 'ahooks';
+import { useInterval, useReactive } from 'ahooks';
 import { StaLine } from "./StaLine";
 import { StaBar } from "./StaBar";
+import { DynaChart } from "./DynaChart";
+import { DynaSeries } from "./DynaSeries";
 const screenHeight = window.innerHeight;
 const screenWidth = window.innerWidth;
 const elementHeight = screenHeight * 0.35;
@@ -22,7 +24,7 @@ export function StaCmp(){
   return (
     <React.Fragment>
     <div className="StaCmp">
-    <div  
+    {/* <div  
     style=  {elementStyle}
       >
     <Histogram tick = {tick}></Histogram>
@@ -31,15 +33,32 @@ export function StaCmp(){
     style=  {elementStyle}
       >
     <StaBar tick = {tick}></StaBar>
-    </div>
+    </div>  
 
-    </div>
-    
+     </div>
+  
     <div  
     style=  {elementStyle}
       >
       <StaLine tick = {tick}></StaLine>
+    </div> */}
+        
+    <div  
+    style=  {elementStyle}
+      >
+        <DynaChart tick = {tick} ></DynaChart>
+    </div>
+
+    <div  
+    style=  {elementStyle}
+      >
+        <DynaSeries tick = {tick} ></DynaSeries>
+    </div>
+
+    
     </div>
     </React.Fragment>
+  
+
   )
 }

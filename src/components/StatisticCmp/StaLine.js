@@ -33,6 +33,6 @@ export function StaLine(props) {
   };
 
   // return <></>
-  return <Line {...config}   />;
+  return <Line {...config} onlyChangeData={true}  />;
 }
 

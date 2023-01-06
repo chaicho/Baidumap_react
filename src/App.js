@@ -17,7 +17,7 @@ import DeviceStateList from './DeviceStateList'
 import {SearchBox,SearchedInfo} from './components/SearchBox'
 // import BasicExample from './components/RightInfoBar';
 import {VehicleList} from './components/Vehicle/VehicleList';
-
+import { BarChart } from './components/StatisticCmp/DynaChart';
 import './App.css'
 // const DisplayRouteButton = 
 // const DisplayDeviceButton = <Displaybutton text = '显示龙门架'></Displaybutton>
@@ -55,7 +55,7 @@ class App extends React.Component {
         // return           <DeviceStateList/>;
         return(
           <div className = "app">
-          
+            {/* <BarChart></BarChart> */}
             <div className='mymap'> 
               <Mymap 
                   displaydevice = {displaydevice}

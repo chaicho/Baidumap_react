@@ -39,7 +39,7 @@ export function Mymap(props) {
 
         <MapTypeControl  anchor={2}/>
         <ZoomControl/>
-        {/* <SideBar></SideBar> */}
+        <SideBar></SideBar>
       {/* <AllLog/> */}
       <StaCmp></StaCmp>      
       </Map>

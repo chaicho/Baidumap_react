@@ -5,18 +5,7 @@ const alldata = require('../../assets/statistics/data.json')
 console.log(alldata)
 export function Histogram(props) {
   const [data, setData] = useState([]);
-
-  useEffect(()=>{
-    if(props.tick > 99) {
-      return;  
-    }
-    setData(alldata[props.tick])
-  }
-  ,[props.tick])
-
-
-  // 定义柱状图的配置
-  const config = {
+  const [config,setConfig] = useState({
     data,
     columnWidthRatio: 0.6, // 设置柱
     autoFit:true,
@@ -45,9 +34,20 @@ export function Histogram(props) {
     //     fillOpacity: 0.25,
     //   }
     // }
-  };
+  })
+  useEffect(()=>{
+    if(props.tick > 99) {
+      return;  
+    }
+    // setData(alldata[props.tick])
+    setConfig({ ...config,data:alldata[props.tick]})
+  }
+  ,[props.tick])
+
+
+
 
   // return <></>
-  return <Column {...config} />;
+  return <Column {...config}  onlyChangeData={true}/>;
 }
 
