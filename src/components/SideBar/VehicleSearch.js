@@ -10,7 +10,7 @@ export function VehicleSearch() {
   const [query, setQuery] = useState('');
   const [curLine, setCurLine] = useState(<></>)
   const cartraces = useContext(CarTraceContext)
-  const tick = useContext(timeContext)
+  const {tick,mapsec} = useContext(timeContext)
   function getPath(query,tick){
     const curtime = tick * 20000 + 1635696000000;    
     console.log(curtime);

@@ -20,7 +20,7 @@ const elementStyle = {
 };
 
 export function StaCmp(){
-  const tick = useContext(timeContext);
+  const {tick,mapsec} = useContext(timeContext);
   return (
     <React.Fragment>
     <div className="StaCmp">

@@ -8,8 +8,8 @@ import { Marker } from 'react-bmapgl'
 export function VehicleList() {
     // const [vechiles,setVehicles ] = useState(<></>)
     const [vechilesdata,setVehiclesdata] = useState({})
-    const tick = useContext(timeContext)
     const [count , setCount] = useState(0)
+    const {tick,mapsec} = useContext(timeContext)
     const FPS = 2
     useEffect(() => {
         axios.get(`Data/carInfo/DoubleKey5per/${tick}.json`)

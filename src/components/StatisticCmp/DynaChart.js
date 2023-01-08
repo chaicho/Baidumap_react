@@ -5,7 +5,6 @@ var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 export function DynaChart(props) {
   const chartRef = useRef();
-  const [tick ,setTick] = useState(0)
   const [options, setOptions] = useState( {
     theme: "light1",
     title: {
