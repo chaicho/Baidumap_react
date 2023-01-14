@@ -1,0 +1,1893 @@
+{
+  
+  "1635696020000": [
+    {
+      "incTime": "1635696020000",
+      "rule": "diff-passid",
+      "vehicleId": "testcase-1"
+    }
+  ],
+  "1635696060000": [
+    {
+      "incTime": "1635696060000",
+      "rule": "diff-passid",
+      "vehicleId": "testcase-2"
+    }
+  ],
+  "1635696140000": [
+    {
+      "incTime": "1635696140000",
+      "rule": "diff-passid",
+      "vehicleId": "testcase-3"
+    }
+  ],
+  "1635696180000": [
+    {
+      "incTime": "1635696180000",
+      "rule": "diff-passid",
+      "vehicleId": "testcase-4"
+    }
+  ],
+  "1635696880000": [
+    {
+      "incTime": "1635696882000",
+      "rule": "diff-passid",
+      "vehicleId": "辽F92343-1"
+    }
+  ],
+  "1635709080000": [
+    {
+      "incTime": "1635709089000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁Q891RV-1"
+    }
+  ],
+  "1635715920000": [
+    {
+      "incTime": "1635715923000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁NJ350W-0"
+    }
+  ],
+  "1635716100000": [
+    {
+      "incTime": "1635716118000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁R9687B-0"
+    }
+  ],
+  "1635716480000": [
+    {
+      "incTime": "1635716492000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁L65153-1"
+    }
+  ],
+  "1635717700000": [
+    {
+      "incTime": "1635717719000",
+      "rule": "time-out",
+      "vehicleId": "鲁D92V67-0"
+    }
+  ],
+  "1635718880000": [
+    {
+      "incTime": "1635718882000",
+      "rule": "time-out",
+      "vehicleId": "鲁JA0597-1"
+    }
+  ],
+  "1635719060000": [
+    {
+      "incTime": "1635719076000",
+      "rule": "time-out",
+      "vehicleId": "冀D5H792-1"
+    }
+  ],
+  "1635719120000": [
+    {
+      "incTime": "1635719121000",
+      "rule": "time-out",
+      "vehicleId": "鲁Q037JG-1"
+    }
+  ],
+  "1635719260000": [
+    {
+      "incTime": "1635719273000",
+      "rule": "time-out",
+      "vehicleId": "鲁P099BX-0"
+    }
+  ],
+  "1635719680000": [
+    {
+      "incTime": "1635719687000",
+      "rule": "diff-passid",
+      "vehicleId": "豫A9065C-1"
+    }
+  ],
+  "1635719800000": [
+    {
+      "incTime": "1635719813000",
+      "rule": "time-out",
+      "vehicleId": "鲁A78JJ7-0"
+    }
+  ],
+  "1635720180000": [
+    {
+      "incTime": "1635720187000",
+      "rule": "time-out",
+      "vehicleId": "鲁UY9997-1"
+    }
+  ],
+  "1635720260000": [
+    {
+      "incTime": "1635720268000",
+      "rule": "time-out",
+      "vehicleId": "冀J8N086-1"
+    }
+  ],
+  "1635720660000": [
+    {
+      "incTime": "1635720678000",
+      "rule": "time-out",
+      "vehicleId": "京AKH936-1"
+    }
+  ],
+  "1635720700000": [
+    {
+      "incTime": "1635720705000",
+      "rule": "time-out",
+      "vehicleId": "豫EN5276-1"
+    }
+  ],
+  "1635720760000": [
+    {
+      "incTime": "1635720773000",
+      "rule": "time-out",
+      "vehicleId": "冀ES0146-1"
+    }
+  ],
+  "1635720780000": [
+    {
+      "incTime": "1635720790000",
+      "rule": "time-out",
+      "vehicleId": "沪EB0833-1"
+    }
+  ],
+  "1635720940000": [
+    {
+      "incTime": "1635720944000",
+      "rule": "time-out",
+      "vehicleId": "鲁H27J83-1"
+    }
+  ],
+  "1635720980000": [
+    {
+      "incTime": "1635720994000",
+      "rule": "time-out",
+      "vehicleId": "鲁K56765-1"
+    }
+  ],
+  "1635721020000": [
+    {
+      "incTime": "1635721037000",
+      "rule": "time-out",
+      "vehicleId": "鲁NE1191-1"
+    }
+  ],
+  "1635721040000": [
+    {
+      "incTime": "1635721056000",
+      "rule": "time-out",
+      "vehicleId": "鲁NB7791-1"
+    }
+  ],
+  "1635721200000": [
+    {
+      "incTime": "1635721209000",
+      "rule": "time-out",
+      "vehicleId": "豫FA8006-1"
+    },
+    {
+      "incTime": "1635721217000",
+      "rule": "time-out",
+      "vehicleId": "苏CMZ582-1"
+    }
+  ],
+  "1635721420000": [
+    {
+      "incTime": "1635721425000",
+      "rule": "time-out",
+      "vehicleId": "冀ER2599-1"
+    }
+  ],
+  "1635721540000": [
+    {
+      "incTime": "1635721545000",
+      "rule": "time-out",
+      "vehicleId": "鲁HH39T3-0"
+    }
+  ],
+  "1635721580000": [
+    {
+      "incTime": "1635721589000",
+      "rule": "time-out",
+      "vehicleId": "冀DX8345-1"
+    }
+  ],
+  "1635721660000": [
+    {
+      "incTime": "1635721666000",
+      "rule": "time-out",
+      "vehicleId": "鲁PT0131-1"
+    }
+  ],
+  "1635721700000": [
+    {
+      "incTime": "1635721703000",
+      "rule": "time-out",
+      "vehicleId": "晋M10072-1"
+    }
+  ],
+  "1635721780000": [
+    {
+      "incTime": "1635721781000",
+      "rule": "time-out",
+      "vehicleId": "冀R97360-1"
+    }
+  ],
+  "1635721960000": [
+    {
+      "incTime": "1635721963000",
+      "rule": "time-out",
+      "vehicleId": "鲁H90D21-1"
+    }
+  ],
+  "1635722020000": [
+    {
+      "incTime": "1635722033000",
+      "rule": "time-out",
+      "vehicleId": "鲁AH81N9-0"
+    }
+  ],
+  "1635722620000": [
+    {
+      "incTime": "1635722634000",
+      "rule": "time-out",
+      "vehicleId": "冀E5067Y-1"
+    }
+  ],
+  "1635722700000": [
+    {
+      "incTime": "1635722700000",
+      "rule": "time-out",
+      "vehicleId": "豫GF2687-1"
+    }
+  ],
+  "1635722840000": [
+    {
+      "incTime": "1635722859000",
+      "rule": "time-out",
+      "vehicleId": "冀B0229Y-1"
+    }
+  ],
+  "1635722880000": [
+    {
+      "incTime": "1635722895000",
+      "rule": "time-out",
+      "vehicleId": "冀D5E187-1"
+    }
+  ],
+  "1635722980000": [
+    {
+      "incTime": "1635722983000",
+      "rule": "time-out",
+      "vehicleId": "鲁PU7032-1"
+    }
+  ],
+  "1635723080000": [
+    {
+      "incTime": "1635723089000",
+      "rule": "time-out",
+      "vehicleId": "辽GL8792-1"
+    }
+  ],
+  "1635723100000": [
+    {
+      "incTime": "1635723107000",
+      "rule": "time-out",
+      "vehicleId": "晋KY1023-1"
+    }
+  ],
+  "1635723220000": [
+    {
+      "incTime": "1635723232000",
+      "rule": "time-out",
+      "vehicleId": "冀A143AL-1"
+    }
+  ],
+  "1635723600000": [
+    {
+      "incTime": "1635723600000",
+      "rule": "time-out",
+      "vehicleId": "苏A5C828-1"
+    }
+  ],
+  "1635723900000": [
+    {
+      "incTime": "1635723915000",
+      "rule": "time-out",
+      "vehicleId": "鲁U37U29-0"
+    }
+  ],
+  "1635723940000": [
+    {
+      "incTime": "1635723948000",
+      "rule": "time-out",
+      "vehicleId": "冀J8F067-1"
+    }
+  ],
+  "1635723960000": [
+    {
+      "incTime": "1635723975000",
+      "rule": "time-out",
+      "vehicleId": "鲁GV3861-1"
+    }
+  ],
+  "1635724200000": [
+    {
+      "incTime": "1635724206000",
+      "rule": "time-out",
+      "vehicleId": "冀RN7E37-0"
+    }
+  ],
+  "1635724400000": [
+    {
+      "incTime": "1635724401000",
+      "rule": "time-out",
+      "vehicleId": "苏K78623-1"
+    }
+  ],
+  "1635724420000": [
+    {
+      "incTime": "1635724436000",
+      "rule": "time-out",
+      "vehicleId": "冀A5N7X0-0"
+    }
+  ],
+  "1635725320000": [
+    {
+      "incTime": "1635725332000",
+      "rule": "time-out",
+      "vehicleId": "鲁DF1976-1"
+    }
+  ],
+  "1635725520000": [
+    {
+      "incTime": "1635725522000",
+      "rule": "diff-passid",
+      "vehicleId": "冀GK1398-1"
+    }
+  ],
+  "1635725640000": [
+    {
+      "incTime": "1635725648000",
+      "rule": "time-out",
+      "vehicleId": "鲁HG29P7-0"
+    }
+  ],
+  "1635725660000": [
+    {
+      "incTime": "1635725678000",
+      "rule": "time-out",
+      "vehicleId": "辽HJ8569-1"
+    }
+  ],
+  "1635725700000": [
+    {
+      "incTime": "1635725711000",
+      "rule": "time-out",
+      "vehicleId": "冀J0H569-0"
+    }
+  ],
+  "1635725860000": [
+    {
+      "incTime": "1635725868000",
+      "rule": "time-out",
+      "vehicleId": "苏CS3J13-0"
+    }
+  ],
+  "1635726040000": [
+    {
+      "incTime": "1635726052000",
+      "rule": "time-out",
+      "vehicleId": "鲁PW1963-1"
+    }
+  ],
+  "1635726420000": [
+    {
+      "incTime": "1635726428000",
+      "rule": "time-out",
+      "vehicleId": "辽G782C8-0"
+    }
+  ],
+  "1635727080000": [
+    {
+      "incTime": "1635727094000",
+      "rule": "time-out",
+      "vehicleId": "冀JP3310-1"
+    }
+  ],
+  "1635727140000": [
+    {
+      "incTime": "1635727154000",
+      "rule": "time-out",
+      "vehicleId": "吉CB6013-1"
+    }
+  ],
+  "1635727280000": [
+    {
+      "incTime": "1635727298000",
+      "rule": "diff-passid",
+      "vehicleId": "冀A56W39-1"
+    }
+  ],
+  "1635727400000": [
+    {
+      "incTime": "1635727413000",
+      "rule": "time-out",
+      "vehicleId": "冀A7262U-1"
+    }
+  ],
+  "1635727460000": [
+    {
+      "incTime": "1635727475000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁RN1804-1"
+    }
+  ],
+  "1635727520000": [
+    {
+      "incTime": "1635727537000",
+      "rule": "diff-passid",
+      "vehicleId": "豫N8952T-0"
+    }
+  ],
+  "1635727680000": [
+    {
+      "incTime": "1635727681000",
+      "rule": "time-out",
+      "vehicleId": "豫N96E6C-0"
+    }
+  ],
+  "1635727920000": [
+    {
+      "incTime": "1635727939000",
+      "rule": "time-out",
+      "vehicleId": "辽HN1065-1"
+    }
+  ],
+  "1635728160000": [
+    {
+      "incTime": "1635728161000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁J339AW-0"
+    },
+    {
+      "incTime": "1635728162000",
+      "rule": "diff-passid",
+      "vehicleId": "冀FU3198-1"
+    }
+  ],
+  "1635728220000": [
+    {
+      "incTime": "1635728233000",
+      "rule": "diff-passid",
+      "vehicleId": "吉BE2520-1"
+    }
+  ],
+  "1635728260000": [
+    {
+      "incTime": "1635728260000",
+      "rule": "time-out",
+      "vehicleId": "豫EU2U16-0"
+    }
+  ],
+  "1635728500000": [
+    {
+      "incTime": "1635728501000",
+      "rule": "time-out",
+      "vehicleId": "皖K9H297-1"
+    }
+  ],
+  "1635728760000": [
+    {
+      "incTime": "1635728763000",
+      "rule": "time-out",
+      "vehicleId": "冀J9X916-1"
+    }
+  ],
+  "1635728780000": [
+    {
+      "incTime": "1635728792000",
+      "rule": "time-out",
+      "vehicleId": "鲁UL2532-1"
+    }
+  ],
+  "1635729040000": [
+    {
+      "incTime": "1635729052000",
+      "rule": "time-out",
+      "vehicleId": "苏J5ZY87-0"
+    }
+  ],
+  "1635729260000": [
+    {
+      "incTime": "1635729279000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁NMZ768-0"
+    }
+  ],
+  "1635730240000": [
+    {
+      "incTime": "1635730254000",
+      "rule": "time-out",
+      "vehicleId": "豫CET173-7"
+    },
+    {
+      "incTime": "1635730257000",
+      "rule": "time-out",
+      "vehicleId": "鲁AG7052-1"
+    }
+  ],
+  "1635730440000": [
+    {
+      "incTime": "1635730449000",
+      "rule": "time-out",
+      "vehicleId": "冀JU9962-1"
+    }
+  ],
+  "1635730680000": [
+    {
+      "incTime": "1635730690000",
+      "rule": "time-out",
+      "vehicleId": "冀TV9R13-0"
+    }
+  ],
+  "1635730700000": [
+    {
+      "incTime": "1635730718000",
+      "rule": "time-out",
+      "vehicleId": "豫CET168-7"
+    }
+  ],
+  "1635730840000": [
+    {
+      "incTime": "1635730846000",
+      "rule": "time-out",
+      "vehicleId": "鲁M3A716-1"
+    }
+  ],
+  "1635730880000": [
+    {
+      "incTime": "1635730895000",
+      "rule": "diff-passid",
+      "vehicleId": "冀J196BN-0"
+    }
+  ],
+  "1635731040000": [
+    {
+      "incTime": "1635731044000",
+      "rule": "time-out",
+      "vehicleId": "冀T63423-1"
+    }
+  ],
+  "1635731460000": [
+    {
+      "incTime": "1635731475000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁R3V53Q-0"
+    }
+  ],
+  "1635732260000": [
+    {
+      "incTime": "1635732268000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁DJ995P-0"
+    }
+  ],
+  "1635732900000": [
+    {
+      "incTime": "1635732916000",
+      "rule": "time-out",
+      "vehicleId": "鲁J67955-1"
+    }
+  ],
+  "1635733600000": [
+    {
+      "incTime": "1635733614000",
+      "rule": "diff-passid",
+      "vehicleId": "冀JW136Q-0"
+    }
+  ],
+  "1635733660000": [
+    {
+      "incTime": "1635733660000",
+      "rule": "diff-passid",
+      "vehicleId": "皖LNB005-0"
+    }
+  ],
+  "1635733700000": [
+    {
+      "incTime": "1635733701000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁R88U62-0"
+    }
+  ],
+  "1635733800000": [
+    {
+      "incTime": "1635733818000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁BF329W-0"
+    }
+  ],
+  "1635734120000": [
+    {
+      "incTime": "1635734131000",
+      "rule": "time-out",
+      "vehicleId": "鲁DAA050-0"
+    }
+  ],
+  "1635734460000": [
+    {
+      "incTime": "1635734479000",
+      "rule": "time-out",
+      "vehicleId": "鲁RM8763-1"
+    }
+  ],
+  "1635734960000": [
+    {
+      "incTime": "1635734966000",
+      "rule": "diff-passid",
+      "vehicleId": "京GVQ998-0"
+    }
+  ],
+  "1635735120000": [
+    {
+      "incTime": "1635735130000",
+      "rule": "time-out",
+      "vehicleId": "苏CJV390-1"
+    }
+  ],
+  "1635735260000": [
+    {
+      "incTime": "1635735265000",
+      "rule": "time-out",
+      "vehicleId": "鲁UJ2205-1"
+    }
+  ],
+  "1635735300000": [
+    {
+      "incTime": "1635735301000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁R5E60D-0"
+    }
+  ],
+  "1635735360000": [
+    {
+      "incTime": "1635735366000",
+      "rule": "time-out",
+      "vehicleId": "鲁UTQ076-0"
+    }
+  ],
+  "1635735800000": [
+    {
+      "incTime": "1635735805000",
+      "rule": "time-out",
+      "vehicleId": "鲁Q891RV-1"
+    }
+  ],
+  "1635736380000": [
+    {
+      "incTime": "1635736388000",
+      "rule": "diff-passid",
+      "vehicleId": "冀EYK197-0"
+    }
+  ],
+  "1635736980000": [
+    {
+      "incTime": "1635736988000",
+      "rule": "time-out",
+      "vehicleId": "苏A1B802-1"
+    }
+  ],
+  "1635737160000": [
+    {
+      "incTime": "1635737179000",
+      "rule": "diff-passid",
+      "vehicleId": "京CKG203-0"
+    }
+  ],
+  "1635737660000": [
+    {
+      "incTime": "1635737674000",
+      "rule": "diff-passid",
+      "vehicleId": "辽L58677-1"
+    }
+  ],
+  "1635737920000": [
+    {
+      "incTime": "1635737937000",
+      "rule": "time-out",
+      "vehicleId": "鲁NN57P7-0"
+    }
+  ],
+  "1635738340000": [
+    {
+      "incTime": "1635738345000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁UL6980-1"
+    }
+  ],
+  "1635738560000": [
+    {
+      "incTime": "1635738563000",
+      "rule": "diff-passid",
+      "vehicleId": "辽HN1065-1"
+    }
+  ],
+  "1635738700000": [
+    {
+      "incTime": "1635738717000",
+      "rule": "diff-passid",
+      "vehicleId": "冀AF77X9-0"
+    }
+  ],
+  "1635739320000": [
+    {
+      "incTime": "1635739325000",
+      "rule": "time-out",
+      "vehicleId": "鲁JA3422-1"
+    }
+  ],
+  "1635739660000": [
+    {
+      "incTime": "1635739675000",
+      "rule": "diff-passid",
+      "vehicleId": "皖M0A639-1"
+    }
+  ],
+  "1635740100000": [
+    {
+      "incTime": "1635740107000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁Q867GG-1"
+    }
+  ],
+  "1635740680000": [
+    {
+      "incTime": "1635740680000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁R1KJ68-0"
+    }
+  ],
+  "1635741440000": [
+    {
+      "incTime": "1635741458000",
+      "rule": "time-out",
+      "vehicleId": "辽A8L53K-0"
+    },
+    {
+      "incTime": "1635741459000",
+      "rule": "time-out",
+      "vehicleId": "辽B64B27-0"
+    }
+  ],
+  "1635741640000": [
+    {
+      "incTime": "1635741641000",
+      "rule": "time-out",
+      "vehicleId": "鲁RM8773-1"
+    }
+  ],
+  "1635741920000": [
+    {
+      "incTime": "1635741936000",
+      "rule": "time-out",
+      "vehicleId": "鲁L65153-1"
+    }
+  ],
+  "1635742580000": [
+    {
+      "incTime": "1635742584000",
+      "rule": "diff-passid",
+      "vehicleId": "冀J0A169-1"
+    }
+  ],
+  "1635742860000": [
+    {
+      "incTime": "1635742878000",
+      "rule": "diff-passid",
+      "vehicleId": "冀ET4406-1"
+    }
+  ],
+  "1635743760000": [
+    {
+      "incTime": "1635743778000",
+      "rule": "diff-passid",
+      "vehicleId": "冀EF617D-0"
+    }
+  ],
+  "1635744020000": [
+    {
+      "incTime": "1635744035000",
+      "rule": "time-out",
+      "vehicleId": "鲁Q757FH-1"
+    }
+  ],
+  "1635744220000": [
+    {
+      "incTime": "1635744227000",
+      "rule": "time-out",
+      "vehicleId": "鲁RL9337-1"
+    }
+  ],
+  "1635744280000": [
+    {
+      "incTime": "1635744294000",
+      "rule": "time-out",
+      "vehicleId": "鲁H69W26-1"
+    }
+  ],
+  "1635744500000": [
+    {
+      "incTime": "1635744510000",
+      "rule": "time-out",
+      "vehicleId": "冀JUL352-0"
+    }
+  ],
+  "1635744900000": [
+    {
+      "incTime": "1635744904000",
+      "rule": "time-out",
+      "vehicleId": "鲁R6HV98-0"
+    }
+  ],
+  "1635745040000": [
+    {
+      "incTime": "1635745048000",
+      "rule": "time-out",
+      "vehicleId": "鲁NMA257-0"
+    }
+  ],
+  "1635745360000": [
+    {
+      "incTime": "1635745371000",
+      "rule": "time-out",
+      "vehicleId": "京P639K0-0"
+    }
+  ],
+  "1635745560000": [
+    {
+      "incTime": "1635745563000",
+      "rule": "time-out",
+      "vehicleId": "鲁Q5B8D0-0"
+    }
+  ],
+  "1635745780000": [
+    {
+      "incTime": "1635745784000",
+      "rule": "time-out",
+      "vehicleId": "鲁LF630K-0"
+    }
+  ],
+  "1635746240000": [
+    {
+      "incTime": "1635746255000",
+      "rule": "diff-passid",
+      "vehicleId": "冀EP0755-1"
+    }
+  ],
+  "1635746940000": [
+    {
+      "incTime": "1635746942000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁N679JF-0"
+    }
+  ],
+  "1635747020000": [
+    {
+      "incTime": "1635747036000",
+      "rule": "time-out",
+      "vehicleId": "鲁Q197GN-0"
+    }
+  ],
+  "1635748200000": [
+    {
+      "incTime": "1635748207000",
+      "rule": "time-out",
+      "vehicleId": "鲁AM9931-1"
+    }
+  ],
+  "1635748360000": [
+    {
+      "incTime": "1635748360000",
+      "rule": "time-out",
+      "vehicleId": "鲁PW6639-1"
+    }
+  ],
+  "1635749120000": [
+    {
+      "incTime": "1635749139000",
+      "rule": "time-out",
+      "vehicleId": "皖M25858-1"
+    }
+  ],
+  "1635749200000": [
+    {
+      "incTime": "1635749215000",
+      "rule": "time-out",
+      "vehicleId": "鲁F666DN-7"
+    }
+  ],
+  "1635749400000": [
+    {
+      "incTime": "1635749406000",
+      "rule": "time-out",
+      "vehicleId": "苏C859WE-0"
+    },
+    {
+      "incTime": "1635749416000",
+      "rule": "time-out",
+      "vehicleId": "鲁P675RD-0"
+    }
+  ],
+  "1635749500000": [
+    {
+      "incTime": "1635749500000",
+      "rule": "time-out",
+      "vehicleId": "鲁H062MG-0"
+    }
+  ],
+  "1635749560000": [
+    {
+      "incTime": "1635749562000",
+      "rule": "time-out",
+      "vehicleId": "鲁HE3672-1"
+    }
+  ],
+  "1635749700000": [
+    {
+      "incTime": "1635749705000",
+      "rule": "diff-passid",
+      "vehicleId": "贵CE733T-0"
+    }
+  ],
+  "1635749900000": [
+    {
+      "incTime": "1635749901000",
+      "rule": "time-out",
+      "vehicleId": "京ABU085-0"
+    }
+  ],
+  "1635750040000": [
+    {
+      "incTime": "1635750054000",
+      "rule": "diff-passid",
+      "vehicleId": "豫F2F503-0"
+    }
+  ],
+  "1635750160000": [
+    {
+      "incTime": "1635750173000",
+      "rule": "time-out",
+      "vehicleId": "鲁B6E9R3-7"
+    }
+  ],
+  "1635750300000": [
+    {
+      "incTime": "1635750307000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁HP6839-1"
+    }
+  ],
+  "1635750520000": [
+    {
+      "incTime": "1635750523000",
+      "rule": "time-out",
+      "vehicleId": "鲁BQ93K2-0"
+    },
+    {
+      "incTime": "1635750537000",
+      "rule": "diff-passid",
+      "vehicleId": "冀A672NY-1"
+    }
+  ],
+  "1635750560000": [
+    {
+      "incTime": "1635750571000",
+      "rule": "time-out",
+      "vehicleId": "鲁H704ED-7"
+    }
+  ],
+  "1635750580000": [
+    {
+      "incTime": "1635750593000",
+      "rule": "diff-passid",
+      "vehicleId": "冀J196BN-0"
+    }
+  ],
+  "1635750740000": [
+    {
+      "incTime": "1635750757000",
+      "rule": "time-out",
+      "vehicleId": "鲁E713KZ-0"
+    }
+  ],
+  "1635750780000": [
+    {
+      "incTime": "1635750794000",
+      "rule": "time-out",
+      "vehicleId": "鲁G171RY-0"
+    }
+  ],
+  "1635751620000": [
+    {
+      "incTime": "1635751625000",
+      "rule": "time-out",
+      "vehicleId": "鲁MJA552-0"
+    },
+    {
+      "incTime": "1635751633000",
+      "rule": "time-out",
+      "vehicleId": "鲁Q9937S-7"
+    }
+  ],
+  "1635751860000": [
+    {
+      "incTime": "1635751877000",
+      "rule": "time-out",
+      "vehicleId": "鲁NMZ768-0"
+    }
+  ],
+  "1635752260000": [
+    {
+      "incTime": "1635752263000",
+      "rule": "time-out",
+      "vehicleId": "鲁NY2966-1"
+    }
+  ],
+  "1635752280000": [
+    {
+      "incTime": "1635752296000",
+      "rule": "time-out",
+      "vehicleId": "鲁K1C665-0"
+    }
+  ],
+  "1635752320000": [
+    {
+      "incTime": "1635752320000",
+      "rule": "diff-passid",
+      "vehicleId": "冀ER8935-1"
+    }
+  ],
+  "1635752360000": [
+    {
+      "incTime": "1635752371000",
+      "rule": "time-out",
+      "vehicleId": "鲁CL1511-1"
+    }
+  ],
+  "1635752460000": [
+    {
+      "incTime": "1635752462000",
+      "rule": "time-out",
+      "vehicleId": "鲁MA7629-1"
+    }
+  ],
+  "1635753220000": [
+    {
+      "incTime": "1635753230000",
+      "rule": "time-out",
+      "vehicleId": "鲁YT7770-0"
+    }
+  ],
+  "1635753260000": [
+    {
+      "incTime": "1635753261000",
+      "rule": "time-out",
+      "vehicleId": "鲁A3G803-0"
+    }
+  ],
+  "1635753540000": [
+    {
+      "incTime": "1635753557000",
+      "rule": "time-out",
+      "vehicleId": "鲁MY8C22-0"
+    }
+  ],
+  "1635753700000": [
+    {
+      "incTime": "1635753719000",
+      "rule": "time-out",
+      "vehicleId": "皖BY008X-0"
+    }
+  ],
+  "1635753820000": [
+    {
+      "incTime": "1635753821000",
+      "rule": "diff-passid",
+      "vehicleId": "皖K889E2-0"
+    }
+  ],
+  "1635753840000": [
+    {
+      "incTime": "1635753840000",
+      "rule": "time-out",
+      "vehicleId": "鲁J5L512-0"
+    },
+    {
+      "incTime": "1635753850000",
+      "rule": "time-out",
+      "vehicleId": "鲁CX752M-0"
+    }
+  ],
+  "1635753880000": [
+    {
+      "incTime": "1635753880000",
+      "rule": "diff-passid",
+      "vehicleId": "豫N27L32-0"
+    }
+  ],
+  "1635753900000": [
+    {
+      "incTime": "1635753903000",
+      "rule": "time-out",
+      "vehicleId": "吉CE1872-1"
+    }
+  ],
+  "1635754420000": [
+    {
+      "incTime": "1635754438000",
+      "rule": "time-out",
+      "vehicleId": "鲁Q5508W-0"
+    }
+  ],
+  "1635754840000": [
+    {
+      "incTime": "1635754847000",
+      "rule": "time-out",
+      "vehicleId": "鲁A9HU78-7"
+    }
+  ],
+  "1635754900000": [
+    {
+      "incTime": "1635754904000",
+      "rule": "time-out",
+      "vehicleId": "鲁A136A2-0"
+    }
+  ],
+  "1635754980000": [
+    {
+      "incTime": "1635754980000",
+      "rule": "time-out",
+      "vehicleId": "津RTL591-0"
+    }
+  ],
+  "1635755080000": [
+    {
+      "incTime": "1635755085000",
+      "rule": "time-out",
+      "vehicleId": "鲁NY3866-1"
+    }
+  ],
+  "1635755180000": [
+    {
+      "incTime": "1635755185000",
+      "rule": "time-out",
+      "vehicleId": "鲁HT2Z93-0"
+    }
+  ],
+  "1635755220000": [
+    {
+      "incTime": "1635755235000",
+      "rule": "time-out",
+      "vehicleId": "鲁ND16F5-0"
+    }
+  ],
+  "1635755460000": [
+    {
+      "incTime": "1635755470000",
+      "rule": "diff-passid",
+      "vehicleId": "皖K3217R-0"
+    }
+  ],
+  "1635755780000": [
+    {
+      "incTime": "1635755798000",
+      "rule": "time-out",
+      "vehicleId": "豫DL6895-7"
+    }
+  ],
+  "1635755860000": [
+    {
+      "incTime": "1635755862000",
+      "rule": "time-out",
+      "vehicleId": "鲁Q7253G-1"
+    },
+    {
+      "incTime": "1635755878000",
+      "rule": "time-out",
+      "vehicleId": "鲁QU3W37-0"
+    }
+  ],
+  "1635756000000": [
+    {
+      "incTime": "1635756010000",
+      "rule": "time-out",
+      "vehicleId": "鲁AK2U36-0"
+    }
+  ],
+  "1635756040000": [
+    {
+      "incTime": "1635756044000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁Q708JU-1"
+    }
+  ],
+  "1635756300000": [
+    {
+      "incTime": "1635756315000",
+      "rule": "time-out",
+      "vehicleId": "鲁RR7630-1"
+    }
+  ],
+  "1635756420000": [
+    {
+      "incTime": "1635756429000",
+      "rule": "time-out",
+      "vehicleId": "浙AC51N7-0"
+    }
+  ],
+  "1635756480000": [
+    {
+      "incTime": "1635756487000",
+      "rule": "time-out",
+      "vehicleId": "鲁C6H115-0"
+    }
+  ],
+  "1635756580000": [
+    {
+      "incTime": "1635756593000",
+      "rule": "time-out",
+      "vehicleId": "鲁R9EG19-0"
+    }
+  ],
+  "1635756640000": [
+    {
+      "incTime": "1635756651000",
+      "rule": "diff-passid",
+      "vehicleId": "冀A980V3-1"
+    }
+  ],
+  "1635756680000": [
+    {
+      "incTime": "1635756681000",
+      "rule": "time-out",
+      "vehicleId": "冀J9A599-1"
+    }
+  ],
+  "1635756920000": [
+    {
+      "incTime": "1635756921000",
+      "rule": "time-out",
+      "vehicleId": "鲁F7BG89-0"
+    }
+  ],
+  "1635756960000": [
+    {
+      "incTime": "1635756974000",
+      "rule": "time-out",
+      "vehicleId": "鲁FER887-1"
+    }
+  ],
+  "1635757000000": [
+    {
+      "incTime": "1635757006000",
+      "rule": "time-out",
+      "vehicleId": "鲁PU0T90-0"
+    },
+    {
+      "incTime": "1635757013000",
+      "rule": "time-out",
+      "vehicleId": "鲁B4L0S3-7"
+    }
+  ],
+  "1635757060000": [
+    {
+      "incTime": "1635757073000",
+      "rule": "time-out",
+      "vehicleId": "冀JU5785-1"
+    }
+  ],
+  "1635757200000": [
+    {
+      "incTime": "1635757208000",
+      "rule": "time-out",
+      "vehicleId": "鲁E8501J-0"
+    }
+  ],
+  "1635757300000": [
+    {
+      "incTime": "1635757306000",
+      "rule": "time-out",
+      "vehicleId": "鲁C888ED-0"
+    },
+    {
+      "incTime": "1635757314000",
+      "rule": "time-out",
+      "vehicleId": "鲁AL2X07-0"
+    }
+  ],
+  "1635757340000": [
+    {
+      "incTime": "1635757350000",
+      "rule": "time-out",
+      "vehicleId": "鲁NE2710-1"
+    }
+  ],
+  "1635757380000": [
+    {
+      "incTime": "1635757393000",
+      "rule": "time-out",
+      "vehicleId": "鲁NW5892-0"
+    }
+  ],
+  "1635757440000": [
+    {
+      "incTime": "1635757455000",
+      "rule": "diff-passid",
+      "vehicleId": "豫PVU861-0"
+    }
+  ],
+  "1635757460000": [
+    {
+      "incTime": "1635757475000",
+      "rule": "time-out",
+      "vehicleId": "鲁AGL599-0"
+    }
+  ],
+  "1635757520000": [
+    {
+      "incTime": "1635757534000",
+      "rule": "time-out",
+      "vehicleId": "鲁G13K03-0"
+    }
+  ],
+  "1635757700000": [
+    {
+      "incTime": "1635757711000",
+      "rule": "time-out",
+      "vehicleId": "冀J1W308-1"
+    }
+  ],
+  "1635757960000": [
+    {
+      "incTime": "1635757960000",
+      "rule": "time-out",
+      "vehicleId": "鲁B19H1N-0"
+    }
+  ],
+  "1635758340000": [
+    {
+      "incTime": "1635758348000",
+      "rule": "time-out",
+      "vehicleId": "鲁M12G16-0"
+    }
+  ],
+  "1635758480000": [
+    {
+      "incTime": "1635758496000",
+      "rule": "time-out",
+      "vehicleId": "鲁QM0X72-0"
+    }
+  ],
+  "1635758580000": [
+    {
+      "incTime": "1635758596000",
+      "rule": "time-out",
+      "vehicleId": "鲁A9P3G2-0"
+    }
+  ],
+  "1635758740000": [
+    {
+      "incTime": "1635758756000",
+      "rule": "time-out",
+      "vehicleId": "鲁RKA883-7"
+    }
+  ],
+  "1635759100000": [
+    {
+      "incTime": "1635759118000",
+      "rule": "time-out",
+      "vehicleId": "鲁B7Q60Y-0"
+    }
+  ],
+  "1635759160000": [
+    {
+      "incTime": "1635759161000",
+      "rule": "time-out",
+      "vehicleId": "鲁A8D75W-0"
+    }
+  ],
+  "1635759340000": [
+    {
+      "incTime": "1635759353000",
+      "rule": "time-out",
+      "vehicleId": "鲁B09QH9-0"
+    }
+  ],
+  "1635759500000": [
+    {
+      "incTime": "1635759509000",
+      "rule": "time-out",
+      "vehicleId": "冀TD6G27-0"
+    }
+  ],
+  "1635759520000": [
+    {
+      "incTime": "1635759526000",
+      "rule": "time-out",
+      "vehicleId": "鲁C9Y779-0"
+    }
+  ],
+  "1635759620000": [
+    {
+      "incTime": "1635759624000",
+      "rule": "time-out",
+      "vehicleId": "豫E68H93-0"
+    }
+  ],
+  "1635759840000": [
+    {
+      "incTime": "1635759853000",
+      "rule": "time-out",
+      "vehicleId": "鲁CZ223P-0"
+    }
+  ],
+  "1635759920000": [
+    {
+      "incTime": "1635759932000",
+      "rule": "time-out",
+      "vehicleId": "鲁E862DG-0"
+    }
+  ],
+  "1635760000000": [
+    {
+      "incTime": "1635760009000",
+      "rule": "time-out",
+      "vehicleId": "鲁C6FY05-0"
+    }
+  ],
+  "1635760260000": [
+    {
+      "incTime": "1635760263000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁RN139M-0"
+    }
+  ],
+  "1635760440000": [
+    {
+      "incTime": "1635760446000",
+      "rule": "time-out",
+      "vehicleId": "鲁AG6551-1"
+    }
+  ],
+  "1635760500000": [
+    {
+      "incTime": "1635760512000",
+      "rule": "time-out",
+      "vehicleId": "鲁P666X3-0"
+    },
+    {
+      "incTime": "1635760519000",
+      "rule": "time-out",
+      "vehicleId": "鲁D96W97-7"
+    }
+  ],
+  "1635760560000": [
+    {
+      "incTime": "1635760566000",
+      "rule": "time-out",
+      "vehicleId": "鲁Q0V1H1-0"
+    }
+  ],
+  "1635760640000": [
+    {
+      "incTime": "1635760650000",
+      "rule": "time-out",
+      "vehicleId": "鲁E6969T-0"
+    },
+    {
+      "incTime": "1635760654000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁A9P78S-0"
+    }
+  ],
+  "1635760700000": [
+    {
+      "incTime": "1635760710000",
+      "rule": "time-out",
+      "vehicleId": "鲁BV87E9-7"
+    }
+  ],
+  "1635760820000": [
+    {
+      "incTime": "1635760823000",
+      "rule": "time-out",
+      "vehicleId": "鲁L57353-1"
+    }
+  ],
+  "1635760900000": [
+    {
+      "incTime": "1635760918000",
+      "rule": "time-out",
+      "vehicleId": "鲁AUC367-0"
+    }
+  ],
+  "1635761620000": [
+    {
+      "incTime": "1635761634000",
+      "rule": "time-out",
+      "vehicleId": "鲁DU038Z-0"
+    }
+  ],
+  "1635761720000": [
+    {
+      "incTime": "1635761721000",
+      "rule": "time-out",
+      "vehicleId": "鲁CYU311-0"
+    }
+  ],
+  "1635761920000": [
+    {
+      "incTime": "1635761926000",
+      "rule": "time-out",
+      "vehicleId": "鲁A3Q3C2-0"
+    }
+  ],
+  "1635761980000": [
+    {
+      "incTime": "1635761991000",
+      "rule": "time-out",
+      "vehicleId": "鲁A2FR18-0"
+    }
+  ],
+  "1635762780000": [
+    {
+      "incTime": "1635762782000",
+      "rule": "time-out",
+      "vehicleId": "鲁NJ891D-0"
+    }
+  ],
+  "1635762940000": [
+    {
+      "incTime": "1635762949000",
+      "rule": "time-out",
+      "vehicleId": "鲁JA7809-1"
+    }
+  ],
+  "1635763300000": [
+    {
+      "incTime": "1635763312000",
+      "rule": "time-out",
+      "vehicleId": "鲁L59621-1"
+    }
+  ],
+  "1635763380000": [
+    {
+      "incTime": "1635763380000",
+      "rule": "time-out",
+      "vehicleId": "鲁P987MC-0"
+    }
+  ],
+  "1635763520000": [
+    {
+      "incTime": "1635763522000",
+      "rule": "diff-passid",
+      "vehicleId": "冀AX868C-0"
+    }
+  ],
+  "1635763700000": [
+    {
+      "incTime": "1635763704000",
+      "rule": "time-out",
+      "vehicleId": "苏G0K722-0"
+    }
+  ],
+  "1635763820000": [
+    {
+      "incTime": "1635763837000",
+      "rule": "diff-passid",
+      "vehicleId": "冀EW9738-1"
+    }
+  ],
+  "1635764240000": [
+    {
+      "incTime": "1635764243000",
+      "rule": "time-out",
+      "vehicleId": "鲁VQF825-0"
+    },
+    {
+      "incTime": "1635764245000",
+      "rule": "time-out",
+      "vehicleId": "蒙D45221-0"
+    }
+  ],
+  "1635765400000": [
+    {
+      "incTime": "1635765416000",
+      "rule": "time-out",
+      "vehicleId": "鲁M8504J-0"
+    }
+  ],
+  "1635766500000": [
+    {
+      "incTime": "1635766516000",
+      "rule": "time-out",
+      "vehicleId": "鲁A2D3V0-0"
+    }
+  ],
+  "1635766540000": [
+    {
+      "incTime": "1635766557000",
+      "rule": "time-out",
+      "vehicleId": "鲁R5690D-0"
+    }
+  ],
+  "1635766600000": [
+    {
+      "incTime": "1635766608000",
+      "rule": "time-out",
+      "vehicleId": "鲁HP5737-1"
+    }
+  ],
+  "1635766760000": [
+    {
+      "incTime": "1635766764000",
+      "rule": "time-out",
+      "vehicleId": "鲁PZ883K-0"
+    }
+  ],
+  "1635766800000": [
+    {
+      "incTime": "1635766816000",
+      "rule": "time-out",
+      "vehicleId": "鲁EF7256-1"
+    }
+  ],
+  "1635767360000": [
+    {
+      "incTime": "1635767375000",
+      "rule": "diff-passid",
+      "vehicleId": "冀AT8B62-0"
+    }
+  ],
+  "1635767560000": [
+    {
+      "incTime": "1635767565000",
+      "rule": "time-out",
+      "vehicleId": "苏GMB956-0"
+    }
+  ],
+  "1635767800000": [
+    {
+      "incTime": "1635767808000",
+      "rule": "time-out",
+      "vehicleId": "鲁R9687B-0"
+    }
+  ],
+  "1635768280000": [
+    {
+      "incTime": "1635768283000",
+      "rule": "time-out",
+      "vehicleId": "苏CJL731-1"
+    }
+  ],
+  "1635768300000": [
+    {
+      "incTime": "1635768318000",
+      "rule": "time-out",
+      "vehicleId": "鲁A0Z8W4-7"
+    }
+  ],
+  "1635768380000": [
+    {
+      "incTime": "1635768380000",
+      "rule": "diff-passid",
+      "vehicleId": "冀FZ16K7-0"
+    }
+  ],
+  "1635768540000": [
+    {
+      "incTime": "1635768544000",
+      "rule": "time-out",
+      "vehicleId": "鲁AN23W0-0"
+    }
+  ],
+  "1635768640000": [
+    {
+      "incTime": "1635768640000",
+      "rule": "time-out",
+      "vehicleId": "吉BE5076-1"
+    }
+  ],
+  "1635768960000": [
+    {
+      "incTime": "1635768968000",
+      "rule": "diff-passid",
+      "vehicleId": "鲁RL608W-0"
+    }
+  ],
+  "1635769160000": [
+    {
+      "incTime": "1635769171000",
+      "rule": "time-out",
+      "vehicleId": "鲁JA8161-1"
+    }
+  ],
+  "1635769580000": [
+    {
+      "incTime": "1635769599000",
+      "rule": "time-out",
+      "vehicleId": "鲁NE6855-1"
+    }
+  ],
+  "1635769660000": [
+    {
+      "incTime": "1635769661000",
+      "rule": "time-out",
+      "vehicleId": "鲁JRD031-0"
+    }
+  ],
+  "1635770420000": [
+    {
+      "incTime": "1635770428000",
+      "rule": "time-out",
+      "vehicleId": "黑MJ4019-1"
+    }
+  ],
+  "1635771940000": [
+    {
+      "incTime": "1635771954000",
+      "rule": "time-out",
+      "vehicleId": "苏DK73X3-0"
+    }
+  ],
+  "1635772420000": [
+    {
+      "incTime": "1635772430000",
+      "rule": "time-out",
+      "vehicleId": "冀F608TG-0"
+    }
+  ],
+  "1635772520000": [
+    {
+      "incTime": "1635772525000",
+      "rule": "time-out",
+      "vehicleId": "鲁UL0778-1"
+    }
+  ],
+  "1635773260000": [
+    {
+      "incTime": "1635773278000",
+      "rule": "time-out",
+      "vehicleId": "冀J0J305-1"
+    }
+  ],
+  "1635773340000": [
+    {
+      "incTime": "1635773343000",
+      "rule": "time-out",
+      "vehicleId": "鲁PM2259-1"
+    }
+  ],
+  "1635773480000": [
+    {
+      "incTime": "1635773484000",
+      "rule": "time-out",
+      "vehicleId": "冀JBH252-0"
+    }
+  ],
+  "1635773560000": [
+    {
+      "incTime": "1635773564000",
+      "rule": "time-out",
+      "vehicleId": "苏G33066-1"
+    }
+  ],
+  "1635774080000": [
+    {
+      "incTime": "1635774089000",
+      "rule": "time-out",
+      "vehicleId": "鲁BF329W-0"
+    }
+  ],
+  "1635774780000": [
+    {
+      "incTime": "1635774796000",
+      "rule": "time-out",
+      "vehicleId": "鲁PQ7375-1"
+    }
+  ],
+  "1635776720000": [
+    {
+      "incTime": "1635776723000",
+      "rule": "time-out",
+      "vehicleId": "鲁ND6958-1"
+    }
+  ],
+  "1635777800000": [
+    {
+      "incTime": "1635777808000",
+      "rule": "diff-passid",
+      "vehicleId": "冀J8KY31-0"
+    }
+  ],
+  "1635778700000": [
+    {
+      "incTime": "1635778712000",
+      "rule": "time-out",
+      "vehicleId": "鲁NE1807-1"
+    }
+  ],
+  "1635779060000": [
+    {
+      "incTime": "1635779074000",
+      "rule": "time-out",
+      "vehicleId": "鲁QYN201-0"
+    }
+  ],
+  "1635779140000": [
+    {
+      "incTime": "1635779141000",
+      "rule": "time-out",
+      "vehicleId": "鲁UW9095-1"
+    }
+  ],
+  "1635779200000": [
+    {
+      "incTime": "1635779203000",
+      "rule": "time-out",
+      "vehicleId": "鲁A683N7-0"
+    }
+  ],
+  "1635779700000": [
+    {
+      "incTime": "1635779715000",
+      "rule": "time-out",
+      "vehicleId": "冀J8370Z-0"
+    }
+  ],
+  "1635780820000": [
+    {
+      "incTime": "1635780833000",
+      "rule": "time-out",
+      "vehicleId": "鲁N100LD-0"
+    }
+  ],
+  "1635781160000": [
+    {
+      "incTime": "1635781175000",
+      "rule": "time-out",
+      "vehicleId": "鲁AE19A0-0"
+    }
+  ],
+  "1635781700000": [
+    {
+      "incTime": "1635781717000",
+      "rule": "time-out",
+      "vehicleId": "鲁R568MQ-0"
+    }
+  ]
+}

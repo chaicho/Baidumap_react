@@ -48,7 +48,7 @@ class CanvasJSChart extends React.Component {
 			this.props.onRef(undefined);
 	}
 	render() {
-    console.log(this.options.title.text)
+    // console.log(this.options.title.text)
 		//return React.createElement('div', { id: this.chartContainerId, style: this.containerProps });
 		return <div id={this.chartContainerId} style={this.containerProps} />
 	}

@@ -7,7 +7,9 @@ import { createContext } from 'react';
 import axios from 'axios';
 import './SideBar.css'
 import { timeContext } from '../../Mymap';
-import { RelationList, RuleList } from './RuleList';
+import {  RuleLogs } from './RuleLogs';
+import {  CarLogs } from './CarLogs';
+import { GatePairLogs } from './GatePairLogs';
 export const CarTraceContext = createContext();
 
 export function SideBar() {
@@ -42,8 +44,9 @@ export function SideBar() {
       {/* 门架搜索 */}
       <DeviceSearch/>
       {/* 日志信息 */}
-      <RuleList tick = {tick} sec = {mapsec}></RuleList>  
-    
+      <RuleLogs tick = {tick} sec = {mapsec}></RuleLogs>  
+      <CarLogs tick = {tick} sec = {mapsec}></CarLogs>
+      <GatePairLogs tick = {tick} sec = {mapsec}></GatePairLogs>
 
       <Button onClick={() => setSelected('Button 1')}>Button 1</Button>
       <Button onClick={() => {setSelected('Button 2'); console.log('2')}}>Button 2</Button>
