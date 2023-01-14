@@ -12,6 +12,7 @@ const captionStyle = {
   color: 'black'
 }
 export function GatePairLogs(props) {
+  const columns = ['gatePair','incNumber']
   const [logs, setLogs] = useState([])
   const [curlog, setCurlog] = useState({})
   const addLog = () => {
@@ -28,26 +29,29 @@ export function GatePairLogs(props) {
     <div>
       <table style={{ width: '100%', backgroundColor: '#f2f2f2', height: '200px' }}>
         <caption style={captionStyle}>Rule Log</caption>
+        <thead>
+          <tr>
+            {columns.map(column => (
+              <th key={column}>{column}</th>
+            ))}
+          </tr>
+        </thead>
         <tbody>
           {Object.entries(curlog).map(([key, value]) => {
             if (key === 'incTime') {
-              return (
-                <tr>
-                  <td>{key}</td>
-                  <td>{value}</td>
-                </tr>
-              )
+              return <></>
             }
             else {
               return (
-                Object.entries(value).map(([key1, value1]) => (
                 <tr>
-                  <td>{key1}</td>
-                  <td>{value1}</td>
+                { Object.entries(value).map(([key1, value1]) => (
+                  <td key = {key1} style ={{ 
+                    whiteSpace: 'nowrap',
+                    fontSize: '0.9em' }} >{value1}</td>
+                ))
+                }
                 </tr>
-                )
               )
-            )
             }
           })}
         </tbody>
