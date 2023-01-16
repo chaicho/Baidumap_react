@@ -18,7 +18,7 @@ export function GatePairLogs(props) {
 
   return (
     <div style={{height :'50%',overflowY: 'hidden',overflowX: 'hidden'}} >
-      <table style={{ width: '100%', backgroundColor: '#f0f3fa' }}>
+      <table style={{ width: '100%' }}>
         <caption style={captionStyle}>潜在异常门架TOP10</caption>
         <thead>
           <tr>

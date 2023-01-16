@@ -61,6 +61,7 @@ export function Mymap(props) {
             {/* <VehicleList /> */}
             <SideBar ></SideBar>
             <StaCmp ></StaCmp>
+            
           </Map>
 
         </windowContext.Provider>

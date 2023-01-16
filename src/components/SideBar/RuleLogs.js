@@ -1,8 +1,7 @@
 import { ProPageHeader } from '@ant-design/pro-components';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { captionStyle } from './SideBar';
 const ruledata = require('../../assets/sidebar/rules.json')
-
 export function RuleLogs(props) {
   const [logs, setLogs] = useState([])
   const [curlog, setCurlog] = useState({})
@@ -16,20 +15,35 @@ export function RuleLogs(props) {
     addLog()
   }
     , [props.tick])
+  let currentRow = [];
 
   return (
-    <div style={{ height: '30%',overflowY: 'scroll'}}>
-      <table style={{ width: '100%', backgroundColor: '#f0f3fa' }}>
+    <div style={{ height: '25%', overflowY: 'hidden ' }}>
+      <table style={{ width: '100%' }}>
         <caption style={captionStyle}>整体规则违反情况</caption>
-          <tbody>
-            {Object.entries(curlog).map(([key, value]) => (
-              <tr>
+        <tbody>
+          {Object.entries(curlog).map(([key, value]) => {
+            if (key !== 'incTime') {
+              currentRow.push(
+                <React.Fragment>
                 <td>{key}</td>
                 <td>{value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                </React.Fragment>
+              );
+              if (currentRow.length === 2) {
+                const row = currentRow;
+                currentRow = [];
+                return <tr>{row}</tr>
+              }
+            }
+            else{
+              return <></>
+            }
+          }
+          )}
+            
+        </tbody>
+      </table>
     </div>
   );
 }

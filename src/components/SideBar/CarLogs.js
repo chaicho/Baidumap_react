@@ -29,7 +29,7 @@ export function CarLogs(props) {
     , [props.sec])
 
   return (
-    <div style={{ height: '20%',backgroundColor: '#f0f3fa', overflowY: 'scroll' }}>
+    <div style={{ height: '20%', overflowY: 'scroll' }}>
         <table style={logTableStyle}>
           <caption style={captionStyle}>车辆异常情况</caption>
           <tbody>
