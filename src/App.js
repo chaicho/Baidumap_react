@@ -64,15 +64,6 @@ class App extends React.Component {
               /> 
 
             </div> 
-            <div className="DeviceState">  
-                {/* <SideBar></SideBar> */}
-            </div> 
-            <div  className="SearchBox">
-              {/* <SearchBox onPressEnter={this.handleSearchDevice}/> */}
-            </div>  
-            {/* <div className='PathTimer'> 
-             <PathViewer/> 
-             </div>   */}
             <div className="SelectView">
             <Displaybutton 
               text = '显示路径'
