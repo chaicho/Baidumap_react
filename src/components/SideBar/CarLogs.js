@@ -31,16 +31,14 @@ export function CarLogs(props) {
   return (
     <div style={{ height: '20%',backgroundColor: '#f0f3fa', overflowY: 'scroll' }}>
         <table style={logTableStyle}>
-          <caption style={captionStyle}>Car Log</caption>
+          <caption style={captionStyle}>车辆异常情况</caption>
           <tbody>
             {logs ? logs.map((log, index) => (
               <React.Fragment key={index}>
-                {Object.entries(log).map(([key, value]) => (
-                  <tr key={key}>
-                    <td>{key}</td>
-                    <td>{value}</td>
+                {
+                  <tr>
+                    <td>车辆{log['vehicleId']}于{new Date(log['incTime']).toDateString()}违反规则{log['rule']}</td>  
                   </tr>
-                ))
                 }
                 {index !== logs.length - 1 && <hr style={logTableHrStyle} />}
               </React.Fragment>

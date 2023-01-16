@@ -56,9 +56,9 @@ export function Mymap(props) {
             <ZoomControl />
             {/* <MapTypeControl anchor={2} /> */}
 
-            <Devicelist display={props.displaydevice}></Devicelist>
-            <Roadlist display={props.displayroute}></Roadlist>
-            <VehicleList />
+            {/* <Devicelist display={props.displaydevice}></Devicelist> */}
+            {/* <Roadlist display={props.displayroute}></Roadlist> */}
+            {/* <VehicleList /> */}
             <SideBar ></SideBar>
             <StaCmp ></StaCmp>
           </Map>

@@ -20,7 +20,7 @@ export function RuleLogs(props) {
   return (
     <div style={{ height: '30%',overflowY: 'scroll'}}>
       <table style={{ width: '100%', backgroundColor: '#f0f3fa' }}>
-        <caption style={captionStyle}>Rule Log</caption>
+        <caption style={captionStyle}>整体规则违反情况</caption>
           <tbody>
             {Object.entries(curlog).map(([key, value]) => (
               <tr>

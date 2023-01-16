@@ -19,12 +19,11 @@ export function GatePairLogs(props) {
   return (
     <div style={{height :'50%',overflowY: 'hidden',overflowX: 'hidden'}} >
       <table style={{ width: '100%', backgroundColor: '#f0f3fa' }}>
-        <caption style={captionStyle}>GatePair Log</caption>
+        <caption style={captionStyle}>潜在异常门架TOP10</caption>
         <thead>
           <tr>
-            {columns.map(column => (
-              <th key={column}>{column}</th>
-            ))}
+            <th key='gatePair' > 门架对</th>
+            <th key='Number' > 异常次数</th>
           </tr>
         </thead>
         <tbody>

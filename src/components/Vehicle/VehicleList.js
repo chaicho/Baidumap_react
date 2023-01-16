@@ -39,10 +39,13 @@ export function VehicleList() {
           </Vehicle>
           }
         }
-        )
+      )
       )
       }
-      <div className="time">
+      <div className="time" style={{
+        top: '0',
+        right: '100'
+      }}>
        {new Date(mapsec).toLocaleString()}
       </div>
       </React.Fragment>
