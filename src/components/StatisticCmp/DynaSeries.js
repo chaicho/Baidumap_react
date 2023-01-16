@@ -15,6 +15,7 @@ export function DynaSeries(props) {
   const options ={
     zoomEnabled: true,
     theme: "light1",
+    height: '200',
     title: {
       text: "s1 vs s2"
     },

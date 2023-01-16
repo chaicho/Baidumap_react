@@ -1,26 +1,18 @@
 import { ProPageHeader } from '@ant-design/pro-components';
 import { useEffect, useState } from 'react';
+import { captionStyle } from './SideBar';
 import React from 'react';
 const ruledata = require('../../assets/sidebar/cars.json')
 const logTableStyle = {
-  width: '100%'
+  width: '100%',
+  
 };
 const logTableHrStyle = {
   width: '100%',
   border: 'none',
   borderTop: '1px solid gray'
 }
-const captionStyle = {
-  captionSide: 'top',
-  position: 'sticky',
-  top: 0,
-  backgroundColor: '#f2f2f2',
-  fontSize: '1.5em',
-  fontWeight: 'bold',
-  textAlign: 'left',
-  padding: '10px',
-  color: 'black'
-}
+
 export function CarLogs(props) {
   const [logs, setLogs] = useState([])
   const [curlog, setCurlog] = useState({})
@@ -37,8 +29,7 @@ export function CarLogs(props) {
     , [props.sec])
 
   return (
-    <div>
-      <div style={{ height: '200px',backgroundColor: '#f2f2f2', overflowY: 'scroll' }}>
+    <div style={{ height: '20%',backgroundColor: '#f0f3fa', overflowY: 'scroll' }}>
         <table style={logTableStyle}>
           <caption style={captionStyle}>Car Log</caption>
           <tbody>
@@ -59,7 +50,6 @@ export function CarLogs(props) {
 
         </table>
       </div>
-    </div>
   );
 }
 

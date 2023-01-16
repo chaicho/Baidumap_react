@@ -7,6 +7,7 @@ export function DynaChart(props) {
   const chartRef = useRef();
   const [options, setOptions] = useState( {
     theme: "light1",
+    height: `200`,
     title: {
       text: "CPU Usage"
     },

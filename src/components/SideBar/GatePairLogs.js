@@ -1,18 +1,9 @@
 import { useEffect, useState } from 'react';
+import { captionStyle } from './SideBar';
 const ruledata = require('../../assets/sidebar/gates.json')
-const captionStyle = {
-  captionSide: 'top',
-  position: 'sticky',
-  top: 0,
-  backgroundColor: '#f2f2f2',
-  fontSize: '1.5em',
-  fontWeight: 'bold',
-  textAlign: 'left',
-  padding: '10px',
-  color: 'black'
-}
+
 export function GatePairLogs(props) {
-  const columns = ['gatePair','incNumber']
+  const columns = ['gatePair','Number']
   const [logs, setLogs] = useState([])
   const [curlog, setCurlog] = useState({})
   const addLog = () => {
@@ -26,9 +17,9 @@ export function GatePairLogs(props) {
     , [props.tick])
 
   return (
-    <div>
-      <table style={{ width: '100%', backgroundColor: '#f2f2f2', height: '200px' }}>
-        <caption style={captionStyle}>Rule Log</caption>
+    <div style={{height :'50%',overflowY: 'hidden',overflowX: 'hidden'}} >
+      <table style={{ width: '100%', backgroundColor: '#f0f3fa' }}>
+        <caption style={captionStyle}>GatePair Log</caption>
         <thead>
           <tr>
             {columns.map(column => (
@@ -47,7 +38,7 @@ export function GatePairLogs(props) {
                 { Object.entries(value).map(([key1, value1]) => (
                   <td key = {key1} style ={{ 
                     whiteSpace: 'nowrap',
-                    fontSize: '0.9em' }} >{value1}</td>
+                    fontSize: '0.7em' }} >{value1}</td>
                 ))
                 }
                 </tr>

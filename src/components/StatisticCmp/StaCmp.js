@@ -1,6 +1,5 @@
 import React, { useContext, useEffect,useState,useRef} from "react";
-import './StatisticCmp.css';
-import { timeContext } from "../../Mymap";
+import { timeContext,windowContext } from "../../Mymap";
 import { Histogram } from "./Histogram";
 import { SideBar } from "../SideBar/SideBar";
 import { useInterval, useReactive } from 'ahooks';
@@ -8,45 +7,42 @@ import { StaLine } from "./StaLine";
 import { StaBar } from "./StaBar";
 import { DynaChart } from "./DynaChart";
 import { DynaSeries } from "./DynaSeries";
+import './StaCmp.css';
+
 const screenHeight = window.innerHeight;
 const screenWidth = window.innerWidth;
 const elementHeight = screenHeight * 0.35;
 const elementWidth = screenWidth * 0.2;
 
-// const elementWidth = map.offsetWidth * 0.333;
 const map = document.querySelector('.mymap');
+
+
 const elementStyle = {
-  flex : 1
+  flex : 1,
 };
 
 export function StaCmp(){
   const {tick,mapsec} = useContext(timeContext);
+  const screenSize = useContext(windowContext)
+  const parentStyle = {
+    // display: "flex",
+    // flexWrap: "wrap",
+    // alignContent: "flex-start",
+    backgroundColor: '#f2f2f2',
+    height: screenSize['height'] * 0.35
+  }
+  console.log(screenSize)
+
   return (
     <React.Fragment>
-    <div className="StaCmp">
-    {/* <div  
-    style=  {elementStyle}
-      >
-    <Histogram tick = {tick}></Histogram>
-    </div>
+    <div className="StaCmp" style= {{
+            height : screenSize['height'],
+            overflowY : 'hidden'
+    }}>        
     <div  
     style=  {elementStyle}
       >
-    <StaBar tick = {tick}></StaBar>
-    </div>  
-
-     </div>
-  
-    <div  
-    style=  {elementStyle}
-      >
-      <StaLine tick = {tick}></StaLine>
-    </div> */}
-        
-    <div  
-    style=  {elementStyle}
-      >
-        <DynaChart tick = {tick} ></DynaChart>
+        <DynaChart tick = {tick} height = {100}></DynaChart>
     </div>
 
     <div  

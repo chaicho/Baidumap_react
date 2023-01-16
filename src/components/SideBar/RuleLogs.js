@@ -1,17 +1,8 @@
 import { ProPageHeader } from '@ant-design/pro-components';
 import { useEffect, useState } from 'react';
+import { captionStyle } from './SideBar';
 const ruledata = require('../../assets/sidebar/rules.json')
-const captionStyle = {
-  captionSide: 'top',
-  position: 'sticky',
-  top: 0,
-  backgroundColor: '#f2f2f2',
-  fontSize: '1.5em',
-  fontWeight: 'bold',
-  textAlign: 'left',
-  padding: '10px',
-  color: 'black'
-}
+
 export function RuleLogs(props) {
   const [logs, setLogs] = useState([])
   const [curlog, setCurlog] = useState({})
@@ -27,8 +18,8 @@ export function RuleLogs(props) {
     , [props.tick])
 
   return (
-    <div>
-      <table style={{ width: '100%', backgroundColor: '#f2f2f2',height:'200px' }}>
+    <div style={{ height: '30%',overflowY: 'scroll'}}>
+      <table style={{ width: '100%', backgroundColor: '#f0f3fa' }}>
         <caption style={captionStyle}>Rule Log</caption>
           <tbody>
             {Object.entries(curlog).map(([key, value]) => (
