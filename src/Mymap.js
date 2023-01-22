@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Map, MapTypeControl, InfoWindow, ScaleControl, ZoomControl } from 'react-bmapgl';
 // import Device from './Device';
 // import { Displaybutton } from './components/Displaybutton';
+import PathViewer from './components/PathViewer/PathViewer'
 import { Vehicle } from './components/Vehicle/Vehicle';
 import { Devicelist } from './components/Device/DeviceList'
 import { VehicleList } from './components/Vehicle/VehicleList';
@@ -46,6 +47,9 @@ export function Mymap(props) {
     <div className='map'>
       <timeContext.Provider value={{ tick, mapsec }}>
         <windowContext.Provider value={{ screenSize }} >
+          <div className="timer" >
+            {new Date(mapsec).toLocaleString()}
+          </div>
           <Map center={{ lng: 116.600797625, lat: 35.4021216643 }}
             style={{ position: 'absolute', width: '75%', height: screenSize['height'] * 0.65 }}
             // enableScrollWheelZoom
@@ -61,11 +65,15 @@ export function Mymap(props) {
             {/* <VehicleList /> */}
             <SideBar ></SideBar>
             <StaCmp ></StaCmp>
-            
+
+
           </Map>
 
         </windowContext.Provider>
       </timeContext.Provider>
+
+      {/* <PathViewer></PathViewer> */}
+
     </div>
   )
 }

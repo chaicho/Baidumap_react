@@ -1,12 +1,17 @@
-import { ProPageHeader } from '@ant-design/pro-components';
+import { Alert } from 'antd';
 import { useEffect, useState } from 'react';
 import { captionStyle } from './SideBar';
 import React from 'react';
 const ruledata = require('../../assets/sidebar/cars.json')
 const logTableStyle = {
   width: '100%',
-  
+
 };
+const tdStyle = {
+  padding: '10px',
+  border: '1px solid gray',
+  borderRadius: '10px',
+}
 const logTableHrStyle = {
   width: '100%',
   border: 'none',
@@ -30,24 +35,27 @@ export function CarLogs(props) {
 
   return (
     <div style={{ height: '20%', overflowY: 'scroll' }}>
-        <table style={logTableStyle}>
-          <caption style={captionStyle}>车辆异常情况</caption>
-          <tbody>
-            {logs ? logs.map((log, index) => (
-              <React.Fragment key={index}>
-                {
-                  <tr>
-                    <td>车辆{log['vehicleId']}于{new Date(log['incTime']).toDateString()}违反规则{log['rule']}</td>  
-                  </tr>
-                }
-                {index !== logs.length - 1 && <hr style={logTableHrStyle} />}
-              </React.Fragment>
-            )) : null}
+      <table style={logTableStyle}>
+        <caption style={captionStyle}>车辆异常情况</caption>
+        <tbody>
+          {logs ? logs.map((log, index) => (
+            <React.Fragment key={index}>
+              {
+                <Alert
+                  key={index}
+                  message={`车辆${log['vehicleId']}于${new Date(Number(log['incTime'])).toLocaleString()}违反规则${log['rule']}`}
+                  type="warning"
+                  showIcon
+                />
+              }
+              {/* {index !== logs.length - 1 && <hr style={logTableHrStyle} />} */}
+            </React.Fragment>
+          )) : null}
 
-          </tbody>
+        </tbody>
 
-        </table>
-      </div>
+      </table>
+    </div>
   );
 }
 

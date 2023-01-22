@@ -74,5 +74,6 @@ export const captionStyle = {
   fontWeight: 'bold',
   textAlign: 'left',
   padding: '10px',
-  color: 'black'
+  color: 'black',
+  zIndex: 100
 }

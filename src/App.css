@@ -17,7 +17,7 @@
 }
 .SelectView {     
   left:20px;
-  top:20px;
+  top:40px;
   z-index:999; 
   position: absolute; 
 }
@@ -28,17 +28,13 @@
   position: absolute;
   z-index: 999;
 }
-.time {
+.timer {
   text-align: center;
   min-height: 100vh;
   position: absolute;
-  left: 10px;
-  bottom: 120px;
+  left: 40px;
+  top : 40px;
   z-index: 998;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
   font-size: calc(10px + 2vmin);
   color: black;
 }
