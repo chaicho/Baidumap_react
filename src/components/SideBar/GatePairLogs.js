@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { captionStyle } from './SideBar';
-const ruledata = require('../../assets/sidebar/gates.json')
+const ruledata = require('../../assets/sidebar/gates_chinese.json')
 
 export function GatePairLogs(props) {
   const columns = ['gatePair','Number']
@@ -22,7 +22,7 @@ export function GatePairLogs(props) {
         <caption style={captionStyle}>潜在异常门架TOP10</caption>
         <thead>
           <tr>
-            <th key='gatePair' > 门架对</th>
+            <th key='gatePair'  style={{width: '90%'}} > 门架对</th>
             <th key='Number' > 异常次数</th>
           </tr>
         </thead>
@@ -36,7 +36,8 @@ export function GatePairLogs(props) {
                 <tr>
                 { Object.entries(value).map(([key1, value1]) => (
                   <td key = {key1} style ={{ 
-                    whiteSpace: 'nowrap',
+                    // whiteSpace: 'nowrap',
+                    width: '90%',
                     fontSize: '0.7em' }} >{value1}</td>
                 ))
                 }

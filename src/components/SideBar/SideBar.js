@@ -10,6 +10,7 @@ import { timeContext,windowContext } from '../../Mymap';
 import {  RuleLogs } from './RuleLogs';
 import {  CarLogs } from './CarLogs';
 import { GatePairLogs } from './GatePairLogs';
+// import { DataTable } from './test';
 export const CarTraceContext = createContext();
 
 export function SideBar() {
@@ -41,10 +42,11 @@ export function SideBar() {
     <div className='SideBar'>
     <CarTraceContext.Provider value={cartraces}>
       {/* 车辆搜索 */}
-      {/* <VehicleSearch/>   */}
+      <VehicleSearch/>
       {/* 门架搜索 */}
-      {/* <DeviceSearch/> */}
+      <DeviceSearch/>
       {/* 日志信息 */}
+      {/* <DataTable></DataTable> */}
       <RuleLogs tick = {tick} sec = {mapsec}></RuleLogs>  
       <CarLogs tick = {tick} sec = {mapsec}></CarLogs>
       <GatePairLogs tick = {tick} sec = {mapsec}></GatePairLogs>

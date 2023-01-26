@@ -15,6 +15,7 @@ import { StaCmp } from './components/StatisticCmp/StaCmp';
 import { useInterval } from 'ahooks';
 import './Mymap.css'
 import { Content } from 'antd/lib/layout/layout';
+import { TitleBar } from './components/Title/TitleBar';
 export const timeContext = React.createContext();
 export const windowContext = React.createContext();
 export function Mymap(props) {
@@ -47,8 +48,15 @@ export function Mymap(props) {
     <div className='map'>
       <timeContext.Provider value={{ tick, mapsec }}>
         <windowContext.Provider value={{ screenSize }} >
-          <div className="timer" >
-            {new Date(mapsec).toLocaleString()}
+          <div className='titlebar'
+            style={{
+              width: '75%',
+              height: '50px',
+              padding: 0,
+              margin: 0,
+              overflow: 'hidden',
+            }}>
+            <TitleBar ></TitleBar>
           </div>
           <Map center={{ lng: 116.600797625, lat: 35.4021216643 }}
             style={{ position: 'absolute', width: '75%', height: screenSize['height'] * 0.65 }}
