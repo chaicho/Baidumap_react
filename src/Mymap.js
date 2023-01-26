@@ -70,7 +70,7 @@ export function Mymap(props) {
 
             {/* <Devicelist display={props.displaydevice}></Devicelist> */}
             {/* <Roadlist display={props.displayroute}></Roadlist> */}
-            {/* <VehicleList /> */}
+            <VehicleList />
             <SideBar ></SideBar>
             <StaCmp ></StaCmp>
 
