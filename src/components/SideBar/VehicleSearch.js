@@ -71,8 +71,8 @@ export function VehicleSearch() {
       }
       {query && (
         <Button onClick={() => {
-          setQuery('');
-          setCurLine(<></>);
+          setQuery('')
+          setCurPath([])
         }}>取消搜索</Button>
       )}
     </div>
