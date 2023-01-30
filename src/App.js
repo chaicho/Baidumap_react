@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Mymap } from './Mymap';
 import { Displaybutton } from './components/Displaybutton'
-
+import { createRoot } from "react-dom/client";
 
 import './App.css'
 
@@ -39,4 +39,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('container'));
+createRoot(document.getElementById("container")).render(<App />);

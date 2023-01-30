@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Map, MapTypeControl, InfoWindow, ScaleControl, } from 'react-bmapgl';
+import { Map, MapTypeControl, InfoWindow, ScaleControl, ZoomControl} from 'react-bmapgl';
 
 import { Devicelist } from './components/Device/DeviceList'
 import { VehicleList } from './components/Vehicle/VehicleList';
@@ -9,6 +9,8 @@ import { StaCmp } from './components/StatisticCmp/StaCmp';
 import { useInterval } from 'ahooks';
 import './Mymap.css'
 import { TitleBar } from './components/Title/TitleBar';
+import { Device } from './components/Device/Device';
+import { Marker } from 'react-bmap';
 export const timeContext = React.createContext();
 export const windowContext = React.createContext();
 export function Mymap(props) {
@@ -58,7 +60,7 @@ export function Mymap(props) {
             ref={mapRef}
           >
             <ScaleControl anchor={1} />
-            {/* <ZoomControl /> /*}
+            <ZoomControl /> 
             {/* <MapTypeControl anchor={2} /> */}
 
             <Devicelist display={props.displaydevice}></Devicelist>
@@ -67,7 +69,7 @@ export function Mymap(props) {
             <SideBar ></SideBar>
             <StaCmp ></StaCmp>
 
-
+            <Device position={{ lng:0 , lat: 0 }} />
           </Map>
 
         </windowContext.Provider>
