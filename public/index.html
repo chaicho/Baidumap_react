@@ -1,74 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?type=webgl&v=1.0&ak=nhRv75Fu53r8g1b6wggucw81H1C5PEHh"></script>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
-    body, html {
-        width: 100%;
-        height: 100%;
-        margin: 0;
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=nhRv75Fu53r8g1b6wggucw81H1C5PEHh"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?type=webgl&v=1.0&ak=nhRv75Fu53r8g1b6wggucw81H1C5PEHh"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <style type="text/css">
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      margin: 0;
     }
+
     #container {
-        height: 100%;
-        width: 100%;
+      height: 100%;
+      width: 100%;
     }
+
     ul li {
-        list-style: none;
+      list-style: none;
     }
+
     .btn-wrap {
-        z-index: 999;
-        position: fixed;
-        bottom: 3.5rem;
-        margin-left: 3rem;
-        padding: 1rem 1rem;
-        border-radius: .25rem;
-        background-color: #fff;
-        box-shadow: 0 2px 6px 0 rgba(27, 142, 236, 0.5);
+      z-index: 999;
+      position: fixed;
+      bottom: 3.5rem;
+      margin-left: 3rem;
+      padding: 1rem 1rem;
+      border-radius: .25rem;
+      background-color: #fff;
+      box-shadow: 0 2px 6px 0 rgba(27, 142, 236, 0.5);
     }
+
     .btn {
-        width: 75px;
-        height: 30px;
-        float: left;
-        background-color: #fff;
-        color: rgba(27, 142, 236, 1);
-        font-size: 14px;
-        border:1px solid rgba(27, 142, 236, 1);
-        border-radius: 5px;
-        margin: 0 5px;
-        text-align: center;
-        line-height: 30px;
+      width: 75px;
+      height: 30px;
+      float: left;
+      background-color: #fff;
+      color: rgba(27, 142, 236, 1);
+      font-size: 14px;
+      border: 1px solid rgba(27, 142, 236, 1);
+      border-radius: 5px;
+      margin: 0 5px;
+      text-align: center;
+      line-height: 30px;
     }
+
     .btn:hover {
-        background-color: rgba(27, 142, 236, 0.8);
-        color: #fff;
+      background-color: rgba(27, 142, 236, 0.8);
+      color: #fff;
     }
-    .container{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        min-height: 100%;
-        height: auto;
-      }
-</style>
-    <title>龙门架展示</title>
+
+    .container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+      height: auto;
+    }
+  </style>
+  <title>龙门架展示</title>
 
 </head>
+
 <body>
 
-    <link
-    async
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui-react/dist/umd/semantic-ui-react.min.js"></script>
-    <div id="container"></div>
-    <!-- <div id="allmap"></div> -->
+  <link async rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui-react/dist/umd/semantic-ui-react.min.js"></script>
+  <div id="container"></div>
+  <!-- <div id="allmap"></div> -->
 
 
 
-  </body>
+</body>
+
 </html>

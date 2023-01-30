@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Input,Button } from 'antd';
-import { Marker }  from 'react-bmapgl'
+import { Marker }  from 'react-bmap'
 import { Deviceinfodict } from '../../ObjInfo'
 const { Search } = Input;
 

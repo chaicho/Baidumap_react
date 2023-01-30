@@ -43,7 +43,7 @@ export function VehicleSearch() {
 
   }
   useEffect(() => {
-    console.log('query')
+    // console.log('query')
     if (cartraces !== null) {
       // console.log(Object.keys(cartraces))
       // console.log(query in (cartraces))

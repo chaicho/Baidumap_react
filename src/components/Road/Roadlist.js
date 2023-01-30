@@ -7,7 +7,7 @@ const roads_static =  devicedata.map((device) =>{
     if(device.isValid === false){
        return <></>
     }
-    const start = new window.BMapGL.Point(device.经度, device.纬度)
+    const start = new window.BMapGL .Point(device.经度, device.纬度)
     for(var  i in device.下游门架) {
         const nextid = (device.下游门架)[i]
         if (Deviceinfodict[nextid]){
