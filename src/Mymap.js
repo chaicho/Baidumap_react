@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Map, MapTypeControl, InfoWindow, ScaleControl, ZoomControl} from 'react-bmapgl';
+import { Map,Marker ,MapTypeControl, InfoWindow, ScaleControl, ZoomControl} from 'react-bmapgl';
 
 import { Devicelist } from './components/Device/DeviceList'
 import { VehicleList } from './components/Vehicle/VehicleList';
@@ -10,7 +10,6 @@ import { useInterval } from 'ahooks';
 import './Mymap.css'
 import { TitleBar } from './components/Title/TitleBar';
 import { Device } from './components/Device/Device';
-import { Marker } from 'react-bmap';
 export const timeContext = React.createContext();
 export const windowContext = React.createContext();
 export function Mymap(props) {
@@ -63,13 +62,16 @@ export function Mymap(props) {
             <ZoomControl /> 
             {/* <MapTypeControl anchor={2} /> */}
 
+            <Device position={{ lng:0 , lat: 0 }} />
+
             <Devicelist display={props.displaydevice}></Devicelist>
             <Roadlist display={props.displayroute}></Roadlist>
             <VehicleList />
             <SideBar ></SideBar>
             <StaCmp ></StaCmp>
 
-            <Device position={{ lng:0 , lat: 0 }} />
+            {/* <Device position  =  {{ lng:117.09736299294687 , lat:37.28892141923907}}/> */}
+
           </Map>
 
         </windowContext.Provider>

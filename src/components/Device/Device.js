@@ -18,6 +18,7 @@ export const Device = (props) => {
       <Marker
         position={props.position}
         icon={red_shelf}
+        onClick = {debug_info}
       />
     );
   }

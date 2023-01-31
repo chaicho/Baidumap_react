@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Input, Button } from 'antd';
 import { CarTraceContext } from './SideBar';
-import { Polyline } from "react-bmapgl"
+import { Polyline, InfoWindow } from "react-bmapgl"
 import axios from 'axios';
 import { timeContext } from '../../Mymap';
 const { Search } = Input;
@@ -11,11 +11,14 @@ export function VehicleSearch() {
   const [curLine, setCurLine] = useState(<></>)
   const [curPath, setCurPath] = useState([])
   const [prePath, setPrePath] = useState([])
+  const [curInfowindow, setInfoWindow] = useState(<></>)
+
   const cartraces = useContext(CarTraceContext)
   const { tick, mapsec } = useContext(timeContext)
   function getPath(query, tick) {
     const curtime = tick * 20000 + 1635696000000;
     // console.log(curtime);
+
     setPrePath(cartraces[query].map((loc) => {
       if (loc[2] + 20000 >= curtime) {
         return null;
@@ -24,6 +27,18 @@ export function VehicleSearch() {
         return { 'lng': loc[0], 'lat': loc[1] }
       }
     }).filter(item => item !== null));
+    const lastinfo =cartraces[query][cartraces[query].length - 1]
+    const lastsec = lastinfo[2]
+    console.log(lastsec)
+    if ( mapsec > lastsec ) {
+      console.log('finish')
+      setCurPath(prePath)
+      setInfoWindow(<InfoWindow
+        position={{ 'lng': lastinfo[0], 'lat': lastinfo[1] }}
+        title="检索车辆"
+        text={`车辆${query}已离开高速`} />)
+      return
+    }
     axios.get(`Data/carInfo/DoubleKey5per/${tick}.json`)
       .catch(function (response) {
         console.log(response)
@@ -32,13 +47,18 @@ export function VehicleSearch() {
         // console.log(query in res['data']);
         if (query in res['data']) {
           setCurPath([
-            ...prePath, 
+            ...prePath,
             res['data'][query]
           ])
+          console.log(res['data'][query])
+          setInfoWindow(<InfoWindow
+            position={res['data'][query]}
+            title="检索车辆"
+            text={`车辆${query}正在行驶中`} />)
           setCurLine()
         }
       })
-    // console.log([tick, curPath])
+    console.log([mapsec, curPath])
 
 
   }
@@ -49,6 +69,9 @@ export function VehicleSearch() {
       // console.log(query in (cartraces))
     }
     if (cartraces === null || query === '' || !(query in (cartraces))) {
+      setQuery('')
+      setCurPath([])
+      setInfoWindow(<></>)
       return;
     }
     getPath(query, tick)
@@ -63,16 +86,18 @@ export function VehicleSearch() {
         placeholder="请输入搜索车辆"
         onSearch={(value) => setQuery(value)}
       />
-      {curPath.length !== 0 && <Polyline             
-             path = {[...curPath]}
-             strokeColor="#708090"
-             cord = 	"bd09ll" 
-             strokeWeight={10}/> 
+      {curPath.length !== 0 && <Polyline
+        path={[...curPath]}
+        strokeColor="#c0504e"
+        cord="bd09ll"
+        strokeWeight={10} />
       }
+      {curInfowindow}
       {query && (
         <Button onClick={() => {
           setQuery('')
           setCurPath([])
+          setInfoWindow(<></>)
         }}>取消搜索</Button>
       )}
     </div>
