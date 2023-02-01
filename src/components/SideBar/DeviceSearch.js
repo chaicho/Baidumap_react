@@ -18,7 +18,7 @@ export function DeviceSearch() {
     const targetDevice = Deviceinfodict[query]
     console.log(targetDevice.经度, targetDevice.纬度)
     setCurDevice(
-      <Marker position={{ lng: targetDevice.经度, lat: targetDevice.纬度 }}
+      <Device position={{ lng: targetDevice.经度, lat: targetDevice.纬度 }}
         isTop={true}
       />);
     setInfoWindow(
