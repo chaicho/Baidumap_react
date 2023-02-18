@@ -16,7 +16,7 @@ export function VehicleSearch() {
   const cartraces = useContext(CarTraceContext)
   const { tick, mapsec } = useContext(timeContext)
   function getPath(query, tick) {
-    const curtime = tick * 20000 + 1635696000000;
+    const curtime = mapsec;
     // console.log(curtime);
 
     setPrePath(cartraces[query].map((loc) => {
@@ -50,7 +50,7 @@ export function VehicleSearch() {
             ...prePath,
             res['data'][query]
           ])
-          console.log(res['data'][query])
+          console.log('get loc')
           setInfoWindow(<InfoWindow
             position={res['data'][query]}
             title="检索车辆"
