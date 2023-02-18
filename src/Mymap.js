@@ -39,21 +39,22 @@ export function Mymap(props) {
   }, 500)
 
   return (
-    <div className='map'>
+    <div className='map_container'>
       <timeContext.Provider value={{ tick, mapsec }}>
         <windowContext.Provider value={{ screenSize }} >
           <div className='titlebar'
             style={{
               width: '75%',
-              height: '50px',
+              height: '10%',
               padding: 0,
               margin: 0,
               overflow: 'hidden',
             }}>
             <TitleBar ></TitleBar>
           </div>
+          <div className='map_container'>
           <Map center={{ lng: 116.600797625, lat: 35.4021216643 }}
-            style={{ position: 'absolute', width: '75%', height: screenSize['height'] * 0.65 }}
+            style={{ position: 'absolute', width: '75%',height: '58%'}}
             // enableScrollWheelZoom
             zoom="9"
             ref={mapRef}
@@ -73,11 +74,9 @@ export function Mymap(props) {
             {/* <Device position  =  {{ lng:117.09736299294687 , lat:37.28892141923907}}/> */}
 
           </Map>
-
+          </div>
         </windowContext.Provider>
       </timeContext.Provider>
-
-      {/* <PathViewer></PathViewer> */}
 
     </div>
   )

@@ -6,7 +6,6 @@ export function TitleBar() {
   return (
     <Menu style={{
       backgroundColor: '#f7bb88',
-      height: '100%'
     }} inverted>
       <Menu.Item header style={{ color: 'black', fontSize: '25px' }}>
         高速门架监测平台
