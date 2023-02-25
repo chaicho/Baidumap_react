@@ -5,52 +5,46 @@ const dataall = require('../../assets/statistics/resources.json')
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 export function MemCmp(props) {
   const chartRef = useRef();
-  const titles = ["ECC","ConC","PCC","INFUSE"]
+  const [dps, setDps] = useState(
+    [
+      { label: "ECC", y: 0, color: "#81c2ea" },
+      { label: "ConC", y: 0, color: "#81c2ea" },
+      { label: "PCC", y: 0, color: "#81c2ea" },
+      { label: "INFUSE", y: 0, color: "#81c2ea" }]
+  )
+  const yValueFormatString = "#,##0.00'%'"
+  const titles = ["ECC", "ConC", "PCC", "INFUSE"]
+  const [stripLineValue, setOracle] = useState(0)
   const [options, setOptions] = useState({
     theme: "light1",
-    height: '180',  
+    height: '180',
     title: {
-      text: "MEM Usage"
+      text: "Cases"
     },
     axisY: {
-      title: "MEM Usage",
+      title: "Cases",
       includeZero: true,
       suffix: "%",
-      maximum: 5
+      // maximum: 30
     },
     data: [{
       type: "column",
-      yValueFormatString: "#,##0.0'%'",
+      yValueFormatString: yValueFormatString,
       indexLabel: "{y}",
-      dataPoints: [
-        { label: "ECC", y: 0, color: "#81c2ea" },
-        { label: "ConC", y: 0, color: "#81c2ea" },
-        { label: "PCC", y: 0, color: "#81c2ea" },
-        { label: "INFUSE", y: 0, color: "#81c2ea" },
-      ]
+      dataPoints: dps
+
     }]
   })
   useEffect(() => {
     var dpsColor, dpsTotal = 0, deltaY, yVal;
-    var dps = chartRef.current.options.data[0].dataPoints;
-    var chart = chartRef.current.chart;
+    var new_dps = dps;
     const cursecdata = dataall[String(props.mapsec)]
-    console.log(cursecdata)
     for (var i = 0; i < dps.length; i++) {
-      // deltaY = Math.round(2 + Math. random() * (-2 - 2));
-      // yVal = deltaY + dps[i].y > 0 ? (deltaY + dps[i].y < 100 ? dps[i].y + deltaY : 100) : 0;
       yVal = cursecdata[titles[i]]['memUsage(%)']
-      dps[i] = { label: titles[i], y: yVal };
-      if (yVal > chart.options.axisY.maximum) {
-        chart.options.axisY.maximum += 10
-      }
-      // dpsTotal += yVal;
+      new_dps[i] = { label: titles[i], y: yVal };
     }
-
-    chart.options.data[0].dataPoints = dps;
-    setOptions(chart.options)
+    setDps(new_dps)
   }, [props.mapsec]);
-
   return (
     <div>
       <CanvasJSChart options={{ ...options }} ref={chartRef} />

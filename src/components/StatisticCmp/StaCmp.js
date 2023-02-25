@@ -7,6 +7,7 @@ import { StaLine } from "./StaLine";
 import { StaBar } from "./StaBar";
 import { DynaChart } from "./DynaChart";
 import { CpuCmp } from "./CpuCmp";
+import { IncCmp } from "./IncCmp";
 import { MemCmp } from "./MemCmp";
 import { DynaSeries } from "./DynaSeries";
 import './StaCmp.css';
@@ -42,11 +43,11 @@ export function StaCmp() {
         height: 'auto',
         overflowY: 'hidden'
       }}>
-        <div
+        {/* <div
           style={elementStyle}
         >
           <DynaSeries tick = {tick} mapsec={mapsec}></DynaSeries>
-        </div>
+        </div> */}
         <div
           style={elementStyle}
         >
@@ -57,6 +58,11 @@ export function StaCmp() {
           style={elementStyle}
         >
           <MemCmp mapsec = {mapsec} ></MemCmp>
+        </div>
+        <div
+          style={elementStyle}
+        >
+          <IncCmp mapsec = {mapsec} ></IncCmp>
         </div>
 
 
