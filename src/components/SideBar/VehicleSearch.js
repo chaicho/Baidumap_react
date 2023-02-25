@@ -17,7 +17,7 @@ export function VehicleSearch() {
   const { tick, mapsec } = useContext(timeContext)
   function getPath(query, tick) {
     const curtime = mapsec;
-    // console.log(curtime);
+    console.log(curtime);
 
     setPrePath(cartraces[query].map((loc) => {
       if (loc[2] + 20000 >= curtime) {
@@ -27,6 +27,7 @@ export function VehicleSearch() {
         return { 'lng': loc[0], 'lat': loc[1] }
       }
     }).filter(item => item !== null));
+    console.log(query)
     const lastinfo =cartraces[query][cartraces[query].length - 1]
     const lastsec = lastinfo[2]
     console.log(lastsec)
@@ -59,7 +60,6 @@ export function VehicleSearch() {
         }
       })
     console.log([mapsec, curPath])
-
 
   }
   useEffect(() => {

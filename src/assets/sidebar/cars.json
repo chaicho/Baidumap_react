@@ -1,33 +1,4 @@
 {
-  
-  "1635696020000": [
-    {
-      "incTime": "1635696020000",
-      "rule": "diff-passid",
-      "vehicleId": "testcase-1"
-    }
-  ],
-  "1635696060000": [
-    {
-      "incTime": "1635696060000",
-      "rule": "diff-passid",
-      "vehicleId": "testcase-2"
-    }
-  ],
-  "1635696140000": [
-    {
-      "incTime": "1635696140000",
-      "rule": "diff-passid",
-      "vehicleId": "testcase-3"
-    }
-  ],
-  "1635696180000": [
-    {
-      "incTime": "1635696180000",
-      "rule": "diff-passid",
-      "vehicleId": "testcase-4"
-    }
-  ],
   "1635696880000": [
     {
       "incTime": "1635696882000",

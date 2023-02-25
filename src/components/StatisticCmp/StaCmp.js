@@ -45,6 +45,11 @@ export function StaCmp() {
         <div
           style={elementStyle}
         >
+          <DynaSeries tick = {tick} mapsec={mapsec}></DynaSeries>
+        </div>
+        <div
+          style={elementStyle}
+        >
             <CpuCmp mapsec = {mapsec}></CpuCmp>
         </div>
 
