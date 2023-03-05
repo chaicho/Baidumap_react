@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Input, Button } from 'antd';
 import { CarTraceContext } from './SideBar';
-import { Polyline, InfoWindow } from "react-bmapgl"
+import { Polyline, InfoWindow , Marker } from "react-bmapgl"
 import axios from 'axios';
 import { timeContext } from '../../Mymap';
-import { Vehicle } from '../Vehicle/Vehicle';
-import largeCar from '../../assets/images/blue_car.png'
+import largeCar from '../../assets/images/large_car.png'
 const { Search } = Input;
-const large_blue_car = new window.BMapGL.Icon(largeCar,
+const large_car = new window.BMapGL.Icon(largeCar,
   new window.BMapGL.Size(30, 30),
   {
     anchor: new window.BMapGL.Size(10, 10)
@@ -66,9 +65,11 @@ export function VehicleSearch() {
             title="检索车辆"
             text={`车辆${query}正在行驶中`} />)
           setCurMarker(
-          <Vehicle>
-
-          </Vehicle>
+            <Marker
+              icon={large_car}
+              position={res['data'][query]}
+              isTop={true}
+            />
           )
           setCurLine()
         }
@@ -108,6 +109,7 @@ export function VehicleSearch() {
         strokeWeight={10} />
       }
       {curInfowindow}
+      {curMarker}
       {query && (
         <Button onClick={() => {
           setQuery('')
