@@ -18,6 +18,7 @@ export function RuleLogs(props) {
   let currentRow = [];
 
   return (
+    
     <div style={{ height: '22%', overflowY: 'hidden ' }}>
       <table style={{ width: '100%' }}>
         <caption style={captionStyle}>整体规则违反情况</caption>

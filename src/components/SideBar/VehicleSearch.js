@@ -4,13 +4,22 @@ import { CarTraceContext } from './SideBar';
 import { Polyline, InfoWindow } from "react-bmapgl"
 import axios from 'axios';
 import { timeContext } from '../../Mymap';
+import { Vehicle } from '../Vehicle/Vehicle';
+import largeCar from '../../assets/images/blue_car.png'
 const { Search } = Input;
-
+const large_blue_car = new window.BMapGL.Icon(largeCar,
+  new window.BMapGL.Size(30, 30),
+  {
+    anchor: new window.BMapGL.Size(10, 10)
+  }
+)
+;
 export function VehicleSearch() {
   const [query, setQuery] = useState('');
   const [curLine, setCurLine] = useState(<></>)
   const [curPath, setCurPath] = useState([])
   const [prePath, setPrePath] = useState([])
+  const [curMarker, setCurMarker] = useState(<></>)
   const [curInfowindow, setInfoWindow] = useState(<></>)
 
   const cartraces = useContext(CarTraceContext)
@@ -56,6 +65,11 @@ export function VehicleSearch() {
             position={res['data'][query]}
             title="检索车辆"
             text={`车辆${query}正在行驶中`} />)
+          setCurMarker(
+          <Vehicle>
+
+          </Vehicle>
+          )
           setCurLine()
         }
       })
@@ -72,6 +86,7 @@ export function VehicleSearch() {
       setQuery('')
       setCurPath([])
       setInfoWindow(<></>)
+      setCurMarker(<></>)
       return;
     }
     getPath(query, tick)

@@ -68,7 +68,7 @@ export function IncCmp(props) {
       }
     }));
     setOracle(cursecdata["Oracle"])
-    console.log(cursecdata["Oracle"])
+    // console.log(cursecdata["Oracle"])
 
   }, [props.mapsec]);
 

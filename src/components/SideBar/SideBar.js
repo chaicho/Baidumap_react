@@ -6,6 +6,7 @@ import { DeviceSearch } from './DeviceSearch';
 import { createContext } from 'react';
 import axios from 'axios';
 import './SideBar.css'
+import { RulesViewer } from './RulesViewer';
 import { timeContext,windowContext } from '../../Mymap';
 import {  RuleLogs } from './RuleLogs';
 import {  CarLogs } from './CarLogs';
@@ -34,11 +35,11 @@ export function SideBar() {
   }
     
   , []);
-
   
 
   return (
     <React.Fragment>
+    <RulesViewer></RulesViewer>
     <div className='SideBar'>
     <CarTraceContext.Provider value={cartraces}>
       {/* 车辆搜索 */}

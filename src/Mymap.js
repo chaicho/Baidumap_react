@@ -69,7 +69,7 @@ export function Mymap(props) {
             <Roadlist display={props.displayroute}></Roadlist>
             <VehicleList />
             <SideBar ></SideBar>
-            <StaCmp ></StaCmp>
+            {/* <StaCmp ></StaCmp> */}
 
             {/* <Device position  =  {{ lng:117.09736299294687 , lat:37.28892141923907}}/> */}
 
