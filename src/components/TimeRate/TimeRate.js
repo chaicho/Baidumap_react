@@ -9,7 +9,7 @@ export function TimeRate(props) {
           min={1}
           max={10}
           trackStyle={{ backgroundColor: '#ff0000' }}
-          handleStyle={{ borderColor: '#ff0000' }}
+          handleStyle={{ borderColor: '#0a9396' }}
           railStyle={{ backgroundColor: '#cccccc' }}
           defaultValue={1}
           onChange={(value) => {

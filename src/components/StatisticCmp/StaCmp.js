@@ -18,7 +18,12 @@ const elementHeight = screenHeight * 0.35;
 const elementWidth = screenWidth * 0.2;
 
 const map = document.querySelector('.mymap');
-
+export const colors = [
+  "#005f73",
+  "#0a9396",
+  "#94d2bd",
+  "#e9d8a6"
+]
 
 const elementStyle = {
   flex: 1,

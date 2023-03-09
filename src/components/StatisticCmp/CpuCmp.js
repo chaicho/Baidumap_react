@@ -1,5 +1,6 @@
 import { useInterval, useSafeState } from 'ahooks';
 import React, { useEffect, useRef, useState } from 'react';
+import {colors} from './StaCmp'
 import CanvasJSReact from '../../lib/canvasjs.react';
 const dataall = require('../../assets/statistics/resources.json')
 var CanvasJS = CanvasJSReact.CanvasJS;
@@ -8,10 +9,10 @@ export function CpuCmp(props) {
   const chartRef = useRef();
   const [dps, setDps] = useState(
     [
-      { label: "ECC", y: 0, color: "#81c2ea" },
-      { label: "ConC", y: 0, color: "#81c2ea" },
-      { label: "PCC", y: 0, color: "#81c2ea" },
-      { label: "INFUSE", y: 0, color: "#81c2ea" }]
+      { label: "ECC", y: 0, color: "#005f73" },
+      { label: "ConC", y: 0, color: "#005f73" },
+      { label: "PCC", y: 0, color: "#005f73" },
+      { label: "INFUSE", y: 0, color: "#005f73" }]
   )
   const yValueFormatString = "#,##0.0'%'"
   const titles = ["ECC", "ConC", "PCC", "INFUSE"]
@@ -42,7 +43,7 @@ export function CpuCmp(props) {
     const cursecdata = dataall[String(props.mapsec)]
     for (var i = 0; i < dps.length; i++) {
       yVal = cursecdata[titles[i]]['cpuUsage(%)']
-      new_dps[i] = { label: titles[i], y: yVal };
+      new_dps[i] = { label: titles[i], y: yVal,color: colors[i]};
     }
     setDps(new_dps)
   }, [props.mapsec]);

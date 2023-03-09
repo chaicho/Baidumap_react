@@ -71,11 +71,11 @@ export const captionStyle = {
   captionSide: 'top',
   position: 'sticky',
   top: 0,
-  backgroundColor: '#f7bb88',
+  backgroundColor: '#0a9396',
   fontSize: '1.5em',
   fontWeight: 'bold',
   textAlign: 'left',
   padding: '10px',
-  color: 'black',
+  color: 'white',
   zIndex: 100
 }

@@ -1,5 +1,6 @@
 import { useInterval, useSafeState } from 'ahooks';
 import React, { useEffect, useRef, useState } from 'react';
+import { colors } from './StaCmp';
 import CanvasJSReact from '../../lib/canvasjs.react';
 const dataall = require('../../assets/statistics/incsInfo.json')
 var CanvasJS = CanvasJSReact.CanvasJS;
@@ -28,10 +29,10 @@ export function IncCmp(props) {
       stripLines: [{
         value: oracle, // 在y轴上绘制线的值
         label: "Oracle", // 线的标签
-        labelFontColor: "#ff0000", // 标签颜色
+        labelFontColor: "#9b2226", // 标签颜色
         labelAlign: "near", // 标签位置
         thickness: 2, // 线的粗细
-        color: "#ff0000", // 线的颜色
+        color: "#9b2226", // 线的颜色
         showOnTop: true // 确保线在其他元素之上
       }]
       // suffix: "%",
@@ -53,7 +54,7 @@ export function IncCmp(props) {
       // deltaY = Math.round(2 + Math. random() * (-2 - 2));
       // yVal = deltaY + dps[i].y > 0 ? (deltaY + dps[i].y < 100 ? dps[i].y + deltaY : 100) : 0;
       yVal = cursecdata[titles[i]]
-      new_dps[i] = { label: titles[i], y: yVal };
+      new_dps[i] = { label: titles[i], y: yVal ,color: colors[i]};
       // dpsTotal += yVal;
     }
     setDps(new_dps)

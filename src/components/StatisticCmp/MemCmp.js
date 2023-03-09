@@ -1,5 +1,6 @@
 import { useInterval, useSafeState } from 'ahooks';
 import React, { useEffect, useRef, useState } from 'react';
+import { colors } from './StaCmp';
 import CanvasJSReact from '../../lib/canvasjs.react';
 const dataall = require('../../assets/statistics/resources.json')
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
@@ -41,7 +42,7 @@ export function MemCmp(props) {
     const cursecdata = dataall[String(props.mapsec)]
     for (var i = 0; i < dps.length; i++) {
       yVal = cursecdata[titles[i]]['memUsage(%)']
-      new_dps[i] = { label: titles[i], y: yVal };
+      new_dps[i] = { label: titles[i], y: yVal,color: colors[i] };
     }
     setDps(new_dps)
   }, [props.mapsec]);
