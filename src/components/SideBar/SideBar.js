@@ -39,7 +39,6 @@ export function SideBar() {
 
   return (
     <React.Fragment>
-    <RulesViewer></RulesViewer>
     <div className='SideBar'>
     <CarTraceContext.Provider value={cartraces}>
       {/* 车辆搜索 */}

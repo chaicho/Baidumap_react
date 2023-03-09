@@ -1,60 +1,69 @@
 import React, { useState } from 'react';
+import { Modal, Button } from 'antd';
 
 export function RulesViewer() {
-  // 初始化 state，用于存储 XML 文件内容和显示/隐藏标志
-  const [xmlContent, setXmlContent] = useState('');
   const [showXml, setShowXml] = useState(false);
+  const [xmlContent, setXmlContent] = useState('');
 
-  // 点击按钮时的事件处理函数
   const handleButtonClick = () => {
-    // 创建 XMLHttpRequest 对象
     const xhr = new XMLHttpRequest();
-
-    // 获取 XML 文件的 URL
     const xmlUrl = `http://localhost:3000/Data/rules/rules.xml`;
-    // 设置请求方法和 URL
     xhr.open('GET', xmlUrl, true);
-
-    // 注册 readyState 改变事件处理函数
     xhr.onreadystatechange = () => {
-      // 如果请求完成且响应状态码为 200
       if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        // 获取响应文本内容
         const xmlContent = xhr.responseText;
-
-        // 更新 state，设置 XML 文件内容和显示标志
         setXmlContent(xmlContent);
         setShowXml(true);
       }
     };
-
-    // 发送请求
     xhr.send();
   };
 
-  // 根据显示/隐藏标志决定是否显示 XML 文件内容
+  const handleClose = () => {
+    setShowXml(false);
+  };
+
   const xmlContentDiv = showXml ? (
-    <div
-      style={{
-        position: 'absolute',
-        top: 'calc(100% + 10px)',
-        left: '0',
-        padding: '10px',
-        backgroundColor: '#fff',
-        border: '1px solid #ccc',
-        borderRadius: '5px',
-        boxShadow: '0 2px 4px rgba(0,0,0,.3)',
-      }}
+    <Modal
+      visible={true}
+      title={
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span>规则文件</span>
+          <Button type="primary" onClick={() => downloadFile(xmlContent)}>导出</Button>
+          <span span style={{marginLeft: '20px'}}></span>
+          {/* <Button type="link" onClick={handleClose}>关闭</Button> */}
+        </div>
+      }
+      footer={null}
+      onCancel={handleClose}
+      bodyStyle={{ padding: '10px', overflowY: 'scroll', maxHeight: '50vh' }}
+      style={{ top: '50px' }}
     >
       <pre>{xmlContent}</pre>
-    </div>
+    </Modal>
   ) : null;
 
-  // 渲染界面
+  const downloadFile = (content) => {
+    const element = document.createElement('a');
+    const file = new Blob([content], { type: 'text/plain' });
+    element.href = URL.createObjectURL(file);
+    element.download = 'rules.xml';
+    document.body.appendChild(element); // Required for this to work in FireFox
+    element.click();
+  };
+
   return (
-    <div>
-      <button onClick={handleButtonClick}>显示 XML 文件</button>
+    <React.Fragment>
+      <Button
+        type="primary"
+        shape="round"
+        size="small"
+        style={{ fontSize: '12px', backgroundColor: '#fff', color: '#000', border: 'none' }}
+        onClick={handleButtonClick}
+      >
+        显示规则文件
+      </Button>
       {xmlContentDiv}
-    </div>
+    </React.Fragment>
   );
 }

@@ -1,5 +1,6 @@
 import { ProPageHeader } from '@ant-design/pro-components';
 import React, { useEffect, useState } from 'react';
+import { RulesViewer } from './RulesViewer';
 import { captionStyle } from './SideBar';
 const ruledata = require('../../assets/sidebar/rules.json')
 export function RuleLogs(props) {
@@ -21,7 +22,9 @@ export function RuleLogs(props) {
     
     <div style={{ height: '22%', overflowY: 'hidden ' }}>
       <table style={{ width: '100%' }}>
-        <caption style={captionStyle}>整体规则违反情况</caption>
+        <caption style={captionStyle}>
+          整体规则违反情况<span style={{marginLeft: '20px'}}/><RulesViewer/>
+        </caption>
         <tbody>
           {Object.entries(curlog).map(([key, value]) => {
             if (key !== 'incTime') {
