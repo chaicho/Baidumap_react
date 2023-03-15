@@ -8,7 +8,7 @@ export function TimeRate(props) {
         <Slider
           min={1}
           max={10}
-          trackStyle={{ backgroundColor: '#ff0000' }}
+          trackStyle={{ backgroundColor: '#0a9396' }}
           handleStyle={{ borderColor: '#0a9396' }}
           railStyle={{ backgroundColor: '#cccccc' }}
           defaultValue={1}
