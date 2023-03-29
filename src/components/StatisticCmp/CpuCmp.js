@@ -21,10 +21,10 @@ export function CpuCmp(props) {
     theme: "light1",
     height: '180',
     title: {
-      text: "Cases"
+      text: "CpuInfo"
     },
     axisY: {
-      title: "Cases",
+      title: "CpuInfo",
       includeZero: true,
       suffix: "%",
       // maximum: 30

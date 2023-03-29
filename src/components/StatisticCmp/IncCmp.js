@@ -21,10 +21,10 @@ export function IncCmp(props) {
     theme: "light1",
     height:'180',
     title: {
-      text: "Cases"
+      text: "incsInfo"
     },
     axisY: {
-      title: "Cases",
+      title: "IncsInfo",
       includeZero: true,
       stripLines: [{
         value: oracle, // 在y轴上绘制线的值
@@ -58,17 +58,17 @@ export function IncCmp(props) {
       // dpsTotal += yVal;
     }
     setDps(new_dps)
+    setOracle(cursecdata["Oracle"])
     setOptions(prevOptions => ({
       ...prevOptions,
       axisY: {
         ...prevOptions.axisY,
         stripLines: [{
           ...prevOptions.axisY.stripLines[0],
-          value: oracle // 更新 stripLines 对象的 value 属性
+          value: cursecdata["Oracle"] // 更新 stripLines 对象的 value 属性
         }]
       }
     }));
-    setOracle(cursecdata["Oracle"])
     // console.log(cursecdata["Oracle"])
 
   }, [props.mapsec]);

@@ -20,10 +20,10 @@ export function MemCmp(props) {
     theme: "light1",
     height: '180',
     title: {
-      text: "Cases"
+      text: "MemInfo"
     },
     axisY: {
-      title: "Cases",
+      title: "MemInfo",
       includeZero: true,
       suffix: "%",
       // maximum: 30
