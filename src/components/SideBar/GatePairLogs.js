@@ -38,7 +38,7 @@ export function GatePairLogs(props) {
                   <td key = {key1} style ={{ 
                     // whiteSpace: 'nowrap',
                     width: '90%',
-                    fontSize: '0.7em' }} >{value1}</td>
+                    fontSize: '1em' }} >{value1}</td>
                 ))
                 }
                 </tr>

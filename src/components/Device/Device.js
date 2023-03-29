@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {  InfoWindow, Marker } from 'react-bmapgl';
-import redShelfUrl from '../../assets/images/red_shelf.png'
+import redShelfUrl from '../../assets/images/vehicle.png'
 const red_shelf = new window.BMapGL.Icon(redShelfUrl,
   new window.BMapGL .Size(15, 15),
 {

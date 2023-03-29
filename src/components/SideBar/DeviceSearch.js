@@ -3,8 +3,15 @@ import { Input, Button } from 'antd';
 import { Marker,InfoWindow } from 'react-bmapgl'
 import { Deviceinfodict } from '../../ObjInfo'
 import { Device } from '../Device/Device';
+import largeVehicle from '../../assets/images/large_vehicle.png'
 const { Search } = Input;
-
+const large_vehicle = new window.BMapGL.Icon(largeVehicle,
+  new window.BMapGL.Size(30, 30),
+  {
+    anchor: new window.BMapGL.Size(10, 10)
+  }
+)
+;
 export function DeviceSearch() {
   const [query, setQuery] = useState('');
   const [curDevice, setCurDevice] = useState(<></>)
@@ -18,13 +25,15 @@ export function DeviceSearch() {
     const targetDevice = Deviceinfodict[query]
     console.log(targetDevice.经度, targetDevice.纬度)
     setCurDevice(
-      <Device position={{ lng: targetDevice.经度, lat: targetDevice.纬度 }}
-        isTop={true}
-      />);
+      <Marker
+      icon={large_vehicle}
+      position={{ lng: targetDevice.经度, lat: targetDevice.纬度 }}
+      isTop={true}
+    />);
     setInfoWindow(
       <InfoWindow position={{ lng: targetDevice.经度, lat: targetDevice.纬度 }}
       title="门架名称"
-      text={ `${targetDevice.门架名称}`}
+      text={ `${targetDevice.门架名称}📞`}
       />
     )
     console.log(curDevice)
