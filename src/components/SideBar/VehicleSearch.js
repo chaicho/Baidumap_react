@@ -99,6 +99,8 @@ export function VehicleSearch() {
           setQuery('')
           setCurPath([])
           setInfoWindow(<></>)
+          setCarTraceDevices(<></>)
+          setCarTrace(<></>)
         }}>取消搜索</Button>
       )}
     </div>
