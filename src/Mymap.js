@@ -44,7 +44,7 @@ export function Mymap(props) {
     <div className='map_container'>
       <timeContext.Provider value={{ tick, mapsec }}>
         <windowContext.Provider value={{ screenSize }} >
-          <div className='titlebar'
+          {/* <div className='titlebar'
             style={{
               width: '75%',
               height: '10%',
@@ -53,11 +53,11 @@ export function Mymap(props) {
               overflow: 'hidden',
             }}>
             <TitleBar ></TitleBar>
-          </div>
+          </div> */}
           <div className='map_container'>
 
             <Map center={{ lng: 116.600797625, lat: 35.4021216643 }}
-              style={{ position: 'absolute', width: '75%', height: '58%' }}
+              style={{ position: 'absolute', width: '100%', height: '100%' }}
               // enableScrollWheelZoom
               zoom="9"
               ref={mapRef}
@@ -72,12 +72,12 @@ export function Mymap(props) {
               <Roadlist display={props.displayroute}></Roadlist>
               {/* <VehicleList />  */}
               <SideBar ></SideBar>
-              <StaCmp ></StaCmp>
+              {/* <StaCmp ></StaCmp> */}
 
               {/* <Device position  =  {{ lng:117.09736299294687 , lat:37.28892141923907}}/> */}
-              <div className="time-rate-container">
+              {/* <div className="time-rate-container">
                 <TimeRate setplayRate={setPlayRate} />
-              </div>
+              </div> */}
             </Map>
           </div>
         </windowContext.Provider>

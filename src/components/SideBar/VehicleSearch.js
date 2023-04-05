@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Input, Button } from 'antd';
 import { CarTraceContext } from './SideBar';
-import { Polyline, InfoWindow , Marker } from "react-bmapgl"
+import { Polyline, Label } from "react-bmapgl"
 import axios from 'axios';
 import { timeContext } from '../../Mymap';
 import largeCar from '../../assets/images/large_car.png'
@@ -41,7 +41,7 @@ export function VehicleSearch() {
     })
     // const carTraceDevices = cartraces[query].map((item) => item[3])
     // console.log(carTraceDevices)
-    console.log(carTraceDevices)
+    // console.log(carTraceDevices)
     setCarTrace(
       <Polyline
         path={carlocs}
@@ -56,11 +56,11 @@ export function VehicleSearch() {
       <React.Fragment>
         {carlocs.map((item, index) => {
           return (
-            <Marker
-              icon={large_vehicle}
-              position={item}
-              key={index}
-            ></Marker>
+            <Label
+            position={item}
+            autoViewport = {false}
+            text={cartraces[query][index][4]}
+            />     
           )
         })}
       </React.Fragment>

@@ -47,9 +47,9 @@ export function SideBar() {
       <DeviceSearch/>
       {/* 日志信息 */}
       {/* <DataTable></DataTable> */}
-      <RuleLogs tick = {tick} sec = {mapsec}></RuleLogs>  
+      {/* <RuleLogs tick = {tick} sec = {mapsec}></RuleLogs>  
       <CarLogs tick = {tick} sec = {mapsec}></CarLogs>
-      <GatePairLogs tick = {tick} sec = {mapsec}></GatePairLogs>
+      <GatePairLogs tick = {tick} sec = {mapsec}></GatePairLogs> */}
 
       {/* <Button onClick={() => setSelected('Button 1')}>Button 1</Button>
       <Button onClick={() => {setSelected('Button 2'); console.log('2')}}>Button 2</Button>
