@@ -4,8 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Mymap } from './Mymap';
 import { Displaybutton } from './components/Displaybutton'
 import { createRoot } from "react-dom/client";
-
+import {displayModeStore} from "./components/features/StateStore"
 import './App.css'
+import { Provider } from 'react-redux';
 
 const App = () => {
   const [displayroute, setDisplayroute] = useState(false);
@@ -16,8 +17,8 @@ const App = () => {
   const handleDeviceDisplayChange = () => {
     setDisplaydevice(!displaydevice)
   }
-
   return (
+    <Provider store={displayModeStore}>
     <div className="app">
       <div className='mymap'>
         <Mymap
@@ -36,6 +37,7 @@ const App = () => {
           onClick={handleDeviceDisplayChange}  ></Displaybutton>
       </div>
     </div>
+    </Provider>
   );
 };
 

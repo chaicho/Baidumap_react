@@ -7,6 +7,7 @@ import { Roadlist } from './components/Road/Roadlist';
 import { SideBar } from './components/SideBar/SideBar';
 import { StaCmp } from './components/StatisticCmp/StaCmp';
 import { useInterval } from 'ahooks';
+import { useSelector } from 'react-redux';
 import './Mymap.css'
 import { TitleBar } from './components/Title/TitleBar';
 import { Device } from './components/Device/Device';
@@ -21,7 +22,9 @@ export function Mymap(props) {
   const mapRef = useRef()
   const sideBarRef = useRef()
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
-
+  const displayMode = useSelector((state) => state.displayMode.mode);
+  console.log(displayMode);
+  
   useEffect(() => {
     setScreenSize({ width: window.innerWidth, height: window.innerHeight });
     // window.addEventListener('resize', handleResize);
