@@ -12,6 +12,8 @@ import './Mymap.css'
 import { TitleBar } from './components/Title/TitleBar';
 import { Device } from './components/Device/Device';
 import { TimeRate } from './components/TimeRate/TimeRate'
+import { DisplayModeToggle} from './components/SceneSwitch/SwitchButtons'
+
 export const timeContext = React.createContext();
 export const windowContext = React.createContext();
 export function Mymap(props) {
@@ -80,6 +82,9 @@ export function Mymap(props) {
               {/* <Device position  =  {{ lng:117.09736299294687 , lat:37.28892141923907}}/> */}
               <div className="time-rate-container">
                 <TimeRate setplayRate={setPlayRate} />
+              </div>
+              <div className='scene-switch-container'>
+                <DisplayModeToggle />
               </div>
             </Map>
           </div>

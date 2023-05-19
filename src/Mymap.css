@@ -12,3 +12,9 @@
   right: 90px;
   z-index: 100;
 }
+.scene-switch-container {
+  position: absolute;
+  top: 100px;
+  right: 90px;
+  z-index: 100;
+}
