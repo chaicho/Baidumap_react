@@ -12,7 +12,7 @@ import './Mymap.css'
 import { TitleBar } from './components/Title/TitleBar';
 import { Device } from './components/Device/Device';
 import { TimeRate } from './components/TimeRate/TimeRate'
-import { DisplayModeToggle} from './components/SceneSwitch/SwitchButtons'
+import { DisplayModeToggle} from './components/DisplayScene/SceneSwitch/SwitchButtons'
 
 export const timeContext = React.createContext();
 export const windowContext = React.createContext();
