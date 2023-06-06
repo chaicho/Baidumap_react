@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const displayModeSlice = createSlice({
   name: 'displayMode',
   initialState: {
-    mode: 'normal',
+    mode: 'Normal',
   },
   reducers: {
     setDisplayMode: (state, action) => {

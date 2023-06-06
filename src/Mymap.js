@@ -25,7 +25,6 @@ export function Mymap(props) {
   const sideBarRef = useRef()
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
   const displayMode = useSelector((state) => state.displayMode.mode);
-  console.log(displayMode);
   
   useEffect(() => {
     setScreenSize({ width: window.innerWidth, height: window.innerHeight });
@@ -75,7 +74,9 @@ export function Mymap(props) {
 
               <Devicelist display={props.displaydevice}></Devicelist>
               <Roadlist display={props.displayroute}></Roadlist>
-              <VehicleList /> 
+              { displayMode === 'Normal' && <VehicleList />}
+              
+
               <SideBar ></SideBar>
               <StaCmp ></StaCmp>
 

@@ -1,4 +1,3 @@
-// import { Vehicle } from "./Vehicle";
 import React, { useEffect, useState, useContext } from 'react';
 import { timeContext } from '../../Mymap';
 import axios from 'axios'
