@@ -8,12 +8,8 @@ export function VehicleList() {
   // const [vechiles,setVehicles ] = useState(<></>)
   const [vechilesdata, setVehiclesdata] = useState({})
   const [count, setCount] = useState(0)
-  const [trick, setTrick] = useState(<></>)
   const { tick, mapsec } = useContext(timeContext)
-  const FPS = 2
-  useEffect(() => {
-    // setTrick(  <Marker position={{ lng:0 , lat: 0 }} /> )
-  }, [])
+
   useEffect(() => {
     axios.get(`Data/carInfo/DoubleKey5per/${tick}.json`)
       .catch(function (response) {
@@ -46,8 +42,6 @@ export function VehicleList() {
         )
       )
       }
-      {/* <Marker position={{ lng:0 , lat: 0 }} /> */}
-      {trick}
     </React.Fragment>
   )
 }

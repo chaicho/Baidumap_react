@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Map, Marker, MapTypeControl, InfoWindow, ScaleControl, ZoomControl } from 'react-bmapgl';
-
+import { DisplayScene } from './components/DisplayScene/DisplayScene';
 import { Devicelist } from './components/Device/DeviceList'
 import { VehicleList } from './components/Vehicle/VehicleList';
 import { Roadlist } from './components/Road/Roadlist';
@@ -76,7 +76,7 @@ export function Mymap(props) {
               <Roadlist display={props.displayroute}></Roadlist>
               { displayMode === 'Normal' && <VehicleList />}
               
-
+              { displayMode === 'Display' && <DisplayScene />} 
               <SideBar ></SideBar>
               <StaCmp ></StaCmp>
 
