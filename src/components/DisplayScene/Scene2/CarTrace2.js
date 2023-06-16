@@ -1,17 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Polyline, InfoWindow } from "react-bmapgl";
+import { Polyline, Label } from "react-bmapgl";
 import { timeContext } from "../../../Mymap";
-import { Vehicle } from "../../Vehicle/Vehicle";
 import axios from "axios";
-export const CarTraceExpected = (props) => {
+import { Vehicle } from "../../Vehicle/Vehicle";
+export const CarTrace2 = (props) => {
   const [showInfo, setShowInfo] = useState(false);
   const {tick, mapsec} = useContext(timeContext);
+  const [isFinished,setFinished] = useState(false);
   const [vehicleData, setVehicledata] = useState({});
   const [curLoc, setCurLoc] = useState({});
   const [curTrace, setCurTrace] = useState([]);
   const [preDevices, setPreDevices] = useState([]);
   useEffect(() => {
-    axios.get(`Data/display/Scene1/dataExpected/${props.carId}.json`)
+    axios.get(`Data/display/Scene2/data/${props.carId}.json`)
       .catch(function (response) {
         console.log(response)
       })
@@ -29,6 +30,10 @@ export const CarTraceExpected = (props) => {
   useEffect(() => {
     let curLocTemp = vehicleData[tick * 20000]
     if(curLocTemp === undefined) {
+      if(tick > 200 && isFinished === false){
+        setFinished(true)
+        console.log('end')
+      }
       return;
     }
     if(Object.keys(curLocTemp).length >= 3) {
@@ -38,14 +43,14 @@ export const CarTraceExpected = (props) => {
     else{
       setCurLoc(curLocTemp)
     }
-    console.log(preDevices.map((device) => device["loc"]))
+    // console.log(preDevices.map((device) => device["loc"]))
     setCurTrace(
       [ 
         ...preDevices.map((device) => device["loc"]),
         curLoc
       ]
     )
-    console.log(curTrace)
+    
   },[tick]);
 
 
@@ -58,19 +63,25 @@ export const CarTraceExpected = (props) => {
 
   return (
     <React.Fragment>
-      {/* {showInfo && infoWindow} */}
       { curLoc !== undefined && 
         <Vehicle
           pos={curLoc}
         />
       }
-      {curTrace.length !== 0 && <Polyline
+      { isFinished === false && curTrace.length !== 0 && <Polyline
         path={curTrace}
-        strokeColor={props.strokeColor || "#18f02e"}
+        strokeColor={props.strokeColor || "#070FF3"}
         cord="bd09ll"
-        strokeWeight={props.strokeWeight || 4}
+        strokeWeight={props.strokeWeight || 5}
         onClick={debug_info}
       /> }
+      {
+        isFinished === true &&         
+        <Label
+          position={curLoc}
+          text={`${props.carId} 违反倒换卡`}
+        />
+      }
     </React.Fragment>
   );
 };

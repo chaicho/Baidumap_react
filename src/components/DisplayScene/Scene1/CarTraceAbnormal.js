@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Polyline, InfoWindow } from "react-bmapgl";
 import { timeContext } from "../../../Mymap";
+import { Vehicle } from "../../Vehicle/Vehicle";
 import axios from "axios";
 export const CarTraceAbnormal = (props) => {
   const [showInfo, setShowInfo] = useState(false);
@@ -57,7 +58,11 @@ export const CarTraceAbnormal = (props) => {
 
   return (
     <React.Fragment>
-      {/* {showInfo && infoWindow} */}
+      { curLoc !== undefined && 
+        <Vehicle
+          pos={curLoc}
+        />
+      }
       {curTrace.length !== 0 && <Polyline
         path={curTrace}
         strokeColor={props.strokeColor || "#c22f14"}
