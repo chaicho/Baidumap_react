@@ -38,14 +38,15 @@ export const CarTraceAbnormal = (props) => {
     else{
       setCurLoc(curLocTemp)
     }
-    console.log(preDevices.map((device) => device["loc"]))
+    // console.log(preDevices.map((device) => device["loc"]))
+    // console.log
     setCurTrace(
       [ 
         ...preDevices.map((device) => device["loc"]),
         curLoc
       ]
     )
-    console.log(curTrace)
+    // console.log(curTrace)
   },[tick]);
 
 
@@ -63,7 +64,7 @@ export const CarTraceAbnormal = (props) => {
           pos={curLoc}
         />
       }
-      {curTrace.length !== 0 && <Polyline
+      {curTrace.length >= 2 && <Polyline
         path={curTrace}
         strokeColor={props.strokeColor || "#c22f14"}
         cord="bd09ll"

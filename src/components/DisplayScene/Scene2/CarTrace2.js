@@ -68,7 +68,7 @@ export const CarTrace2 = (props) => {
           pos={curLoc}
         />
       }
-      { isFinished === false && curTrace.length !== 0 && <Polyline
+      { isFinished === false && curTrace.length >= 2 && <Polyline
         path={curTrace}
         strokeColor={props.strokeColor || "#070FF3"}
         cord="bd09ll"

@@ -10,6 +10,7 @@ export const CarTraceExpected = (props) => {
   const [curLoc, setCurLoc] = useState({});
   const [curTrace, setCurTrace] = useState([]);
   const [preDevices, setPreDevices] = useState([]);
+  
   useEffect(() => {
     axios.get(`Data/display/Scene1/dataExpected/${props.carId}.json`)
       .catch(function (response) {
@@ -38,14 +39,14 @@ export const CarTraceExpected = (props) => {
     else{
       setCurLoc(curLocTemp)
     }
-    console.log(preDevices.map((device) => device["loc"]))
+    // console.log(preDevices.map((device) => device["loc"]))
     setCurTrace(
       [ 
         ...preDevices.map((device) => device["loc"]),
         curLoc
       ]
     )
-    console.log(curTrace)
+    console.log(curTrace.length)
   },[tick]);
 
 
@@ -64,7 +65,7 @@ export const CarTraceExpected = (props) => {
           pos={curLoc}
         />
       }
-      {curTrace.length !== 0 && <Polyline
+      {curTrace.length >=2 && <Polyline
         path={curTrace}
         strokeColor={props.strokeColor || "#18f02e"}
         cord="bd09ll"
