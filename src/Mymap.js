@@ -62,8 +62,8 @@ export function Mymap(props) {
           <div className='map_container'>
 
             <Map center={{ lng: 116.600797625, lat: 35.4021216643 }}
-              style={{ position: 'absolute', width: '100%', height: '100%' }}
-              // enableScrollWheelZoom
+              style={{ position: 'absolute', width: '100%', height: '90%' }}
+              enableScrollWheelZoom
               zoom="9"
               ref={mapRef}
               onClick = {(e) => {
