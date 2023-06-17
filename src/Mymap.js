@@ -13,6 +13,7 @@ import { TitleBar } from './components/Title/TitleBar';
 import { Device } from './components/Device/Device';
 import { TimeRate } from './components/TimeRate/TimeRate'
 import { DisplayModeToggle} from './components/DisplayScene/SceneSwitch/SwitchButtons'
+import {Label} from 'react-bmapgl'
 
 export const timeContext = React.createContext();
 export const windowContext = React.createContext();
@@ -25,7 +26,7 @@ export function Mymap(props) {
   const sideBarRef = useRef()
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
   const displayMode = useSelector((state) => state.displayMode.mode);
-  
+  const [clickLoc, setClickLoc] = useState({'lng': 0, 'lat': 0})
   useEffect(() => {
     setScreenSize({ width: window.innerWidth, height: window.innerHeight });
     // window.addEventListener('resize', handleResize);
@@ -50,7 +51,7 @@ export function Mymap(props) {
         <windowContext.Provider value={{ screenSize }} >
           <div className='titlebar'
             style={{
-              width: '75%',
+              width: '100%',
               height: '10%',
               padding: 0,
               margin: 0,
@@ -61,32 +62,20 @@ export function Mymap(props) {
           <div className='map_container'>
 
             <Map center={{ lng: 116.600797625, lat: 35.4021216643 }}
-              style={{ position: 'absolute', width: '75%', height: '58%' }}
+              style={{ position: 'absolute', width: '100%', height: '100%' }}
               // enableScrollWheelZoom
               zoom="9"
               ref={mapRef}
+              onClick = {(e) => {
+                console.log(e)
+                console.log(e['latlng'])
+                setClickLoc(e['latlng'])
+              }} 
             >
               <ScaleControl anchor={1} />
               <ZoomControl />
-              {/* <MapTypeControl anchor={2} /> */}
-              
-              <Device position={{ lng: 0, lat: 0 }} />
-
-              <Devicelist display={props.displaydevice}></Devicelist>
-              <Roadlist display={props.displayroute}></Roadlist>
-              { displayMode === 'Normal' && <VehicleList />}
-              
-              { displayMode === 'Display' && <DisplayScene />} 
-              <SideBar ></SideBar>
-              <StaCmp ></StaCmp>
-
-              {/* <Device position  =  {{ lng:117.09736299294687 , lat:37.28892141923907}}/> */}
-              <div className="time-rate-container">
-                <TimeRate setplayRate={setPlayRate} />
-              </div>
-              <div className='scene-switch-container'>
-                <DisplayModeToggle />
-              </div>
+              <Label position = {clickLoc} text ={
+                `lng : ${clickLoc['lng']}\nlat : ${clickLoc['lat']} `}></Label>
             </Map>
           </div>
         </windowContext.Provider>
