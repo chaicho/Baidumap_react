@@ -11,8 +11,8 @@ export const DisplayScene = () => {
   
   return (
     <div>
-      <CartracesScene1></CartracesScene1>
-      <CartracesScene2></CartracesScene2>
+      {/* <CartracesScene1></CartracesScene1> */}
+      {/* <CartracesScene2></CartracesScene2> */}
       {/* <CarTrace1></CarTrace1> */}
     </div>
   )
