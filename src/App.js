@@ -10,32 +10,12 @@ import { Provider } from 'react-redux';
 
 
 const App = () => {
-  const [displayroute, setDisplayroute] = useState(false);
-  const [displaydevice, setDisplaydevice] = useState(false);
-  const handleRouteDisplayChange = () => {
-    setDisplayroute(!displayroute)
-  }
-  const handleDeviceDisplayChange = () => {
-    setDisplaydevice(!displaydevice)
-  }
+
   return (
     <Provider store={displayModeStore}>
     <div className="app">
       <div className='mymap'>
-        <Mymap
-          displaydevice={displaydevice}
-          displayroute={displayroute}
-        />
-      </div>
-      <div className="SelectView">
-        <Displaybutton
-          text='显示路径'
-          active={displayroute}
-          onClick={handleRouteDisplayChange}  ></Displaybutton>
-        <Displaybutton
-          text='显示龙门架'
-          active={displaydevice}
-          onClick={handleDeviceDisplayChange}  ></Displaybutton>
+        <Mymap/>
       </div>
     </div>
     </Provider>

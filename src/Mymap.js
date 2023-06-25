@@ -12,7 +12,8 @@ import './Mymap.css'
 import { TitleBar } from './components/Title/TitleBar';
 import { Device } from './components/Device/Device';
 import { TimeRate } from './components/TimeRate/TimeRate'
-import { DisplayModeToggle} from './components/DisplayScene/SceneSwitch/SwitchButtons'
+import { DisplayModeToggle } from './components/DisplayScene/SceneSwitch/SwitchButtons'
+import { Displaybutton } from './components/Displaybutton'
 
 export const timeContext = React.createContext();
 export const windowContext = React.createContext();
@@ -25,7 +26,15 @@ export function Mymap(props) {
   const sideBarRef = useRef()
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
   const displayMode = useSelector((state) => state.displayMode.mode);
-  
+  const [displayRoute, setdisplayRoute] = useState(false);
+  const [displayDevice, setdisplayDevice] = useState(false);
+  const handleRouteDisplayChange = () => {
+    setdisplayRoute(!displayRoute)
+  }
+  const handleDeviceDisplayChange = () => {
+    setdisplayDevice(!displayDevice)
+  }
+
   useEffect(() => {
     setScreenSize({ width: window.innerWidth, height: window.innerHeight });
     // window.addEventListener('resize', handleResize);
@@ -58,38 +67,43 @@ export function Mymap(props) {
             }}>
             <TitleBar ></TitleBar>
           </div>
-          <div className='map_container'>
-
-            <Map center={{ lng: 116.600797625, lat: 35.4021216643 }}
-              style={{ position: 'absolute', width: '75%', height: '58%' }}
-              // enableScrollWheelZoom
-              zoom="9"
-              ref={mapRef}
-            >
-              <ScaleControl anchor={1} />
-              <ZoomControl />
-              {/* <MapTypeControl anchor={2} /> */}
-              
-              <Device position={{ lng: 0, lat: 0 }} />
-
-              <Devicelist display={props.displaydevice}></Devicelist>
-              <Roadlist display={props.displayroute}></Roadlist>
-              { displayMode === 'Normal' && <VehicleList />}
-              
-              { displayMode === 'Display' && <DisplayScene />} 
-              <SideBar ></SideBar>
-              <StaCmp ></StaCmp>
-
-              {/* <Device position  =  {{ lng:117.09736299294687 , lat:37.28892141923907}}/> */}
-              <div className="time-rate-container">
-                <TimeRate setplayRate={setPlayRate} />
-              </div>
-              <div className='scene-switch-container'>
-                <DisplayModeToggle />
-              </div>
-            </Map>
+          <div className='scene-switch-container'>
+                  <DisplayModeToggle />
           </div>
-        </windowContext.Provider>
+          {displayMode === "Display" && <DisplayScene></DisplayScene> }
+          {displayMode === 'Normal' && <div className='map_container'>
+            <div className="SelectView">
+              <Displaybutton
+                text='显示路径'
+                active={displayRoute}
+                onClick={handleRouteDisplayChange} />
+              <Displaybutton
+                text='显示龙门架'
+                active={displayDevice}
+                onClick={handleDeviceDisplayChange} />
+            </div>
+            <Map center={{ lng: 116.600797625, lat: 35.4021216643 }}
+                style={{ position: 'absolute', width: '75%', height: '58%' }}
+                // enableScrollWheelZoom
+                zoom="9"
+                ref={mapRef}
+              >
+                <ScaleControl anchor={1} />
+                <ZoomControl />
+                {/* <MapTypeControl anchor={2} /> */}
+                <Devicelist display={displayDevice}></Devicelist>
+                <Roadlist display={displayRoute}></Roadlist>
+                <SideBar ></SideBar>
+                <StaCmp ></StaCmp>
+                <div className="time-rate-container">
+                  <TimeRate setplayRate={setPlayRate} />
+                </div>
+
+              </Map>
+          
+          </div>
+          }
+          </windowContext.Provider>
       </timeContext.Provider>
 
     </div>
