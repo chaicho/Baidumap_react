@@ -70,6 +70,9 @@ export function Mymap(props) {
           <div className='scene-switch-container'>
                   <DisplayModeToggle />
           </div>
+        
+          <SideBar ></SideBar>
+
           {displayMode === "Display" && <DisplayScene></DisplayScene> }
           {displayMode === 'Normal' && <div className='map_container'>
             <div className="SelectView">
@@ -93,7 +96,6 @@ export function Mymap(props) {
                 {/* <MapTypeControl anchor={2} /> */}
                 <Devicelist display={displayDevice}></Devicelist>
                 <Roadlist display={displayRoute}></Roadlist>
-                <SideBar ></SideBar>
                 <StaCmp ></StaCmp>
                 <div className="time-rate-container">
                   <TimeRate setplayRate={setPlayRate} />
