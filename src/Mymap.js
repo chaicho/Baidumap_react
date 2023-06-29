@@ -74,7 +74,9 @@ export function Mymap(props) {
           <SideBar ></SideBar>
 
           {displayMode === "Display" && <DisplayScene></DisplayScene> }
-          {displayMode === 'Normal' && <div className='map_container'>
+          {displayMode === 'Normal' && <div className='NormalMap' 
+            style={{width:"75%", height:"90%"}}
+           >
             <div className="SelectView">
               <Displaybutton
                 text='显示路径'
@@ -86,7 +88,7 @@ export function Mymap(props) {
                 onClick={handleDeviceDisplayChange} />
             </div>
             <Map center={{ lng: 116.600797625, lat: 35.4021216643 }}
-                style={{ position: 'absolute', width: '75%', height: '58%' }}
+                style={{width: '100%', height: '70%' }}
                 // enableScrollWheelZoom
                 zoom="9"
                 ref={mapRef}
@@ -96,13 +98,14 @@ export function Mymap(props) {
                 {/* <MapTypeControl anchor={2} /> */}
                 <Devicelist display={displayDevice}></Devicelist>
                 <Roadlist display={displayRoute}></Roadlist>
-                <StaCmp ></StaCmp>
                 <div className="time-rate-container">
                   <TimeRate setplayRate={setPlayRate} />
                 </div>
 
               </Map>
-          
+            <div className='staticsDisplay' style={{width:"100%",height:"30%"}}>
+                    <StaCmp ></StaCmp>
+            </div>
           </div>
           }
           </windowContext.Provider>

@@ -12,12 +12,7 @@ import { MemCmp } from "./MemCmp";
 import { DynaSeries } from "./DynaSeries";
 import './StaCmp.css';
 
-const screenHeight = window.innerHeight;
-const screenWidth = window.innerWidth;
-const elementHeight = screenHeight * 0.35;
-const elementWidth = screenWidth * 0.2;
 
-const map = document.querySelector('.mymap');
 export const colors = [
   "#005f73",
   "#0a9396",
@@ -45,14 +40,10 @@ export function StaCmp() {
   return (
     <React.Fragment>
       <div className="StaCmp" style={{
-        height: 'auto',
+        height: '100%',
+        width: "100%",
         overflowY: 'hidden'
       }}>
-        {/* <div
-          style={elementStyle}
-        >
-          <DynaSeries tick = {tick} mapsec={mapsec}></DynaSeries>
-        </div> */}
         <div
           style={elementStyle}
         >
