@@ -28,7 +28,7 @@ export function TitleBar() {
           }
         `}
       </style>
-      <Menu inverted style={{ backgroundColor: '#005f73' }}>
+      <Menu inverted style={{ backgroundColor: '#005f73'}}>
         <Menu.Item style={{ color: 'white', fontSize: '25px' }}>
           高速门架监测平台
         </Menu.Item>
