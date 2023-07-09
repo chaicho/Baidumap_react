@@ -1,7 +1,20 @@
-.map {  
+.map_container {  
   width: 100%;
-  min-height: 100%;
-  height: auto;
-  position:  absolute;
+  height: 100%;
+  /* min-height: 100%; */
+  overflow-y : hidden;
+  position:  relative;
   z-index:1;  
+}
+.time-rate-container {
+  position: absolute;
+  top: 10px;
+  right: 90px;
+  z-index: 100;
+}
+.scene-switch-container {
+  position: absolute;
+  top: 0px;
+  right: 180px;
+  z-index: 100;
 }

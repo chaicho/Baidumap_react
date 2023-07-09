@@ -1,7 +1,7 @@
 import { Input } from 'antd';
 import React from 'react';
 import { Deviceinfodict } from "../ObjInfo"
-import {InfoWindow} from  "react-bmapgl"
+import {InfoWindow} from  'react-bmapgl'
 const { Search } = Input;
 // const onSearch = ;
 

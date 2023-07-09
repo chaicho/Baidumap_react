@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+
+<rules>
+
+    <rule>
+        <id>rule_dual-read</id>
+        <formula>
+            <forall var="v1" in="pat_dual-read_prev">
+                <not>
+                    <exists var="v2" in="pat_dual-read_cur">
+                        <bfunc name="dual-read">
+                            <param pos="1" var="v1" field="object"/>
+                            <param pos="2" var="v2" field="object"/>
+                        </bfunc>
+                    </exists>
+                </not>
+            </forall>
+        </formula>
+    </rule>
+
+    <rule>
+        <id>rule_missing-read</id>
+        <formula>
+            <forall var="v1" in="pat_missing-read_prev">
+                <not>
+                    <exists var="v2" in="pat_missing-read_cur">
+                        <bfunc name="missing-read">
+                            <param pos="1" var="v1" field="object"/>
+                            <param pos="2" var="v2" field="object"/>
+                        </bfunc>
+                    </exists>
+                </not>
+            </forall>
+        </formula>
+    </rule>
+
+    <rule>
+        <id>rule_cross-read-one</id>
+        <formula>
+            <forall var="v1" in="pat_cross-read-one_prev">
+                <not>
+                    <exists var="v2" in="pat_cross-read-one_cur">
+                        <bfunc name="cross-read-one">
+                            <param pos="1" var="v1" field="object"/>
+                            <param pos="2" var="v2" field="object"/>
+                        </bfunc>
+                    </exists>
+                </not>
+            </forall>
+        </formula>
+    </rule>
+
+    <rule>
+        <id>rule_cross-read-two</id>
+        <formula>
+            <forall var="v1" in="pat_cross-read-two_prev">
+                <not>
+                    <exists var="v2" in="pat_cross-read-two_cur">
+                        <bfunc name="cross-read-two">
+                            <param pos="1" var="v1" field="object"/>
+                            <param pos="2" var="v2" field="object"/>
+                        </bfunc>
+                    </exists>
+                </not>
+            </forall>
+        </formula>
+    </rule>
+
+    <rule>
+        <id>rule_cross-read-three</id>
+        <formula>
+            <forall var="v1" in="pat_cross-read-three_prev">
+                <not>
+                    <exists var="v2" in="pat_cross-read-three_cur">
+                        <bfunc name="cross-read-three">
+                            <param pos="1" var="v1" field="object"/>
+                            <param pos="2" var="v2" field="object"/>
+                        </bfunc>
+                    </exists>
+                </not>
+            </forall>
+        </formula>
+    </rule>
+
+    <rule>
+        <id>rule_topology-violation</id>
+        <formula>
+            <forall var="v1" in="pat_topology-violation_prev">
+                <not>
+                    <exists var="v2" in="pat_topology-violation_cur">
+                        <bfunc name="topology-violation">
+                            <param pos="1" var="v1" field="object"/>
+                            <param pos="2" var="v2" field="object"/>
+                        </bfunc>
+                    </exists>
+                </not>
+            </forall>
+        </formula>
+    </rule>
+
+    <rule>
+        <id>rule_time-out</id>
+        <formula>
+            <forall var="v1" in="pat_time-out_prev">
+                <not>
+                    <exists var="v2" in="pat_time-out_cur">
+                        <bfunc name="time-out">
+                            <param pos="1" var="v1" field="object"/>
+                            <param pos="2" var="v2" field="object"/>
+                        </bfunc>
+                    </exists>
+                </not>
+            </forall>
+        </formula>
+    </rule>
+
+    <rule>
+        <id>rule_diff-passid</id>
+        <formula>
+            <forall var="v1" in="pat_diff-passid_exit">
+                <not>
+                    <exists var="v2" in="pat_diff-passid_entry">
+                        <bfunc name="diff-passid">
+                            <param pos="1" var="v1" field="object"/>
+                            <param pos="2" var="v2" field="object"/>
+                        </bfunc>
+                    </exists>
+                </not>
+            </forall>
+        </formula>
+    </rule>
+
+</rules>

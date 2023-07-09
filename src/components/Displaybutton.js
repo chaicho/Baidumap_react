@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button } from 'semantic-ui-react'
 
-
 export class ButtonExampleToggle extends React.Component {
   constructor(props){
     super(props)

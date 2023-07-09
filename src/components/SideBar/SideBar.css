@@ -1,0 +1,9 @@
+.SideBar {
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  /* overflow-y: scroll; */
+  /* background-color: #f0f3fa; */
+  }
