@@ -12,8 +12,8 @@ import './Mymap.css'
 import { TitleBar } from './components/Title/TitleBar';
 import { Device } from './components/Device/Device';
 import { TimeRate } from './components/TimeRate/TimeRate'
-import { DisplayModeToggle} from './components/DisplayScene/SceneSwitch/SwitchButtons'
-import {Label} from 'react-bmapgl'
+import { DisplayModeToggle } from './components/DisplayScene/SceneSwitch/SwitchButtons'
+import { Label } from 'react-bmapgl'
 
 export const timeContext = React.createContext();
 export const windowContext = React.createContext();
@@ -26,7 +26,7 @@ export function Mymap(props) {
   const sideBarRef = useRef()
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
   const displayMode = useSelector((state) => state.displayMode.mode);
-  const [clickLoc, setClickLoc] = useState({'lng': 0, 'lat': 0})
+  const [clickLoc, setClickLoc] = useState({ 'lng': 0, 'lat': 0 })
   useEffect(() => {
     setScreenSize({ width: window.innerWidth, height: window.innerHeight });
     // window.addEventListener('resize', handleResize);
@@ -47,6 +47,7 @@ export function Mymap(props) {
 
   return (
     <div className='map_container'>
+
       <timeContext.Provider value={{ tick, mapsec }}>
         <windowContext.Provider value={{ screenSize }} >
           <div className='titlebar'
@@ -66,15 +67,22 @@ export function Mymap(props) {
               enableScrollWheelZoom
               zoom="9"
               ref={mapRef}
-              onClick = {(e) => {
+              onClick={(e) => {
                 console.log(e)
                 console.log(e['latlng'])
                 setClickLoc(e['latlng'])
-              }} 
+              }}
             >
+
+              <div className='SearchBox'
+                style={{
+                  position: 'absolute'
+                }}> 
+                  <DisplayScene></DisplayScene>
+              </div>
               <ScaleControl anchor={1} />
               <ZoomControl />
-              <Label position = {clickLoc} text ={
+              <Label position={clickLoc} text={
                 `lng : ${clickLoc['lng']}\nlat : ${clickLoc['lat']} `}></Label>
             </Map>
           </div>
