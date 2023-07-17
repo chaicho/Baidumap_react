@@ -6,15 +6,15 @@ import { ScenePlayer } from "./ScenePlayer";
 // import myVideo from "../../assets/videos/cross-read_1.mp4"
 // An array of video sources
 const videos = [
-  "/Data/videos/CR-1.2.mp4",
-  "/Data/videos/CR-1.2.mp4",
-  "/Data/videos/CR-1.2.mp4",
-  "/Data/videos/CR-1.2.mp4",
-  "/Data/videos/CR-1.2.mp4",
-  "/Data/videos/CR-1.2.mp4",
-  "/Data/videos/CR-1.2.mp4",
-  "/Data/videos/CR-1.2.mp4",
-  "/Data/videos/CR-1.2.mp4"
+  "/Data/videos/CR-1.4.mp4",
+  "/Data/videos/CR-1.4.mp4",
+  "/Data/videos/CR-1.4.mp4",
+  "/Data/videos/CR-1.4.mp4",
+  "/Data/videos/CR-1.4.mp4",
+  "/Data/videos/CR-1.4.mp4",
+  "/Data/videos/CR-1.4.mp4",
+  "/Data/videos/CR-1.4.mp4",
+  "/Data/videos/CR-1.4.mp4"
   // myVideo
   // "https://www.youtube.com/watch?v=KODzih-pYlU",
   // "https://www.youtube.com/watch?v=4e0n7vTLz1U",

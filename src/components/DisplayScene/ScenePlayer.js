@@ -33,7 +33,7 @@ export function ScenePlayer (props) {
     }
     else{
       if (video instanceof HTMLVideoElement) {
-        video.style.width = '100%';
+        video.style.width = '99%';
         video.style.height = '100%';
         video.style.position = 'relative';
         video.style.zIndex = '0';
@@ -57,9 +57,9 @@ export function ScenePlayer (props) {
   };
 
   return (
-    <div videoContainer style={{width: '100%', height: '100%' }}>
+    <div videoContainer style={{width: '100%', height: '100%',"backgroundColor":"rgb(0, 95, 115)" }}>
       <video
-        style={{width: '100%', height: '100%',"backgroundColor":"rgb(0, 95, 115)"}}
+        style={{width: '99%', height: '100%'}}
         ref={videoRef}
         src={props.url}
         onClick={handleVideoClick}
