@@ -99,9 +99,9 @@ export function Mymap(props) {
                 <VehicleList></VehicleList>
                 <Devicelist display={displayDevice}></Devicelist>
                 <Roadlist display={displayRoute}></Roadlist>
-                <div className="time-rate-container">
+                {/* <div className="time-rate-container">
                   <TimeRate setplayRate={setPlayRate} />
-                </div>
+                </div> */}
 
               </Map>
             <div className='staticsDisplay' style={{width:"100%",height:"30%"}}>
