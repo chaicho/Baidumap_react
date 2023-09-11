@@ -96,6 +96,7 @@ export function Mymap(props) {
                 <ScaleControl anchor={1} />
                 <ZoomControl />
                 {/* <MapTypeControl anchor={2} /> */}
+                <VehicleList></VehicleList>
                 <Devicelist display={displayDevice}></Devicelist>
                 <Roadlist display={displayRoute}></Roadlist>
                 <div className="time-rate-container">
