@@ -7,23 +7,16 @@ import { ScenePlayer } from "./ScenePlayer";
 // An array of video sources
 const videos = [
   "/Data/videos/CR-1.4.mp4",
-  "/Data/videos/CR-1.4.mp4",
-  "/Data/videos/CR-1.4.mp4",
-  "/Data/videos/CR-1.4.mp4",
-  "/Data/videos/CR-1.4.mp4",
-  "/Data/videos/CR-1.4.mp4",
-  "/Data/videos/CR-1.4.mp4",
-  "/Data/videos/CR-1.4.mp4",
-  "/Data/videos/CR-1.4.mp4"
-  // myVideo
-  // "https://www.youtube.com/watch?v=KODzih-pYlU",
-  // "https://www.youtube.com/watch?v=4e0n7vTLz1U",
-  // "https://www.youtube.com/watch?v=8EJ3zbKTWQ8",
-  // "https://www.youtube.com/watch?v=6ZfuNTqbHE8",
-  // "https://www.youtube.com/watch?v=QwievZ1Tx-8",
-  // "https://www.youtube.com/watch?v=ue80QwXMRHg",
-  // "https://www.youtube.com/watch?v=QwievZ1Tx-8",
-  // "https://www.youtube.com/watch?v=6ZfuNTqbHE8"
+  "/Data/videos/CR-2.1.mp4",
+  "/Data/videos/CR-3.2.mp4",
+  "/Data/videos/MR-1.3.mp4",
+  "/Data/videos/MR-2.2.mp4",
+  "/Data/videos/MR-3.2.mp4",
+  "/Data/videos/PC1-1.3.mp4",
+  "/Data/videos/PC1-2.2.mp4",
+  "/Data/videos/PC1-3.2.mp4",
+
+
 ];
 export const DisplayScene = () => {
     // A state variable to store the index of the clicked video
