@@ -43,7 +43,7 @@ export function CarLogs(props) {
               {
                 <Alert
                   key={index}
-                  message={`车辆${log['vehicleId']}于${new Date(Number(log['incTime'])).toLocaleString()}违反规则${log['rule']}`}
+                  message={`车辆${log['vehicleId']}于${new Date(Number(log['incTime'])).toLocaleString().split(' ').at(1)}违反规则${log['rule']}`}
                   type="warning"
                   showIcon
                 />

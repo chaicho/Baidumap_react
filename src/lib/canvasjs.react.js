@@ -18,7 +18,10 @@ class CanvasJSChart extends React.Component {
 		super(props);
 		this.options = props.options ? props.options : {};
 		this.containerProps = props.containerProps ? { ...props.containerProps } : { width: "100%", position: "relative" };
-		this.containerProps.height = props.containerProps && props.containerProps.height ? props.containerProps.height : this.options.height ? this.options.height + "px" : "400px";
+    this.containerProps.height = props.containerProps && props.containerProps.height ? props.containerProps.height : this.options.height ? this.options.height + "px" : "400px";
+    console.log(props.containerProps)
+    console.log(props.containerProps.height)
+    console.log(this.containerProps.height)
 		this.chartContainerId = "canvasjs-react-chart-container-" + CanvasJSChart._cjsContainerId++;
 	}
 	componentDidMount() {
@@ -50,6 +53,8 @@ class CanvasJSChart extends React.Component {
 	render() {
     // console.log(this.options.title.text)
 		//return React.createElement('div', { id: this.chartContainerId, style: this.containerProps });
+    console.log(this.chartContainerId)
+    console.log(this.containerProps)
 		return <div id={this.chartContainerId} style={this.containerProps} />
 	}
 }

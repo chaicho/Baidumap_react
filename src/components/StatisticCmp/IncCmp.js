@@ -4,7 +4,7 @@ import { colors } from './StaCmp';
 import CanvasJSReact from '../../lib/canvasjs.react';
 const dataall = require('../../assets/statistics/incsInfo.json')
 var CanvasJS = CanvasJSReact.CanvasJS;
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+var   CanvasJSChart = CanvasJSReact.CanvasJSChart;
 export function IncCmp(props) {
   const chartRef = useRef();
   const [dps,setDps] = useState(
@@ -19,7 +19,6 @@ export function IncCmp(props) {
   const [oracle,setOracle] = useState(0)
   const [options, setOptions] = useState({
     theme: "light1",
-    height:'180',
     title: {
       text: "incsInfo"
     },
@@ -74,8 +73,8 @@ export function IncCmp(props) {
   }, [props.mapsec]);
 
   return (
-    <div>
-      <CanvasJSChart options={{ ...options }} ref={chartRef} />
+    <div style={{width : "100%", height : "100%"}}>
+      <CanvasJSChart options={{ ...options }} ref={chartRef} containerProps = {{ width: "100%", position: "relative",height:"100%"}}/>
     </div>
   );
 }

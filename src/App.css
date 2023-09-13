@@ -15,8 +15,8 @@
   z-index:1;  
 }
 .SelectView {     
-  left:20px;
-  top:70px;
+  left:3%;
+  top:12%;
   z-index:999; 
   position: absolute; 
 }

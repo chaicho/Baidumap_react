@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { setDisplayMode } from '../../features/displayModeSlice';
 import { Button } from 'antd';
-import 'antd/dist/antd.css'; // Import Ant Design's CSS
 
 export function DisplayModeToggle() {
   const dispatch = useDispatch();
@@ -12,11 +11,11 @@ export function DisplayModeToggle() {
 
   return (
     <div>
-      <Button  ghost onClick={() => setMode("Normal")}>
-        Normal Mode
+      <Button  ghost  size="large" onClick={() => setMode("Normal")}>
+        Main Page
       </Button>
-      <Button  ghost onClick={() => setMode("Display")}>
-        Display Mode
+      <Button  ghost  size="large" onClick={() => setMode("Display")}>
+        Case Page
       </Button>
     </div>
   );

@@ -29,6 +29,7 @@ export function ScenePlayer (props) {
         video.style.left = '20%';
         video.style.boxShadow = '6px 4px 400px 200px rgb(20,19,19,0.75)';
       }
+      video.currentTime = 0
       setIsEnlarged(true);
     }
     else{

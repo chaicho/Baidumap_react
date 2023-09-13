@@ -19,7 +19,6 @@ export function CpuCmp(props) {
   const [stripLineValue, setOracle] = useState(0)
   const [options, setOptions] = useState({
     theme: "light1",
-    height: '180',
     title: {
       text: "CpuInfo"
     },
@@ -48,8 +47,8 @@ export function CpuCmp(props) {
     setDps(new_dps)
   }, [props.mapsec]);
   return (
-    <div>
-      <CanvasJSChart options={{ ...options }} ref={chartRef} />
+    <div style={{width : "100%", height : "100%"}}>
+      <CanvasJSChart options={{ ...options }} ref={chartRef} containerProps = {{ width: "100%", position: "relative",height:"100%"}}/>
     </div>
   );
 }

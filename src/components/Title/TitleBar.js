@@ -28,11 +28,11 @@ export function TitleBar() {
           }
         `}
       </style>
-      <Menu inverted style={{ backgroundColor: '#005f73'}}>
-        <Menu.Item style={{ color: 'white', fontSize: '25px' }}>
+      <Menu inverted style={{ backgroundColor: '#005f73', height:'100%'}}>
+        <Menu.Item style={{ color: 'white', fontSize: '40px' }}>
           高速门架监测平台
         </Menu.Item>
-        <Menu.Item position="right" style={{ color: 'white', fontSize: '25px', paddingRight: '0 !important' }}>
+        <Menu.Item position="right" style={{ color: 'white', fontSize: '40px', paddingRight: '0 !important' }}>
           {new Date(mapsec).toLocaleString()}
         </Menu.Item>
       </Menu>

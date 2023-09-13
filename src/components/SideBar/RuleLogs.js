@@ -6,7 +6,7 @@ const ruledata = require('../../assets/sidebar/rules.json')
 export function RuleLogs(props) {
   const [logs, setLogs] = useState([])
   const [curlog, setCurlog] = useState({})
-  const columns = ['incTime', 'dual-read', 'missing-read', 'cross-read-one', 'cross-read-two', 'cross-read-three', 'topology-violation', 'time-out', 'diff-passid'];
+  const columns = ['incTime', 'dual-read', 'MR-1', 'CR-1', 'CR-2', 'CR-3', 'topo-vio', 'time-out', 'diff-pid'];
   const addLog = () => {
     const newlog = ruledata[props.sec]
     setCurlog(newlog)
